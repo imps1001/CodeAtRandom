@@ -1,0 +1,122 @@
+.navbar-light{
+    background-color: rgba(0,12,255,0.6) ;
+}
+.carousel-item{
+  height: 300px;
+}
+
+.carousel-item img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 500px;
+}
+div {
+  display: block;
+}
+.generic_footer {
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  bottom: -1px;
+  margin-top: 100px;
+  min-height: 230px;
+}
+.row_content{
+  color: white;
+
+}
+#copyright{
+    float: right;
+}
+.link{
+  color:white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a :hover{
+  color:white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.navbar-brand{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+}
+a {
+  color: white;
+}
+a:hover{
+  color: white;
+  text-decoration: none;
+}
+#footer{
+  display: flex;
+  padding-top: 10px;
+}
+#cr{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+  background-color: #DDE7B6;
+  padding: 0px;
+  margin: 0px;
+}
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px; 
+  width: 100%;
+  height: 200px;
+}
+
+.jumbotron {
+    margin: 0px auto;
+    padding: 200px 150px;
+    background: rgba(0,12,255,0.6);
+    color: floralwhite;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 100%; 
+}
+
+.row-content {
+      margin: 0px auto;
+      padding: 50px 0px;
+      border-bottom: 1px ridge;
+      min-height: 400px; 
+}
+.overlay{
+  top: 0;
+  left: 0;
+  background-color: url(images/img8.jpg);
+  position: absolute;
+  width: 100%;
+  height: 250px;
+
+}
+h1{
+  padding-top: 70px;
+  margin-top: 50px;
+  padding-left: 100px;
+  margin-left: 50px;
+
+}
+h4{
+  padding-left: 100px;
+  margin-left: 50px;
+}
+.startbutton{
+  width: 200px;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+.card-deck{
+  padding-left: 30px;
+  margin: 0px, 10px, 0px, 0px;
+}
