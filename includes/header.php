@@ -24,6 +24,7 @@
       {?>
         <li class="nav-item" id="loginButton"><a class="nav-link" href="#" style="color: white;"><span class="fa fa-sign-in fa-lg "> Login</span></a></li>
         <li class="nav-item" id="RegisterButton"><a class="nav-link" href="#" style="color: white;"><span class="fa fa-user fa-lg " > Register </span></a></li>
+        <li class="nav-item"><a class="nav-link" href="allcourses.php" style="color: white;"><span class="fa fa-book fa-lg" > All Courses</span></a></li>
         <?php
        }?>
       </ul>

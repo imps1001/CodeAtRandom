@@ -38,22 +38,23 @@ require 'includes/common.php';
     <div class="overlay">
       <div class="row row-header align-text-center">
         <div class="col-12">
-              <img src="images/Watermark1.png" height="600" width="400" class="img-fluid col-12 col-md-6 offset-md-1" style="margin-top: 150px;">
-              <img src="images/jumbotron1.jpg" class="img-fluid col-12 col-md-4" style="height:200px; margin-top:130px; float:right;">
+              <img src="images/Watermark1.png" height="700" width="500" class="order-sm-first img-fluid col-12 col-md-6 offset-md-1" style="margin-top: 150px;">
+              <img src="images/jumbotron1.jpg" class="img-fluid col-12 col-md-4 d-sm-none d-md-inline ml-auto order-sm-last offset-md-1" style="height:200px; margin-top: 100px;">
         </div>
         </div>
         <!--<div class="row" style="margin-top:0px;">
          <div class="startlearningbutton col-12 mt-0" style="margin-bottom: 20px;">
           <a href="allcourses.php" role="button" style="color: black;" class="startbutton btn btn-block nav-link btn-success col-12 col-md-5 offset-lg-5 offset-sm-4">Start Learning</a>
          </div>-->
-  </div>
       </div>
-    </div> 
+    </div>
+</div> 
 </header>
 
 
 <!--Card Deck-->
-  <div class="container">
+<div class="w-100"></div>
+  <div class="container"> 
    <div class="row row_content align-text-center">
     <div class="card-deck">
       <div class="card text-white bg-success mb-3 ml-3 mr-5" style="max-width: 20rem;">
