@@ -165,7 +165,7 @@ require 'includes/common.php';
                       <a class="link" href="termsandconditions.php">Terms</a>
                     </div>
                     <div class="footer-list-item">
-                    <a class="link" href="#">Privacy</a>
+                    <a class="link" href="termsandconditions.php">Privacy</a>
                     </div>
                     <div class="footer-list-item">
                     <a class="link" href="#">Feedback</a>

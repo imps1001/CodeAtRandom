@@ -40,7 +40,7 @@ require 'includes/common.php';
     </div>
     </div>
 </header>
-<div class="container">
+<div class="container ">
   <div class="row About">
       <ol class="col-12 breadcrumb">
           <li class="breadcrumb-item"><a href="index.php" style="color: blue;">Home</a></li>

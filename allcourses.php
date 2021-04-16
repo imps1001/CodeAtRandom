@@ -34,15 +34,28 @@ require 'includes/common.php';
     
 
     <!--Jumbotron-->
-<header class="jumbotron" style="background-color:grey; height:20px;">
+<header class="jumbotron" style="height: 10%">
   <div class="container">
     <div class="overlay">
-    <div class="row row-header align-text-center justify-content-center">
-      <h1 class="About_Header"><strong><u> All Courses</u></strong></h1> 
+      <div class="row row-header">
+          <div class=" col-12 offset-md-3 col-sm-6">
+              <h1 class=" About_heading col-12 offset-md-4 col-sm-6 col-lg-5 " style="color:black"> <strong>All Courses</strong></h1>
+          </div>
+      </div>
     </div>
-</div>
-  </div>
+    </div>
 </header>
+
+<div class="container">
+  <div class="row About">
+      <ol class="col-12 breadcrumb">
+          <li class="breadcrumb-item"><a href="index.php" style="color: blue;">Home</a></li>
+          <li class="breadcrumb-item active">All Courses</li>
+      </ol>
+
+          <h3 class="About_Header offset-3 offset-sm-5" style="color:brown;"><strong><u>Code At Random</u></strong></h3>
+  </div>
+
 <!--Footer Section-->
 <?php 
  include 'includes/footer(about).php';
