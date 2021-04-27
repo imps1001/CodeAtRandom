@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/style.css" rel="stylesheet">
+    <title> Code@Random</title>
+</head>
+<body>
+  <nav class="navbar navbar-dark navbar-default navbar-expand-sm fixed-top" id="navbarcr">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="images/new logo c@r.png" height="40" width="51"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-5" id="Navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item navbar-text" id="loginButton"><span style="color:black" class="fa fa-sign-in"> Login</span></li>
+            <li class="nav-item navbar-text ml-3" id="RegisterButton"><span style="color:black" class="fa fa-user"> Sign-Up </span></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+<header class="jumbotron">
+  <div class="container">
+    <div class="overlay">
+      <div class="row row-header align-text-center">
+          <div class=" col-12 offset-md-2 col-sm-6">
+              <h1 class="col-12 offset-md-4 col-md-6 offset-lg-5">Code@Random</h1>
+              <h4 class="col-12 offset-md-3 col-md-8 offset-lg-5">Learn Anytime! Learn Anywhere!</h4>
+              <a role="button" style="color: black;" class="startbutton btn btn-block nav-link btn-success col-12 offset-md-4 col-md-6 offset-lg-6">Start Leaning</a>
+          </div>
+      </div>
+    </div>
+    </div>
+</header>
+
+<!--Login Modal-->
+<div class="modal " id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+             <h4 class="modal-title">Login </h4>
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <i class="is-icon-cross" aria-hidden="true"></i>
+              </button>
+          </div>
+          <div class="modal-body">
+                <form role="form" id="modal-login-form">
+                  <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
+                  <div class="form-group">
+                      <label for="email" class="control-label">Email</label>
+                      <input type="email" class="form-control" id="modal_email" tabindex="1" name ="email" placeholder="john@example.com">
+                  </div>
+                  <div class="form-group">
+                      <label for="password" class="control-label">Password</label>
+                      <input type="password" class="form-control" id="modal_password" tabindex="2" name="password" placeholder="Must be atleast 6 characters">
+                  </div>
+                  <div class="forgot_password">
+                      <a href="/login/forgot_password" id="forgot-password" style="color: blue;">Forgot password?</a>
+                  </div>
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-primary col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" id="modal_login_submit" tabindex="3">Login</button>
+                  </div>
+                  <div class="form-group new_to_c@r">
+                  <label for="signup" id="register-link">
+                  New to Code@Random?  <a href='#' style="color: blue;"> Register</a>
+                  </label>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>
+<!--SignUp Modal-->
+<div class="modal " id="register_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+             <h4 class="modal-title">Register </h4>
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <i class="is-icon-cross" aria-hidden="true"></i>
+              </button>
+          </div>
+          <div class="modal-body">
+            <form role="form" id="registration-form" method="POST">
+              <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
+              <input type="hidden" value="" name="utm_source" >
+              <input type="hidden" value="" name="utm_medium" >
+              <input type="hidden" value="" name="utm_campaign" >
+              <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
+                  <div class="row">
+                    <div class="col-6" id="first_name_container">
+                        <div class="form-group">
+                            <label for="first_name" class="control-label">First Name</label>
+                            <input type="text" class="form-control" id="first_name" name="first_name" value="" placeholder="First Name" required>
+                        </div>
+                    </div>
+                    <div class="col-6" id="last_name_container">
+                        <div class="form-group">
+                            <label for="last_name" class="control-label">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" name="last_name" value="" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-6" id="class_container">
+                    <div class="form-group">
+                      <label for="class">Education</label>
+                      <select id="class" class="form-control" required>
+                        <option></option>
+                        <option>6th</option>
+                        <option>7th</option>
+                        <option>8th</option>
+                        <option>9th</option>
+                        <option>10th</option>
+                        <option>11th</option>
+                        <option>12th</option>
+                        <option>Graduation</option>
+                        <option>Post Graduation</option>
+                        <option>Others</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-6" id="board_container">
+                    <div class="form-group">
+                      <label for="board">Board/University Name</label>
+                      <select id="board" class="form-control" required>
+                        <option></option>
+                        <option>ICSE</option>
+                        <option>CBSE</option>
+                        <option>State Board</option>
+                        <option>College Level</option>
+                        <option>Others</option>
+                      </select>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                  <label for="phone_no" class="control-label">Whatsapp Mobile No</label>
+                  <input type="tel" class="form-control" size="10" id="phone_no" tabindex="1" name ="phone" placeholder="number" required>
+                </div>
+                  <div class="form-group">
+                      <label for="email" class="control-label">Email</label>
+                      <input type="email" class="form-control" id="modal_email" tabindex="1" name ="email" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password" class="control-label">Password</label>
+                      <input type="password" class="form-control" id="modal_password" tabindex="2" name="password" placeholder="Must be atleast 6 characters">
+                  </div>
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-primary col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" id="modal_login_submit" tabindex="3">Register</button>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>
+<!--Card Deck-->
+  <div class="container">
+   <div class="row row-content align-text-center">
+    <div class="card-deck">
+      <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+        <img class="card-img-top" src="images/img3.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Leaders are Readers!!</h5>
+          <p class="card-text">Grab a copy of Fiction, Non-Fiction and Personality Development based Novels at the lowest Price.</p>
+          <a href="#" class="btn btn-primary ml-5">Try Now</a>
+        </div>
+      </div>
+      <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+        <img class="card-img-top" src="images/img6.jpg" height="175">
+        <div class="card-body">
+          <h5 class="card-title">Learning starts at just Rs10</h5>
+          <p class="card-text">According to our mission, we offer our classes starting at just Rs 10</p>
+          <a href="#" class="btn btn-primary ml-5">Explore</a>
+        </div>
+      </div>
+      <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+        <img class="card-img-top" src="images/img7.jpg" height="175">
+       <div class="card-body">
+        <h5 class="card-title">Interactive Live lectures</h5>
+        <p class="card-text">Interact with qualified and experienced teachers in live classes </p>
+        <a href="#" class="btn btn-primary ml-5">Start Learning</a>
+       </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!--Carousel
+  <div class="container">
+    <div class="row row-content">
+      <div class="col">
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="images/img9.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block img-fluid" src="images/img7.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+             <img class="d-block img-fluid " src="images/img8.jpg" alt="Third slide">
+            </div>
+            <ol class="carousel-indicators">
+            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mycarousel" data-slide-to="1"></li>
+            <li data-target="#mycarousel" data-slide-to="2"></li>
+            </ol>
+             <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </a>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>-->
+  
+
+  <!--Footer Section-->
+  <div id="footer" class="generic_footer" style="margin-bottom: 5px;">
+    <div class="container-fluid">
+        <div class="max-width-container">             
+            <div class="footer_container">
+              <div class="row row_content">
+                 <div class="col-sm-6 offset-md-1">
+                   <div class="footer-list footer-column ">
+                    <h5> About Us:- </h5>
+                      <p class="mb-0">“I never teach my pupils; I only attempt to provide the conditions in 
+                        which they can learn”</p>
+                      <footer class="blockquote-footer" style="color: white; float: right;">Albert Einstein
+                      </footer>
+                       <br>
+                    <p style=>Education is all about self-awakening. We learn to augment our perspectives, not only 
+                    academically, but also to teach ourselves how to live. Importance of school learning and 
+                    the fundamental educational values our students draw from their early ages can never be 
+                    undermined, as this goes with them for through their life. <br>  <em><a href="/aboutus.html" style="color: gray;">  Read More... </a></em></p>
+               </div>
+              </div>
+            <div class="col-sm-4 offset-1 d-none d-lg-block mr-auto">
+                <div class="footer-list footer-column" style="float: right; margin-right: 200px;">
+                  <h5>Links</h5>
+                    <div class="footer-list-item">
+                      <a class="link" href="#">Our vision & Mission</a>
+                    </div>
+                    <div class="footer-list-item">
+                       <a class="link" id="Loginlink" href="#">Register/Login</a>
+                    </div>
+                    <div class="footer-list-item">
+                       <a class="link" href="#">Courses</a>
+                    </div>
+                    <div class="footer-list-item">
+                        <a class="link" href="#">Pricing</a>
+                    </div>
+                    <div class="footer-list-item">
+                      <a class="link" href="#">Contact Us</a>
+                  </div>
+                    <div class="footer-list-item">
+                      <a class="link" href="#">Terms</a>
+                    </div>
+                    <div class="footer-list-item">
+                    <a class="link" href="#">Privacy</a>
+                    </div>
+                    <div class="footer-list-item">
+                    <a class="link" href="#">Feedback</a>
+                    </div>
+                </div>
+          </div>
+        </div>
+        </div>
+        <hr color="grey">
+           <div class="footer-bottom">
+            <div id="social-media-container" style="margin-left: 0px;">
+                    <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google plus"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    <a style="color: white;" class="btn btn-social-icon" href="mailto:codeatrandom@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                    <div class='' id='copyright' style="margin-right: 0px; color: white;">
+                      &reg; Copyright 2020 Code@Random
+                      <br>
+                      Formally known as <strong>Code at Random Pvt. Ltd.</strong>
+                  </div>
+            </div>
+                  <div class="clear">
+                  </div>
+            </div>
+       </div>
+    </div>
+  </div>
+</footer>
+ <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+ <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+ <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+ <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+ <script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbarcr").style.top = "0";
+    } else {
+      document.getElementById("navbarcr").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  $('#loginButton').click(function () 
+  {
+  $('#loginModal').modal('show')
+  }
+  );
+
+  $('#RegisterButton').click(function ()
+  {
+    $('#register_Modal').modal('show')
+  }
+  );
+  
+  $('#register-link').click(function ()
+  {
+    $('#loginModal').modal('hide')
+    $('#register_Modal').modal('show')
+  }
+  );
+  $('#Loginlink').click(function () 
+  {
+  $('#loginModal').modal('show')
+  }
+  );
+
+  </script>
+        
+</body>
+</html>
