@@ -13,7 +13,7 @@
       ?></span></a>
      <!--<div class="dropdown-menu" style="background-color: #CCCD6A;">-->
         <li class="nav-item"><a class="nav-link" href="#" style="color: white;"><span class="fa fa-user fa-lg" > My Profile</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="allcourses.php" style="color: white;"><span class="fa fa-book fa-lg" > All Courses</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php#courses" style="color: white;"><span class="fa fa-book fa-lg" > All Courses</span></a></li>
         <li class="nav-item"><a class="nav-link" href="logout.php" style="color: white;"><span class="fa fa-sign-out fa-lg">Sign Out</span></a></li>
 
       </div> 

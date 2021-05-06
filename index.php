@@ -58,10 +58,10 @@ require 'includes/common.php';
 
   <div class="bg-white">
     <div class="container">
-      <h2 class="text-dark text-center font-weight-bold mt-5">Why Choose Us</h2>
+      <h2 class="text-dark text-center font-weight-bold">Why Choose Us</h2>
       <br><br><br>
 
-      <div class="text-center" style="margin-bottom: 0px;">
+      <div class="text-center">
         <div class="why-us-container">
           <img class="mb-4" src="images/computers.png" alt="First slide" height="100px">
           <h3 class="text-dark font-weight-bold">Interactive Live Classes</h3>
@@ -72,21 +72,16 @@ require 'includes/common.php';
           <h3 class="text-dark font-weight-bold">Low Pricing</h3>
           <p class="text-dark text-center ml-3">We charge too low so that every student <br> can afford it </p>
         </div>
-        <div class="why-us-container">
-          <img class="mb-4" src="images/user_friendly.png" alt="First slide" height="100px">
-          <h3 class="text-dark font-weight-bold">User Friendly</h3>
-          <p class="text-dark text-center ml-3">Stuck in project, our mentors are <br> to guide you</p>
-        </div>
-        <div class="why-us-container" style="margin-top: 40px;">
+        <div class="why-us-container" style="margin-top: 20px;">
           <img class="mb-4" src="images/doubts_support.png" alt="First slide" height="100px">
           <h3 class="text-dark font-weight-bold">Doubts Support</h3>
           <p class="text-dark text-center ml-3">Stuck somewhere, our mentors are <br> to guide you</p>
         </div>
-        <div class="why-us-container" style="margin-top: 40px;">
+        <div class="why-us-container" style="margin-top: 20px;">
           <img class="mb-4" src="images/result_oriented.png" alt="First slide" height="100px">
           <h3 class="text-dark font-weight-bold">Result Oriented</h3>
-          <p class="text-dark text-center ml-3">Courses are carefully designed to work great for the students <br>
-            and to help them get good grades.</p>
+          <p class="text-dark text-center ml-3">Courses are designed for students <br>willing to get good grades.
+            </p>
         </div>
 
       </div>
@@ -140,16 +135,16 @@ require 'includes/common.php';
                           <div class="course-card__title">JAVA For Class 9<sup>th</sup> ICSE</div>
                           <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 8% 0px 8%;">
                             <div style="text-align: center;">
-                              <div style="font: 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Actual Price</strong></div>
-                              <div class="course-card__price-actual" style="font-size: 24px;"><strong>&#x20b9; 4,999</strong></div>
+                              <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Actual Fees</strong></div>
+                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;4,999/-</strong></div>
                             </div>
                             <div style="text-align: center;">
-                              <div class="course-card__price-discounted" style="font-size: 18px;"><strong>&#x20b9;&nbsp;1,199/-&nbsp;* </strong></span></div>
-                              <div style="font: 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Offer Price</strong></div>
+                              <div class="course-card__price-discounted"><strong>&#x20b9;&nbsp;1,199/-&nbsp;* </strong></span></div>
+                              <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Offer Price</strong></div>
                             </div>
                             <div style="align-self: flex-end;">
-                              <div style="font: 24px Mulish; color: rgb(255, 255, 255); opacity: 0.8; padding-left:5px;"><strong> Mode Of Teaching</strong></div>
-                              <div class="course-card__date"><strong>  Online </strong></div>
+                              <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Mode Of Teaching</strong></div>
+                              <div class="course-card__date"><strong>Online</strong></div>
                             </div>
                           </div>
                           <div style="height: 70%; display: flex; flex-direction: column; justify-content: space-around;">
@@ -199,7 +194,7 @@ require 'includes/common.php';
                           <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 8% 0px 8%;">
                             <div style="text-align: center;">
                               <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Actual Fees</strong></div>
-                              <div class="course-card__price-actual"><strong>&#x20b9;10,000/-</strong></div>
+                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;6,999/-</strong></div>
                             </div>
                             <div style="text-align: center;">
                               <div class="course-card__price-discounted"><strong>&#x20b9;&nbsp;1,499/-&nbsp;* </strong></span></div>
@@ -243,7 +238,7 @@ require 'includes/common.php';
                             </div>
                           </div>
                           <div class="course-card__buttons">
-                            <a href="./kickstart_web_development.html">
+                            <a href="java_tenth_icse.php">
                               <button class="btn btn--main btn-l btn--padding-l">Learn More</button></a>
                           </div>
                         </div>
@@ -261,42 +256,6 @@ require 'includes/common.php';
     </div>
   </div>
 
-
-  <!--Card Deck
-<div class="w-100"></div>
-  <div class="container"> 
-   <div class="row row_content align-text-center">
-    <div class="card-deck">
-      <div class="card text-white bg-success mb-3 ml-3 mr-5" style="max-width: 20rem;">
-        <img class="card-img-top" src="https://source.unsplash.com/164x175/?books,leaders" height="175">
-        <div class="card-body">
-          <h5 class="card-title">Leaders are Readers!!</h5>
-          <p class="card-text">Grab a copy of Fiction, Non-Fiction and Personality Development based Novels at the lowest Price.</p>
-          <a href="#" class="btn btn-primary ml-5">Try Now</a>
-        </div>
-      </div>
-      <div class="card text-white bg-danger mb-3 ml-3 mr-5" style="max-width: 20rem;">
-        <img class="card-img-top" src="https://source.unsplash.com/164x175/?coding,computer" height="175">
-        <div class="card-body">
-          <h5 class="card-title">Java Course For Beginners<br>[No Experience Rqd]</h5>
-    
-          <p class="card-text">Learn JAVA at just ₹ 749* 
-          <br>
-          Limited Seats for next batch.</p>
-          <a href="#" class="btn btn-primary ml-5">Explore</a>
-        </div>
-      </div>
-      <div class="card text-white bg-warning mb-3 ml-3 mr-5" style="max-width: 20rem;">
-        <img class="card-img-top" src="images/img7.jpg" height="175">
-       <div class="card-body">
-        <h5 class="card-title">Special Board Lessons Available For Java</h5>
-        <p class="card-text">Interact with qualified and experienced teachers in live classes </p>
-        <a href="#" class="btn btn-primary ml-5">Start Learning</a>
-       </div>
-      </div>
-    </div>
-    </div>
-  </div>-->
 
   <!--Carousel-->
   <div class="container">

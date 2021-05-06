@@ -17,12 +17,7 @@ $token = bin2hex(random_bytes(15));
 $Sql = "SELECT * FROM demo WHERE Email= '$Email' OR Phone= '$Phone'";
 $result = mysqli_query($con, $Sql);
 $num_rows = mysqli_num_rows($result);
-if($num_rows>0)
-{   
-    $showError= "Email_Id Or Mobile_NO already exists";
-}
-else
-{
+
   if(strcmp($Confirm_Password,$Password)==0) 
   { 
     $user_registration_query = "Insert into demo(First_Name, Last_Name, Class, Board, Phone, State, Email, Password,Confirm_Password,token) 
@@ -39,7 +34,6 @@ else
   else{
     $showError= " Both Passwords must be same";
    }
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,7 +75,7 @@ else
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Oops!! Your Registration could not be completed.</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base"> Please try again</p>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base"> Please try again and check that you typed correct passwords.</p>
     </div>
     <div class="flex lg:w-1/6 w-full sm: w-1/7 flex-row flex-col mx-auto px-9 sm:px-0">
     <div class="form-group">
