@@ -1,8 +1,8 @@
 <?php
 include 'includes/common.php';
-if(isset($_POST['submit'])){
-    if(isset($_POST['Token'])){
-        $token = $_POST['Token'];
+if(isset($_GET['submit'])){
+    if(isset($_GET['token'])){
+        $token = $_POST['token'];
     
     $newpassword = $_POST['password'];
     $cpassword = $_POST['cpassword']; 

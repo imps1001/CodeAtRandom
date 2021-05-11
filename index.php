@@ -14,16 +14,80 @@ require 'includes/common.php';
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet"> 
+    <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
+    
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <link href="css/style.css" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">
   <link rel="manifest" href="favicon_io/site.webmanifest">
-  <title> Code@Random</title>
+  <title> Code@Random </title>
+
+<style>
+@media only screen and (max-width: 600px) {
+  [class*="col-"] {
+  width: 100%;
+}
+.brand-banner{
+  width: 100%;
+  height: auto;
+}
+.flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+.choose-container{
+  margin-top: 225px;
+}
+}
+
+@media only screen and (max-width: 768px){
+
+  [class*="col-"] {
+    width: 100%;
+  }
+  .brand-banner{
+  width: 100%;
+  height: auto;
+  }
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+.choose-container{
+  margin-top: 300px;
+  justify-content: center;
+}
+.jumbotron-img{
+  height: auto;
+  max-width: 100%;
+}
+.generic_footer{
+  width: 106%;
+}
+.courses-main-outer{
+  width: 106%;
+}
+}
+
+@media only screen and (min-width :992px){
+  .brand-banner{
+    height: auto;
+    width: 100%;
+    margin-left: 10px;
+  }
+
+}
+</style>
+
 </head>
 
-<body>
+<body style="overflow-x: hidden; overflow-y: auto;">
 
   <!--Login Modal-->
   <?php include 'includes/login.php'; ?>
@@ -36,20 +100,20 @@ require 'includes/common.php';
 
   <!--Jumbotron-->
   <header class="jumbotron" style="height: 450px;">
-    <div class="container">
+    <div class="flex-container">
       <div class="overlay">
         <div class="row row-header align-text-center">
-          <div class="order-sm-first img-fluid col-12 col-md-6 col-12 offset-md-1">
-            <img src="images/Watermark1 (reduced Size).png" width="600" style="height: auto; margin-top: 100px;">
-            <p class="mt-1"><strong> - An online educational portal which delivers result-oriented courses at the convenience of your time and money.</strong> </p>
+          <div class="order-sm-first img-fluid col-12 col-md-6 col-12 offset-md-1 flex-item-left">
+            <img src="images/Watermark1 (reduced Size).png" width="100%" style="margin-top: 100px;" class="brand-banner">
+            <p class="mt-1"><strong> - An online educational portal that delivers result-oriented courses at the convenience of your time and money.</strong> </p>
           </div>
-          <div class="img-fluid col-12 col-md-4 order-sm-last offset-md-1">
-            <img src="images/jumbotron1.jpg" height="200" width="350" style="margin-top: 100px;" class=" d-none d-lg-block ml-auto">
+          <div class="img-fluid col-12 col-md-4 order-sm-last offset-md-1 flex-item-right jumbotron-img">
+            <img src="images/jumbotron1.jpg" height="200" width="350" style="margin-top: 100px;">
           </div>
         </div>
         <div class="row" style="margin-top:0px;">
-          <div class="startlearningbutton col-md-12 col-sm-5 mt-0" style="margin-bottom: 20px;">
-            <a href="#courses" role="button" style="color: black;" class="startbutton btn btn-block nav-link btn col-12 col-md-5 offset-lg-5 offset-md-4"><strong>Explore Now</strong></a>
+          <div class="startlearningbutton col-md-12 mt-5" style="margin-bottom: 10px;">
+            <a href="#courses" role="button" style="color: black;" class="startbutton btn btn-block nav-link btn col-12 col-md-5 offset-lg-5 offset-md-4 offset-sm-2"><i class="fas fa-chalkboard-teacher"></i> Explore Now</a>
           </div>
         </div>
       </div>
@@ -57,7 +121,7 @@ require 'includes/common.php';
   </header>
 
   <div class="bg-white">
-    <div class="container">
+    <div class="container choose-container">
       <h2 class="text-dark text-center font-weight-bold">Why Choose Us</h2>
       <br><br><br>
 
@@ -181,7 +245,7 @@ require 'includes/common.php';
                           </div>
                           <div class="course-card__buttons">
                             <a href="java_ninth_icse.php">
-                              <button class="btn btn--main btn-l btn--padding-l">Learn More</button></a>
+                              <button class="btn btn--main btn-l btn--padding-l"><i class="fas fa-forward"></i> Learn More</button></a>
                           </div>
                         </div>
                       </div>
@@ -239,7 +303,7 @@ require 'includes/common.php';
                           </div>
                           <div class="course-card__buttons">
                             <a href="java_tenth_icse.php">
-                              <button class="btn btn--main btn-l btn--padding-l">Learn More</button></a>
+                              <button class="btn btn--main btn-l btn--padding-l"><i class="fas fa-forward"></i> Learn More</button></a>
                           </div>
                         </div>
                       </div>
@@ -295,7 +359,7 @@ require 'includes/common.php';
   </div>
   <!--Footer Section-->
   <div id="footer" class="generic_footer" style="margin-bottom: 5px;">
-    <div class="container-fluid">
+    <div class="container">
       <div class="max-width-container">
         <div class="footer_container">
           <div class="row ">
@@ -329,7 +393,7 @@ require 'includes/common.php';
                   <a class="link" href="#">Pricing</a>
                 </div>
                 <div class="footer-list-item">
-                  <a class="link" href="#">Contact Us</a>
+                  <a class="link" href="contactus.php">Contact Us</a>
                 </div>
                 <div class="footer-list-item">
                   <a class="link" href="termsandconditions.php">Terms</a>
@@ -347,11 +411,13 @@ require 'includes/common.php';
         <hr color="grey">
         <div class="footer-bottom">
           <div id="social-media-container" style="margin-left: 0px;" class="d-none d-lg-block ml-auto">
-            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom"><i class="fa fa-facebook"></i></a>
-            <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/"><i class="fa fa-instagram"></i></a>
-            <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g"><i class="fa fa-youtube"></i></a>
+          <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                  <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
             <div class='' id='copyright' style="margin-right: 0px; color: white;">
-              <strong>&copy; Copyright 2020 CODE AT RANDOM</strong>
+            <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
             </div>
           </div>
           <div class="clear">
@@ -372,6 +438,10 @@ require 'includes/common.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  <script defer src="./node_modules/font-awesome/js/all.js"></script> 
+<script defer src="./node_modules/font-awesome/js/fontawesome.js"></script> 
+<script defer src="./node_modules/font-awesome/js/brands.js"></script> 
+<script defer src="./node_modules/font-awesome/js/solid.js"></script> 
 
   <script>
     var prevScrollpos = window.pageYOffset;

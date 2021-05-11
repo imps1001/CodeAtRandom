@@ -30,16 +30,16 @@
                    <a class="link" href="index.php">Home</a>
                  </div>
                  <div class="footer-list-item">
-                    <a class="link" href="#">Login</a>
+                    <a class="link" href="#">Login/Register</a>
                  </div>
                  <div class="footer-list-item">
-                    <a class="link" href="#">Register</a>
+                    <a class="link" href="contactus.phps">Feedback</a>
                  </div>
                  <div class="footer-list-item">
-                    <a class="link" href="#">Courses</a>
+                    <a class="link" href="#"> All Courses</a>
                  </div>
                  <div class="footer-list-item">
-                     <a class="link" href="#">Pricing</a>
+                     <a class="link" href="contactus.php">Contact Us</a>
                  </div>
              </div>
        </div>
@@ -51,16 +51,16 @@
            <div class="row">
            <h5 class="col-sm-3">Connect With Us:-</h5>
            <div class="col-12 col-sm-9 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
-                  <h6><strong>&copy; Copyright 2020 CODE AT RANDOM</strong></h6>
+                  <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
           </div>
           </div>
 
           <div id="social-media-container order-sm-first" style="margin-left: 0px;">
-                  <a class="btn btn-social-icon btn-google" href="http://google.com/+" target="_blank"><i class="fa fa-google plus"></i></a>
-                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fa fa-facebook"></i></a>
-                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fa fa-instagram"></i></a>
-                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fa fa-youtube"></i></a>
-                  <a style="color: white;" class="btn btn-social-icon" href="mailto:codeatrandom3110@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a>
+                  <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                  <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
           </div>
                 <div class="clear">
                 </div>

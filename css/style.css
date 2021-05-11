@@ -125,6 +125,7 @@ div
   font-size: 14px;
   bottom: -1px;
   margin-top: 0px;
+  width: 100%;
 }
 .row_content
 {
@@ -218,6 +219,21 @@ header {
   position: absolute;
   width: 100%;
 
+}
+
+.flex-container{
+
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
 }
 h1{
   padding-top: 70px;

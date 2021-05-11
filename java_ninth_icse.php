@@ -14,13 +14,17 @@ require 'includes/common.php';
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet"> 
+    <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <link href="css/style.css" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="con" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">
   <link rel="manifest" href="favicon_io/site.webmanifest">
-  <title>Our Courses</title>
+  <title>Code@Random | 9th ICSE</title>
 </head>
 
 <body overflow-x: hidden; overflow-y: auto;>
@@ -65,7 +69,7 @@ require 'includes/common.php';
               </div>
               <div class="col-12 col-md-6">
                 <?php  if (isset($_SESSION['email'])) {?>
-                <a href="#">
+                <a href="https://rzp.io/l/CRJVICPAY">
                   <div class="btn btn--main btn-l btn--padding-l">
                     Enroll Now <br>And Pay
                   </div>
@@ -88,9 +92,8 @@ require 'includes/common.php';
             </div>
           </div>
           <div class="col-12 col-md-6 mt-4">
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/BpPLkDiOM8k" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/546990311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
       </main>
@@ -105,7 +108,13 @@ require 'includes/common.php';
             <h2>Course Content</h2>
           </div>
           <p class="mg-top" style="margin-bottom: 0.8rem; color: black">
-            This course is designed for the students of class 9th with ICSE board for preparing Computer Subject, which occupies JAVA language in most of its syllabus. The students have to learn to program for the first time, so this course has made to help them. <br>This course will cover JAVA from scratch in a topic-wise manner with 150+ programming questions. It contains the explanation of each and every topic, practice questions, assignments, quizzes, and also live sessions to directly interact with your mentor. <br> The course is divided into modules. After each module, there is an assignment for practicing and when you submit, its solution video will be provided to you.</p>
+            This course is designed for the students of class 9th with ICSE board for preparing Computer Subject, 
+            which occupies JAVA language in most of its syllabus. The students have to learn to program for the 
+            first time, so this course has made to help them. <br>This course will cover JAVA from scratch in a 
+            topic-wise manner with 150+ programming questions. It contains the explanation of each and every topic, 
+            practice questions, assignments, quizzes, and also live sessions to directly interact with your mentor. 
+            <br> The course is divided into modules. After each module, there is an assignment for practicing and when
+             you submit, its solution video will be provided to you.</p>
           <div class="sub-card">
             <h5>Language focus</h5>
             <div style="text-align: center; display: inline-block">
@@ -135,9 +144,6 @@ require 'includes/common.php';
             <li class="ml-3 mb-1">Program based on while loop like Armstrong number, Spy number,Niven number,Palindrome number, etc.</li>
             <li class="ml-3 mb-1">Programs based on Nested Loops</li>
             <li class="ml-3 mb-1">Menu Driven and Bill Slab Programs etc.</li>
-            
-
-
           </ul>
         </div>
 

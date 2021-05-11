@@ -12,7 +12,11 @@ require 'includes/common.php';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet"> 
+    <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link href="css/style.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -29,7 +33,7 @@ require 'includes/common.php';
     <div class="overlay">
       <div class="row row-header">
           <div class=" col-12 offset-md-3 col-sm-6" style="margin-top: 50px;">
-              <h1 class=" About_heading col-12 offset-md-4 col-sm-6 col-lg-5 " style="color:black"> <strong>About Us</strong></h1>
+              <h1 class=" About_heading col-12 offset-md-3 col-sm-6 col-lg-6 " style="color:black"> <strong>About Us</strong></h1>
               <blockquote class="blockquote">
                 <p class="mb-0">“I never teach my pupils; I only attempt to provide the conditions in 
                   which they can learn”</p>
@@ -164,6 +168,11 @@ require 'includes/common.php';
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/path/to/js.cookie.js"></script>
+<script defer src="./node_modules/font-awesome/js/all.js"></script> 
+<script defer src="./node_modules/font-awesome/js/fontawesome.js"></script> 
+<script defer src="./node_modules/font-awesome/js/brands.js"></script> 
+<script defer src="./node_modules/font-awesome/js/solid.js"></script> 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
