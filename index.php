@@ -101,8 +101,8 @@ require 'includes/common.php';
         <div class="row row-header align-text-center" id="flex">
           <div class="order-sm-first img-fluid col-12 col-md-6 col-12 offset-md-1 flex-item-left">
             <img src="images/Watermark1 (reduced Size).png" width="100%" style="margin-top: 100px;" class="brand-banner">
-            <p class="mt-1 paragraph"><strong> - An online educational portal that delivers result-oriented courses at the convenience
-                <br>of your time and money.</strong> </p>
+            <p class="mt-1 paragraph"><strong> - An online educational portal that delivers result-oriented courses at the <br>convenience
+                of your time and money.</strong> </p>
           </div>
           <div class="img-fluid col-12 col-md-4 order-sm-last offset-md-1 flex-item-right jumbotron-img">
             <img src="images/jumbotron1.jpg" height="200" width="350" style="margin-top: 100px;">
@@ -110,7 +110,7 @@ require 'includes/common.php';
         </div>
         <div class="row" style="margin-top:0px;">
           <div class="startlearningbutton col-md-12 mt-5" style="margin-bottom: 10px;">
-            <a href="#courses" role="button" style="color: black;" class="startbutton btn btn-block nav-link btn col-12 col-md-5 offset-lg-5 offset-md-4 offset-sm-2"><i class="fas fa-chalkboard-teacher"></i> Explore Now</a>
+            <a href="div#courses" role="button" style="color: black;" class="startbutton btn btn-lg nav-link col-12 col-md-5 offset-lg-5 offset-md-4 offset-sm-2"> Explore Now</a>
           </div>
         </div>
       </div>
@@ -459,6 +459,7 @@ require 'includes/common.php';
             <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
             <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
             <div class='' id='copyright' style="margin-right: 0px; color: white;">
+            <span id="siteseal" class="d-none d-lg-block "><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=AjsKTmPlyBiS3GZpOk5Evgcdp4YQmbSunjnNpJauTZE0tJrEHK03jBy5qC3I"></script></span>
               <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
             </div>
           </div>

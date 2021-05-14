@@ -20,12 +20,20 @@
     }
     .carousel .carousel-inner {
       margin-top: 200px;
-      padding-top: 270px;
+      padding-top: 260px;
       justify-content: center;
-        margin-bottom: 10px;
-        height: auto;
+        height: 440px;
         width: 100%;
       }
+      .courses-main-outer .courses-main-outer-1{
+        width: 110%;
+
+      }
+      div#carousel-example {
+        height: 420px;
+        margin-bottom: 35px;
+    }
+
   }
 
   @media only screen and (max-width: 768px) {
@@ -68,21 +76,30 @@
       width: 106%;
     }
     .carousel .carousel-inner {
-      margin-top: 300px;
-      padding-top: 300px;
+      margin-top: 50px;
+    margin-bottom: 60px;
+    height: 500px;
       justify-content: center;
         margin-bottom: 60px;
-        height: 400px;
       }
       .top-content .carousel-control-prev, 
       .top-content .carousel-control-next { display: none; }
       .top-content .carousel-indicators li { margin-left: 10px; margin-right: 10px; }
   }
-
+@media only screen and (max-width:992px) {
+  .carousel .carousel-inner {
+    margin-top: 100px;
+    padding-top: 220px;
+    margin-left: 20px;
+  margin-bottom: 40px;
+  height: 570px;
+    justify-content: center;
+    }
+}
 
   @media only screen and (min-width :992px){
     .brand-banner {
-      width: 650px;
+      width: 550px;
       float: left;
     }
 
@@ -124,4 +141,10 @@
         margin-bottom: 60px;
         height: 510px;
       }
+  }
+  @media only screen and (min-width :1025px){
+    .brand-banner {
+      width: 650px;
+      float: left;
+    }
   }

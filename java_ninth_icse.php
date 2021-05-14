@@ -429,7 +429,7 @@ function pay_now() {
       success: function(result) {
 
         var options = {
-          "key": "rzp_test_qYyG9sLV44cGfn",
+          "key": "rzp_live_jU7XeSF5KCVYVE",
           "amount": "119900",
           "currency": "INR",
           "name": "Code At Random (OPC) Pvt Ltd",
@@ -442,7 +442,7 @@ function pay_now() {
               data: "payment_id=" + response.razorpay_payment_id + "&course_id=" + course_id,
               success: function(result) {
 
-                window.location.href = "thank_you.php";
+                window.location.href = "java_ninth_icse.php";
               }
             });
           },

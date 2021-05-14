@@ -398,6 +398,90 @@ require 'includes/common.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  $('#loginButton').click(function() {
+    $('#loginModal').modal('show')
+  });
+
+  $('#RegisterButton').click(function() {
+    $('#register_Modal').modal('show')
+  });
+
+  $('#register-link').click(function() {
+    $('#loginModal').modal('hide')
+    $('#register_Modal').modal('show')
+  });
+  $('#not_login').click(function() {
+    $('#loginModal').modal('show')
+  });
+
+let acc = document.querySelectorAll(".accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+      } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+  });
+}
+
+$('.accordion-heading').on('click', (e) => {
+  if ($(e.target).parent().parent().hasClass('active-accordion')) {
+      $('.accordion-heading').parent().parent().removeClass('active-accordion')
+  }
+  else {
+      $('.accordion-heading').parent().parent().removeClass('active-accordion')
+      $(e.target).parent().parent().addClass('active-accordion')
+  }
+})
+
+function pay_now() {
+    var course_id = 2;
+
+    jQuery.ajax({
+      type: 'post',
+      url: 'payment_process.php',
+      data: "course_id=" + course_id,
+      success: function(result) {
+
+        var options = {
+          "key": "rzp_live_jU7XeSF5KCVYVE",
+          "amount": "149900",
+          "currency": "INR",
+          "name": "Code At Random (OPC) Pvt Ltd",
+          "description": "Java Course For Class 9th ICSE  ",
+          "image": "http://codeatrandom.com/images/LOGO.png",
+          "handler": function(response) {
+            jQuery.ajax({
+              type: 'post',
+              url: 'payment_process.php',
+              data: "payment_id=" + response.razorpay_payment_id + "&course_id=" + course_id,
+              success: function(result) {
+
+                window.location.href = "java_tenth_icse.php";
+              }
+            });
+          },
+          "notes": {
+            "address": "5, Khanderao Gate Jhansi (UP)"
+          },
+          "theme": {
+            "color": "#3399ff"
+          }
+        };
+        var rzp1 = new Razorpay(options);
+          rzp1.open();
+      }
+    });
+
+
+  }
+  </script>
 
 
 

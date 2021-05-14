@@ -25,6 +25,41 @@ require 'includes/common.php';
   <title> About-Code At Random</title>
 </head>
 
+<style>
+  @media only screen and (max-width: 600px) {
+    .blockquote-footer{
+      margin-top: 10px;
+      justify-content: center;
+    }
+  }
+
+  .About_Header{
+    font-size: 1.8rem;
+    margin-left: 3px;
+    justify-content: center;
+  }
+  .row-content{
+    margin-top: 1px;
+    padding-top: 0rem;
+  }
+  .ravi_card{
+    margin-top: 20px;
+  }
+
+  @media only screen and (max-width: 768px){
+    .row-content{
+    margin-top: 1px;
+    padding-top: 0rem;
+  }
+  .ravi_card{
+    margin-top: 20px;
+    margin-left: 0rem;
+  }
+  }
+
+  </style>
+
+
 <body style="overflow-x: hidden; overflow-y: auto;">
   <?php include 'includes/header.php' ?>
 
@@ -37,7 +72,7 @@ require 'includes/common.php';
             <blockquote class="blockquote">
               <p class="mb-0">“I never teach my pupils; I only attempt to provide the conditions in
                 which they can learn”</p>
-              <footer class="blockquote-footer" style="color: crimson; float: right;">Albert Einstein
+              <footer class="blockquote-footer mt-2" style="color: crimson; ">Albert Einstein
               </footer>
             </blockquote>
           </div>
@@ -113,7 +148,7 @@ require 'includes/common.php';
 
               </p>
             </div>
-            <div style="z-index: 2;" class="card card--shadow card--behind col-12  offset-md-1 col-md-5">
+            <div style="z-index: 2;" class="card card--shadow card--behind col-12  offset-md-1 col-md-5 ravi_card">
               <p class="mt-3">
               <p class="mb-2">It is my dream to provide apt guidance and education to as many students at a
                 low cost since my graduation days. </p>
