@@ -134,7 +134,7 @@ if (isset($_POST['submit'])) {
     <div class="content" style="justify-content:center;">
       <div class="col-12 col-md-6 offset-md-4">
         <h1 style="font-weight:700;">Contact Us</h1>
-        <p style="margin:auto; justify-content:center; font-size:large;">Tell us your comments by filling this form.</p>
+        <p style="margin:auto; justify-content:center; font-size:large;">Tell us your views/query in this form.</p>
       </div>
       <div class="container">
         <div class="alert alert-success d-flex align-items-center" role="alert">
@@ -142,7 +142,7 @@ if (isset($_POST['submit'])) {
             <use xlink:href="#check-circle-fill" />
           </svg>
           <div>
-            Send your message by filling this form.
+            Send your message by filling this form. We will reach to you shortly.
           </div>
         </div>
         <form action="" method="POST" role="form" id="contact-form">
@@ -159,7 +159,7 @@ if (isset($_POST['submit'])) {
 
         </form>
         <div class="d-flex justify-content-center mt-5">
-          <h5>Or mail us to <span style="color:blue;">support@codeatrandom.com</span> </h5>
+          <h5>Or mail us at <span style="color:blue;">support@codeatrandom.com</span> </h5>
         </div>
       </div>
     </div>

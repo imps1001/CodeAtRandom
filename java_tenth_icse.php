@@ -20,6 +20,7 @@ require 'includes/common.php';
     <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <link href="css/style.css" rel="stylesheet">
+  <link href="js/course2.js" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="con" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">
@@ -53,24 +54,25 @@ require 'includes/common.php';
       <main>
         <h1 class="heading" style="color: white; ">JAVA COURSE FOR 10th ICSE</h1>
         <div class="row">
-          <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-5">
+          <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-4">
             <div class="offer-card row">
               <div class="col-12 col-md-6">
                 <div class="text-description">Next upcoming batch</div>
-                <div class="text-orange text-size-m">Join Immediately</div>
+                <div class="text-orange text-size-m">26th May 2021</div>
                 <div class="mg-top text-description">
                   Fees
                 </div>
-                <div class="text-orange text-size-l"><del>&#x20b9; 6,999 </del> &nbsp;&#x20b9;1,499*</div>
+                <div class="text-orange text-size-1 "><del>&#x20b9; 6,999 </del> &nbsp;&#x20b9;1,499*</div>
                 <div class="mg-top text-description">
                   * This special price is for limited time period.<br>
-                  ** Weekly Live Doubt Clearing Sessions on Sunday.
+                  ** Weekly Live Doubt Clearing Sessions on Sunday.<br>
+                  *** After enrolling you will get a link for telegram group to join for updates.
                 </div>
               </div>
               <div class="col-12 col-md-6">
               <?php  if (isset($_SESSION['email'])) {?>
                 <a href="#">
-                  <div class="btn btn--main btn-l btn--padding-l">
+                  <div id="payment-btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
                     Enroll Now <br>And Pay
                   </div>
                 </a>
@@ -87,13 +89,13 @@ require 'includes/common.php';
                     Want to know more?
                   </button>
                 </a>
+                <h6 class="mt-4">For this course, refund can be claimed within <strong>7-days.</strong></h6>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 mt-4">
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/BpPLkDiOM8k" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/546990311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
       </main>
@@ -387,7 +389,7 @@ require 'includes/common.php';
 
 
 
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/path/to/js.cookie.js"></script>
@@ -395,45 +397,9 @@ require 'includes/common.php';
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
-  <script>
-    $('#loginButton').click(function() {
-      $('#loginModal').modal('show')
-    });
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-    $('#RegisterButton').click(function() {
-      $('#register_Modal').modal('show')
-    });
 
-    $('#register-link').click(function() {
-      $('#loginModal').modal('hide')
-      $('#register_Modal').modal('show')
-    });
-
-let acc = document.querySelectorAll(".accordion");
-let i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
-
-$('.accordion-heading').on('click', (e) => {
-    if ($(e.target).parent().parent().hasClass('active-accordion')) {
-        $('.accordion-heading').parent().parent().removeClass('active-accordion')
-    }
-    else {
-        $('.accordion-heading').parent().parent().removeClass('active-accordion')
-        $(e.target).parent().parent().addClass('active-accordion')
-    }
-})
-  </script>
 
 
 </body>

@@ -14,10 +14,10 @@ require 'includes/common.php';
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet"> 
-    <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
-    <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
-    <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <link href="css/style.css" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -39,7 +39,7 @@ require 'includes/common.php';
   <br>
 
   <div class="header-container">
-  <div class="breadcrumb_container mt-5" style="height: 0px;">
+    <div class="breadcrumb_container mt-5" style="height: 0px;">
       <nav aria-label="breadcrumb" style="padding-top: 20px; padding-right: 15px;">
         <ol class="breadcrumb" style="background-color: #c1e7f0">
           <li class="breadcrumb-item"><a href="./index.php" style="color: blue;"><strong>Home</strong></a></li>
@@ -53,7 +53,7 @@ require 'includes/common.php';
       <main>
         <h1 class="heading" style="color: white; ">JAVA COURSE FOR 9th ICSE</h1>
         <div class="row">
-          <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-5">
+          <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-4">
             <div class="offer-card row">
               <div class="col-12 col-md-6">
                 <div class="text-description">Next upcoming batch</div>
@@ -64,36 +64,37 @@ require 'includes/common.php';
                 <div class="text-orange text-size-l"><del>&#x20b9; 4,999 </del> &nbsp;&#x20b9;1,199*</div>
                 <div class="mg-top text-description">
                   * This special price is for limited time period.<br>
-                  ** Weekly Live Doubt Clearing Sessions on Sunday.
+                  ** Weekly Live Doubt Clearing Sessions.<br>
+                  *** After enrolling you will get a link for telegram group to join for updates.
                 </div>
               </div>
               <div class="col-12 col-md-6">
-                <?php  if (isset($_SESSION['email'])) {?>
-                <a href="https://rzp.io/l/CRJVICPAY">
-                  <div class="btn btn--main btn-l btn--padding-l">
-                    Enroll Now <br>And Pay
-                  </div>
-                </a>
-                <?php } 
-                else {
-                  ?>
-                   <a href="#">
-                  <div id="not_login" class="btn btn--main btn-l btn--padding-l">
-                    Enroll Now <br>And Pay
-                  </div>
-                </a>
+                <?php if (isset($_SESSION['email'])) { ?>
+                  <a href="#">
+                    <div id="payment_btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
+                      Enroll Now <br>And Pay
+                    </div>
+                  </a>
+                <?php } else {
+                ?>
+                  <a href="#">
+                    <div id="not_login" class="btn btn--main btn-l btn--padding-l">
+                      Enroll Now <br>And Pay
+                    </div>
+                  </a>
                 <?php } ?>
 
                 <a href="#course_content"><button class="btn btn--outline btn-l btn--padding-l mt-2">
                     Want to know more?
                   </button>
                 </a>
+                <h6 class="mt-4">For this course, refund can be claimed within <strong>7-days.</strong></h6>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 mt-4">
-          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/546990311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/546990311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
       </main>
@@ -107,14 +108,16 @@ require 'includes/common.php';
           <div class="heading" style="justify-content: center;">
             <h2>Course Content</h2>
           </div>
-          <p class="mg-top" style="margin-bottom: 0.8rem; color: black">
-            This course is designed for the students of class 9th with ICSE board for preparing Computer Subject, 
-            which occupies JAVA language in most of its syllabus. The students have to learn to program for the 
-            first time, so this course has made to help them. <br>This course will cover JAVA from scratch in a 
-            topic-wise manner with 150+ programming questions. It contains the explanation of each and every topic, 
-            practice questions, assignments, quizzes, and also live sessions to directly interact with your mentor. 
+          <p class="mg-top" style="color: black">
+            This course is designed for the students of class 9th with ICSE board for preparing Computer Subject,
+            which occupies JAVA language in most of its syllabus. The students have to learn to program for the
+            first time, so this course has made to help them. <br>This course will cover JAVA from scratch in a
+            topic-wise manner with 150+ programming questions. It contains the explanation of each and every topic,
+            practice questions, assignments, quizzes, and also live sessions to directly interact with your mentor.
             <br> The course is divided into modules. After each module, there is an assignment for practicing and when
-             you submit, its solution video will be provided to you.</p>
+            you submit, its solution video will be provided to you.
+          </p>
+          <p class="mb-3" style="color: black;"><strong>To get a certificate, a test will be conducted for the students.</strong></p>
           <div class="sub-card">
             <h5>Language focus</h5>
             <div style="text-align: center; display: inline-block">
@@ -132,7 +135,7 @@ require 'includes/common.php';
         <div style="z-index: 2;" class="card card--shadow card--behind col-12 col-md-4">
           <h2 class="heading" style="justify-content: center; padding-bottom:10px;"> 150+ Programs</h2>
           <ul>
-          <li class="ml-3 mb-1">Programs Using Assignment Statements</li>
+            <li class="ml-3 mb-1">Programs Using Assignment Statements</li>
             <li class="ml-3 mb-1">Programs based on– Input through parameters</li>
             <li class="ml-3 mb-1">Programs based on – Input through Scanner class.</li>
             <li class="ml-3 mb-1">Programs based on Mathematical methods</li>
@@ -218,7 +221,7 @@ require 'includes/common.php';
                   </div>
                   <div class="accordions-content">
                     <ul>
-                    <li>Character set, ASCII code, Unicode</li>
+                      <li>Character set, ASCII code, Unicode</li>
                       <li>JAVA Tokens</li>
                       <li>Escape sequences, Constants and Variables,</li>
                       <li>Data types, type conversions. </li>
@@ -343,77 +346,133 @@ require 'includes/common.php';
   </div>
 
   <div class="bg-white">
-  <div class="container">
-        <div class="video-container" style="padding: 30px 0px 20px 0px; text-align: center; color: #000;">
-          <h2>Want to see any demo class?</h2>
-          <p>Here are two sample sessions of this course.</p>
-          <div class="row">
-            <div class="col-12 col-md-6 mt-4">
-          <iframe style="margin-top: 30px; max-width: 720px;" src="https://www.youtube.com/embed/I5m6tOBtWoc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="col-12 col-md-6 mt-4">
-          <iframe style="margin-top: 30px; max-width: 720px;" src="https://www.youtube.com/embed/I5m6tOBtWoc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+    <div class="container">
+      <div class="video-container" style="padding: 30px 0px 20px 0px; text-align: center; color: #000;">
+        <h2>Want to see any demo class?</h2>
+        <p>Here are two sample sessions of this course.</p>
+        <div class="row">
+          <div class="col-12 col-md-6 mt-4">
+            <iframe style="margin-top: 30px; max-width: 720px;" src="https://www.youtube.com/embed/I5m6tOBtWoc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-12 col-md-6 mt-4">
+            <iframe style="margin-top: 30px; max-width: 720px;" src="https://www.youtube.com/embed/I5m6tOBtWoc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
+    </div>
   </div>
 
   <?php include 'includes/footer(about).php';
   ?>
 
-
-
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/path/to/js.cookie.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
   <script>
-    $('#loginButton').click(function() {
-      $('#loginModal').modal('show')
-    });
 
-    $('#RegisterButton').click(function() {
-      $('#register_Modal').modal('show')
-    });
+  
 
-    $('#register-link').click(function() {
-      $('#loginModal').modal('hide')
-      $('#register_Modal').modal('show')
-    });
-    $('#not_login').click(function() {
-      $('#loginModal').modal('show')
-    });
+$('#loginButton').click(function() {
+    $('#loginModal').modal('show')
+  });
 
-let acc = document.querySelectorAll(".accordion");
-let i;
+  $('#RegisterButton').click(function() {
+    $('#register_Modal').modal('show')
+  });
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
+  $('#register-link').click(function() {
+    $('#loginModal').modal('hide')
+    $('#register_Modal').modal('show')
+  });
+  $('#not_login').click(function() {
+    $('#loginModal').modal('show')
+  });
+
+  let acc = document.querySelectorAll(".accordion");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     });
-}
+  }
 
-$('.accordion-heading').on('click', (e) => {
+  $('.accordion-heading').on('click', (e) => {
     if ($(e.target).parent().parent().hasClass('active-accordion')) {
-        $('.accordion-heading').parent().parent().removeClass('active-accordion')
+      $('.accordion-heading').parent().parent().removeClass('active-accordion')
+    } else {
+      $('.accordion-heading').parent().parent().removeClass('active-accordion')
+      $(e.target).parent().parent().addClass('active-accordion')
     }
-    else {
-        $('.accordion-heading').parent().parent().removeClass('active-accordion')
-        $(e.target).parent().parent().addClass('active-accordion')
-    }
-})
+  })
+
+
+function pay_now() {
+    var course_id = 1;
+
+    jQuery.ajax({
+      type: 'post',
+      url: 'payment_process.php',
+      data: "course_id=" + course_id,
+      success: function(result) {
+
+        var options = {
+          "key": "rzp_test_qYyG9sLV44cGfn",
+          "amount": "119900",
+          "currency": "INR",
+          "name": "Code At Random (OPC) Pvt Ltd",
+          "description": "Java Course For Class 9th ICSE  ",
+          "image": "https://i.pinimg.com/originals/b8/62/cd/b862cd2f8ba5bb3bb17145d9f3949b36.jpg",
+          "handler": function(response) {
+            jQuery.ajax({
+              type: 'post',
+              url: 'payment_process.php',
+              data: "payment_id=" + response.razorpay_payment_id + "&course_id=" + course_id,
+              success: function(result) {
+
+                window.location.href = "thank_you.php";
+              }
+            });
+          },
+          "notes": {
+            "address": "5, Khanderao Gate Jhansi (UP)"
+          },
+          "theme": {
+            "color": "#3399ff"
+          }
+        };
+        var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response){
+      alert(response.error.code);
+      alert(response.error.description);
+      alert(response.error.source);
+      alert(response.error.step);
+      alert(response.error.reason);
+      alert(response.error.metadata.order_id);
+      alert(response.error.metadata.payment_id);
+});
+        var rzp1 = new Razorpay(options);
+          rzp1.open();
+      }
+    });
+
+
+  }
   </script>
+
+
 
 
 </body>

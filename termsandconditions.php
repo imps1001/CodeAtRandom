@@ -86,7 +86,7 @@ require 'includes/common.php';
                 <li class="list-paragraph"><p><strong>"Code At Random Content" </strong>means all Content that Code At Random makes available through the Site, Application, Services, or its related promotional campaigns and official social media channels, including any Content licensed from a third party, but excluding Student Content.</p></li>
                 </ul>
                 <!--3rd Header-->
-                <h5><li class="list-header"><em>Terms OF Service</em></li></h5>
+                <h5><li class="list-header" style="margin-bottom: 5;"><em>Terms of Service</em></li></h5>
                 <ul class="inner-list" style="list-style-type: circle;">
                 <li class="list-paragraph"><p>By using the Site, Applications or Services, you agree to comply with 
                     and be legally bound by the terms and conditions of these Terms, whether or not you become a 

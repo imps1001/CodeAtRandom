@@ -14,76 +14,72 @@ require 'includes/common.php';
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet"> 
-    <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
-    <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
-    <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
-    
+  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
+
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <link href="css/style.css" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">
-  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link href="css/media_queries.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_ioo/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
   <title> Code@Random </title>
 
-<style>
-@media only screen and (max-width: 600px) {
-  [class*="col-"] {
-  width: 100%;
-}
-.brand-banner{
-  width: 100%;
-  height: auto;
-}
-.flex-item-right, .flex-item-left {
-    flex: 100%;
-  }
-.choose-container{
-  margin-top: 225px;
-}
-}
+  <style>
+    .carousel .carousel-indicators {
+      bottom: -20px;
+    }
 
-@media only screen and (max-width: 768px){
+    .carousel .carousel-indicators li {
+      width: 16px;
+      height: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background-color: #5a6268;
+    }
 
-  [class*="col-"] {
-    width: 100%;
-  }
-  .brand-banner{
-  width: 100%;
-  height: auto;
-  }
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-  }
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-  }
-.choose-container{
-  margin-top: 300px;
-  justify-content: center;
-}
-.jumbotron-img{
-  height: auto;
-  max-width: 100%;
-}
-.generic_footer{
-  width: 106%;
-}
-.courses-main-outer{
-  width: 106%;
-}
-}
+    .carousel .carousel-control-next,
+    .carousel .carousel-control-prev {
+      top: auto;
+      border: 0;
+    }
 
-@media only screen and (min-width :992px){
-  .brand-banner{
-    height: auto;
-    width: 100%;
-    margin-left: 10px;
-  }
+    .carousel .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%235a6268' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+    }
 
-}
-</style>
+    .carousel .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%235a6268' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+    }
+
+    .top-content .carousel-control-prev {
+      left: -110px;
+      border-bottom: 0;
+      margin-bottom: 200px;
+    }
+
+    .top-content .carousel-control-next {
+      right: -110px;
+      border-bottom: 0;
+      margin-bottom: 200px;
+    }
+
+    .top-content .carousel-indicators {
+      bottom: -80px;
+    }
+
+    .top-content .carousel-indicators li {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-radius: 50%;
+    }
+  </style>
 
 </head>
 
@@ -102,10 +98,11 @@ require 'includes/common.php';
   <header class="jumbotron" style="height: 450px;">
     <div class="flex-container">
       <div class="overlay">
-        <div class="row row-header align-text-center">
+        <div class="row row-header align-text-center" id="flex">
           <div class="order-sm-first img-fluid col-12 col-md-6 col-12 offset-md-1 flex-item-left">
             <img src="images/Watermark1 (reduced Size).png" width="100%" style="margin-top: 100px;" class="brand-banner">
-            <p class="mt-1"><strong> - An online educational portal that delivers result-oriented courses at the convenience of your time and money.</strong> </p>
+            <p class="mt-1 paragraph"><strong> - An online educational portal that delivers result-oriented courses at the convenience
+                <br>of your time and money.</strong> </p>
           </div>
           <div class="img-fluid col-12 col-md-4 order-sm-last offset-md-1 flex-item-right jumbotron-img">
             <img src="images/jumbotron1.jpg" height="200" width="350" style="margin-top: 100px;">
@@ -119,39 +116,50 @@ require 'includes/common.php';
       </div>
     </div>
   </header>
+  <!--Video Carousel-->
+  <div class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12 col-lg-10 offset-lg-1">
 
-  <div class="bg-white">
-    <div class="container choose-container">
-      <h2 class="text-dark text-center font-weight-bold">Why Choose Us</h2>
-      <br><br><br>
+          <div id="carousel-example" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example" data-slide-to="1"></li>
+              <li data-target="#carousel-example" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hgVihWjK2c?rel=0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/546657963?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oiKj0Z_Xnjc" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
 
-      <div class="text-center">
-        <div class="why-us-container">
-          <img class="mb-4" src="images/computers.png" alt="First slide" height="100px">
-          <h3 class="text-dark font-weight-bold">Interactive Live Classes</h3>
-          <p class="text-dark text-center ml-3">We provide online live classes <br> for doubt clearance.</p>
         </div>
-        <div class="why-us-container">
-          <img class="mb-4" src="images/price_tag.png" alt="First slide" height="100px">
-          <h3 class="text-dark font-weight-bold">Low Pricing</h3>
-          <p class="text-dark text-center ml-3">We charge too low so that every student <br> can afford it </p>
-        </div>
-        <div class="why-us-container" style="margin-top: 20px;">
-          <img class="mb-4" src="images/doubts_support.png" alt="First slide" height="100px">
-          <h3 class="text-dark font-weight-bold">Doubts Support</h3>
-          <p class="text-dark text-center ml-3">Stuck somewhere, our mentors are <br> to guide you</p>
-        </div>
-        <div class="why-us-container" style="margin-top: 20px;">
-          <img class="mb-4" src="images/result_oriented.png" alt="First slide" height="100px">
-          <h3 class="text-dark font-weight-bold">Result Oriented</h3>
-          <p class="text-dark text-center ml-3">Courses are designed for students <br>willing to get good grades.
-            </p>
-        </div>
-
       </div>
+
     </div>
   </div>
-
   <!--Courses Section-->
 
   <div class="courses-main-outer" id="courses" style="background-color: #1e687b;">
@@ -187,9 +195,8 @@ require 'includes/common.php';
                       <span class="t-1" style="display: none; color: white;" class="course-detail__typography">For <b>Class 10<sup>th</sup> ICSE students</b> we are providing JAVA Sessions for preparing for <b>computers</b>
                         Our Courses have 100+ hours learning sessions, 30+(minimum) hours live sessions, 300+ practice questions, carefully
                         designed to give a boast to your learning.</span>
-                      <span class="t-2" style="display: none; color: white;" class="course-detail__typography">Our <b>Interview Preparation</b> is a 90 days study plan to help students prepare for software engineering job in the range of 6-12LPA.</span>
-                      <span class="t-3" style="display: none; color: white;" class="course-detail__typography">Our <b>Projects</b> include LIFETIME access to recorded videos,
-                        documentation, code snippets for a project depending on the skill, with LIVE support for upto 2 hrs at a pre defined timings.</span>
+                      <span class="t-2" style="display: none; color: white;" class="course-detail__typography">We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </span>
+                      <span class="t-3" style="display: none; color: white;" class="course-detail__typography">We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </span>
                     </div>
                   </div>
                   <div class="pb-3 row">
@@ -250,7 +257,7 @@ require 'includes/common.php';
                         </div>
                       </div>
                     </div>
-                
+
                     <div class=" c-2 pl-4 pr-2 pb-3 course-fix col-sm-12 col-lg-10 offset-lg-1" style="display: none;">
                       <div class="course-card-outer">
                         <div class="course-card" style="margin-top: 0px;">
@@ -309,9 +316,11 @@ require 'includes/common.php';
                       </div>
                     </div>
                   </div>
-
+                  
 
                 </div>
+
+
               </div>
             </div>
           </div>
@@ -321,7 +330,8 @@ require 'includes/common.php';
   </div>
 
 
-  <!--Carousel-->
+
+  <!--Carousel
   <div class="container">
     <div class="row row-content">
       <div class="col">
@@ -329,7 +339,9 @@ require 'includes/common.php';
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
               <div class="hvrbox">
-                <img src="https://source.unsplash.com/1900x360/?coding,java,programming,class" alt="Mountains" class="hvrbox-layer_bottom">
+              <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+</div>
                 <div class="hvrbox-layer_top">
                   <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
                 </div>
@@ -356,7 +368,43 @@ require 'includes/common.php';
         </div>
       </div>
     </div>
+  </div>-->
+
+
+  <!--Why Us Container-->
+  <div class="bg-white">
+    <div class="container choose-container mt-0">
+      <h2 class="text-dark text-center font-weight-bold">Why Choose Us</h2>
+      <br><br><br>
+
+      <div class="text-center">
+        <div class="why-us-container">
+          <img class="mb-4" src="images/computers.png" alt="First slide" height="100px">
+          <h3 class="text-dark font-weight-bold">Interactive Live Classes</h3>
+          <p class="text-dark text-center ml-3">We provide online live classes <br> for doubt clearance.</p>
+        </div>
+        <div class="why-us-container">
+          <img class="mb-4" src="images/price_tag.png" alt="First slide" height="100px">
+          <h3 class="text-dark font-weight-bold">Low Pricing</h3>
+          <p class="text-dark text-center ml-3">We charge too low so that every student <br> can afford it </p>
+        </div>
+        <div class="why-us-container" style="margin-top: 20px;">
+          <img class="mb-4" src="images/doubts_support.png" alt="First slide" height="100px">
+          <h3 class="text-dark font-weight-bold">Doubts Support</h3>
+          <p class="text-dark text-center ml-3">Stuck somewhere, our mentors are <br> to guide you</p>
+        </div>
+        <div class="why-us-container" style="margin-top: 20px;">
+          <img class="mb-4" src="images/result_oriented.png" alt="First slide" height="100px">
+          <h3 class="text-dark font-weight-bold">Result Oriented</h3>
+          <p class="text-dark text-center ml-3">Courses are designed for students <br>willing to get good grades.
+          </p>
+        </div>
+
+      </div>
+    </div>
   </div>
+
+
   <!--Footer Section-->
   <div id="footer" class="generic_footer" style="margin-bottom: 5px;">
     <div class="container">
@@ -368,7 +416,7 @@ require 'includes/common.php';
                 <h5> About Us:- </h5>
                 <p class="mb-0">“I never teach my pupils; I only attempt to provide the conditions in
                   which they can learn”</p>
-                <footer class="blockquote-footer" style="color: white; float: right;">Albert Einstein
+                <footer class="blockquote-footer mt-1" style="color: white; float: right;">Albert Einstein
                 </footer>
                 <br>
                 <p style=>Education is all about self-awakening. We learn to augment our perspectives, not only
@@ -390,16 +438,10 @@ require 'includes/common.php';
                   <a class="link" href="#courses">Courses</a>
                 </div>
                 <div class="footer-list-item">
-                  <a class="link" href="#">Pricing</a>
-                </div>
-                <div class="footer-list-item">
                   <a class="link" href="contactus.php">Contact Us</a>
                 </div>
                 <div class="footer-list-item">
-                  <a class="link" href="termsandconditions.php">Terms</a>
-                </div>
-                <div class="footer-list-item">
-                  <a class="link" href="termsandconditions.php">Privacy</a>
+                  <a class="link" href="termsandconditions.php">Terms and Policies</a>
                 </div>
                 <div class="footer-list-item">
                   <a class="link" href="#">Feedback</a>
@@ -411,13 +453,13 @@ require 'includes/common.php';
         <hr color="grey">
         <div class="footer-bottom">
           <div id="social-media-container" style="margin-left: 0px;" class="d-none d-lg-block ml-auto">
-          <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
-                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
-                  <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+            <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
+            <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
             <div class='' id='copyright' style="margin-right: 0px; color: white;">
-            <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
+              <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
             </div>
           </div>
           <div class="clear">
@@ -438,13 +480,14 @@ require 'includes/common.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-  <script defer src="./node_modules/font-awesome/js/all.js"></script> 
-<script defer src="./node_modules/font-awesome/js/fontawesome.js"></script> 
-<script defer src="./node_modules/font-awesome/js/brands.js"></script> 
-<script defer src="./node_modules/font-awesome/js/solid.js"></script> 
+  <script defer src="./node_modules/font-awesome/js/all.js"></script>
+  <script defer src="./node_modules/font-awesome/js/fontawesome.js"></script>
+  <script defer src="./node_modules/font-awesome/js/brands.js"></script>
+  <script defer src="./node_modules/font-awesome/js/solid.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
 
   <script>
-    var prevScrollpos = window.pageYOffset;
+  var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
@@ -477,8 +520,8 @@ require 'includes/common.php';
       $('#First_Modal').modal('hide')
       $('#register_Modal').modal('show')
     });*/
-  </script>
-  <script>
+  
+  
     if (!Cookies.get('popup')) {
       setTimeout(function() {
         $('#First_Modal').modal();
@@ -534,7 +577,19 @@ require 'includes/common.php';
         $(".t-3").show();
       }
     }
-  </script>
+  
+
+    jQuery(document).ready(function() {
+      $('#myModal').on('hidden.bs.modal', function(e) {
+        $('#myModal iframe').each(function() {
+          var videoURL = $(this).attr('src');
+          $(this).attr('src', videoURL);
+        });
+      });
+
+    });
+    </script>
+
 
 </body>
 

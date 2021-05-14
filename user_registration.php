@@ -32,7 +32,7 @@ $num_rows = mysqli_num_rows($result);
     header('location: index.php');
   }
   else{
-    $showError= " Both Passwords must be same";
+    $showError= "Both Passwords must be same";
    }
 ?>
 <!DOCTYPE html>

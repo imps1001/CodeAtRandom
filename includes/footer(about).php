@@ -7,23 +7,23 @@
                 <div class="footer-list footer-column ">
                  <h5>Code At Random</h5>
                  <div class="footer-list-item">
-                   <a class="link" href="#">Home</a>
+                   <a class="link" href="index.php">Home</a>
                  </div>
                  <div class="footer-list-item">
-                   <a class="link" href="#">Our Vision</a>
+                   <a class="link" href="aboutus.php#mission_vision">Our Vision</a>
                  </div>
                  <div class="footer-list-item">
-                   <a class="link" href="#">Our Mission</a>
+                   <a class="link" href="index.php#courses">All Courses</a>
                  </div>
                  <div class="footer-list-item">
-                   <a class="link" href="termsandconditions.php">Terms</a>
+                   <a class="link" href="termsandconditions.php">Terms and Conditions</a>
                  </div>
                  <div class="footer-list-item">
-                    <a class="link" href="#">Privacy</a>
+                    <a class="link" href="contactus.php">Contact Us</a>
                  </div>
             </div>
            </div>
-         <div class="col-sm-5 offset-1 d-none d-lg-block mr-auto">
+         <div class="col-sm-5 offset-1 d-none d-md-block mr-auto">
              <div class="footer-list footer-column" style="float: right; margin-right: 200px;">
                <h5>Links</h5>
                  <div class="footer-list-item">
@@ -39,7 +39,10 @@
                     <a class="link" href="#"> All Courses</a>
                  </div>
                  <div class="footer-list-item">
-                     <a class="link" href="contactus.php">Contact Us</a>
+                     <a class="link" href="termsandconditions.php">Privacy</a>
+                 </div>
+                 <div class="footer-list-item">
+                     <a class="link" href="contactus.php">Refunds</a>
                  </div>
              </div>
        </div>

@@ -26,7 +26,7 @@ else
         $stmt->bind_param('s', $_SESSION['email'] );
         $result=$stmt->execute();
 
-        if( $result )
+        if( $result)
         {
             $stmt->store_result();
             $stmt->bind_result( $first_name, $last_name, $class, $board, $phone, $state );
@@ -69,7 +69,7 @@ else
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">
 <link rel="manifest" href="favicon_io/site.webmanifest">
-    <title> Sign-Up Error</title>
+    <title> Sign-In Error</title>
     </head>
     <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top" id="navbarcr">
