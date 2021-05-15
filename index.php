@@ -9,7 +9,8 @@ require 'includes/common.php';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+  <meta name="java" content="index,courses"><title>Code At Random For 9th and 10th standard </title>
+  <meta name="description" content="Code At Random e-learning platform offering courses at a nominal rate for 9th and 10th standard.">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -18,7 +19,6 @@ require 'includes/common.php';
   <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
   <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
   <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
-
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/media_queries.css" rel="stylesheet">
@@ -110,7 +110,7 @@ require 'includes/common.php';
         </div>
         <div class="row" style="margin-top:0px;">
           <div class="startlearningbutton col-md-12 mt-5" style="margin-bottom: 10px;">
-            <a href="div#courses" role="button" style="color: black;" class="startbutton btn btn-lg nav-link col-12 col-md-5 offset-lg-5 offset-md-4 offset-sm-2"> Explore Now</a>
+            <a href="#courses" role="button" style="color: black;" ><span class="startbutton btn btn-lg nav-link col-12 col-md-5 offset-lg-5 offset-md-4 offset-sm-2">Explore Now</span></a>
           </div>
         </div>
       </div>
@@ -131,12 +131,12 @@ require 'includes/common.php';
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hgVihWjK2c?rel=0" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/549620264?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/546657963?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/546657963?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="carousel-item">
@@ -187,16 +187,22 @@ require 'includes/common.php';
             <div class="col-sm-12 col-md-8" style="padding:0 20px">
               <div class="justify-content-center row">
                 <div class="course-detail">
-                  <div class="d-none d-lg-block col-12">
+                  <div class="col-12">
                     <div class="mb-4">
-                      <span class="t-0" class="course-detail__typography" style="color: white;">For <b>Class 9<sup>th</sup> ICSE students</b> we are providing JAVA Sessions for preparing for <b>computers</b>
+                      <span class="t-0" class="course-detail__typography d-none d-lg-block" style=" color: white;">For <b>Class 9<sup>th</sup> ICSE students</b> we are providing JAVA Sessions for preparing for <b>computers</b>
                         Our Courses have 100+ hours learning sessions, 30+(minimum) hours live sessions, 300+ practice questions, carefully
                         designed to give a boast to your learning.</span>
                       <span class="t-1" style="display: none; color: white;" class="course-detail__typography">For <b>Class 10<sup>th</sup> ICSE students</b> we are providing JAVA Sessions for preparing for <b>computers</b>
                         Our Courses have 100+ hours learning sessions, 30+(minimum) hours live sessions, 300+ practice questions, carefully
                         designed to give a boast to your learning.</span>
-                      <span class="t-2" style="display: none; color: white;" class="course-detail__typography">We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </span>
-                      <span class="t-3" style="display: none; color: white;" class="course-detail__typography">We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </span>
+                      <div class="t-2" style=" display: none; color: white;" class="course-detail__typography">
+                      <p>We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </p>
+                      <button class="btn btn-warning btn-lg offset-md-4 offset-lg-5"><a href="requirement_students.php" style="color: black; text-decoration:none;" >Learn More</a></button>
+                    </div>
+                    <div class="t-3" style=" display: none; color: white;" class="course-detail__typography">
+                      <p>We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </p>
+                      <button class="btn btn-warning btn-lg offest-md-4 offset-lg-5"><a href="requirement_students.php" style="color: black; text-decoration:none;" >Learn More</a></button>
+                    </div>
                     </div>
                   </div>
                   <div class="pb-3 row">
@@ -452,7 +458,7 @@ require 'includes/common.php';
         </div>
         <hr color="grey">
         <div class="footer-bottom">
-          <div id="social-media-container" style="margin-left: 0px;" class="d-none d-lg-block ml-auto">
+          <div id="social-media-container" style="margin-left: 0px;" class="ml-auto">
             <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
             <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>

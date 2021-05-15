@@ -26,6 +26,21 @@ require 'includes/common.php';
   <link rel="con" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">
   <link rel="manifest" href="favicon_io/site.webmanifest">
   <title>Code@Random | 10th ICSE</title>
+
+  <style>
+
+  @media only screen and (max-width:600px){
+  .course_9{
+    margin-left: 0rem;
+    padding-left: 0rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .heading{
+    font-size: 1.8rem;
+  }
+  }
+  </style>
 </head>
 
 <body overflow-x: hidden; overflow-y: auto;>
@@ -54,42 +69,41 @@ require 'includes/common.php';
       <main>
         <h1 class="heading" style="color: white; ">JAVA COURSE FOR 10th ICSE</h1>
         <div class="row">
-          <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-4">
+        <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-4 course_9">
             <div class="offer-card row">
               <div class="col-12 col-md-6">
-                <div class="text-description">Next upcoming batch</div>
-                <div class="text-orange text-size-m">26th May 2021</div>
+                <div class="text-description">Lectures Available From</div>
+                <div class="text-orange text-size-m"><strong> May 26th 2021</strong></div>
                 <div class="mg-top text-description">
                   Fees
                 </div>
-                <div class="text-orange text-size-1 "><del>&#x20b9; 6,999 </del> &nbsp;&#x20b9;1,499*</div>
-                <div class="mg-top text-description">
-                  * This special price is for limited time period.<br>
-                  ** Weekly Live Doubt Clearing Sessions on Sunday.<br>
-                  *** After enrolling you will get a link for telegram group to join for updates.
+                <div class="text-orange text-size-l"><del>&#x20b9; 1,999 </del> &nbsp;&#x20b9;1,199*</div>
+                <div class="mg-top text-description" style="font-size: 15px;">
+                  * Introductory offer valid till <br> 26th May 2021<br>
+                  * After Enrolling/payment you will receive a Tax Invoice along with a link for joining the Telegram group on your registered email ID so as to get constant updates.
                 </div>
               </div>
               <div class="col-12 col-md-6">
-              <?php  if (isset($_SESSION['email'])) {?>
-                <a href="#">
-                  <div id="payment-btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
-                    Enroll Now <br>And Pay
-                  </div>
-                </a>
-                <?php } 
-                else {
-                  ?>
-                   <a href="#">
-                  <div id="not_login" class="btn btn--main btn-l btn--padding-l">
-                    Enroll Now <br>And Pay
-                  </div>
-                </a>
+                <?php if (isset($_SESSION['email'])) { ?>
+                  <a href="#">
+                    <div id="payment_btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
+                      Enroll Now <br>And Pay
+                    </div>
+                  </a>
+                <?php } else {
+                ?>
+                  <a href="#">
+                    <div id="not_login" class="btn btn--main btn-l btn--padding-l">
+                      Enroll Now <br>And Pay
+                    </div>
+                  </a>
                 <?php } ?>
+
                 <a href="#course_content"><button class="btn btn--outline btn-l btn--padding-l mt-2">
                     Want to know more?
                   </button>
                 </a>
-                <h6 class="mt-4">For this course, refund can be claimed within <strong>7-days.</strong></h6>
+                <h6 class="mt-4">* For any support related to the course, kindly mail us to support@codeatrandom.com</h6>
               </div>
             </div>
           </div>
@@ -374,10 +388,10 @@ require 'includes/common.php';
           <p>Here are sample sessions of this course.</p>
           <div class="row">
             <div class="col-12 col-md-6 mt-4">
-          <iframe style="margin-top: 30px; max-width: 720px;" src="https://www.youtube.com/embed/I5m6tOBtWoc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/549620264?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-12 col-md-6 mt-4">
-          <iframe style="margin-top: 30px; max-width: 720px;" src="https://www.youtube.com/embed/I5m6tOBtWoc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/546657963?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -396,7 +410,7 @@ require 'includes/common.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-
+  <script src="https://player.vimeo.com/api/player.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
   $('#loginButton').click(function() {
@@ -455,7 +469,7 @@ function pay_now() {
           "currency": "INR",
           "name": "Code At Random (OPC) Pvt Ltd",
           "description": "Java Course For Class 9th ICSE  ",
-          "image": "http://codeatrandom.com/images/LOGO.png",
+          "image": "http://codeatrandom.com/images/LOGO_1.png",
           "handler": function(response) {
             jQuery.ajax({
               type: 'post',
