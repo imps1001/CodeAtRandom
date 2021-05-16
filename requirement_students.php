@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
             background-color: #45a049;
         }
 
-        .container {
+        .req_cont {
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
@@ -104,16 +104,40 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-        </symbol>
-    </svg>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top" id="navbarcr" style="height: 40px;">
-        <div class="container" style="background-color: #1e687b; height:50px;">
-            <a class="navbar-brand col-sm-6" href="index.php"><img src="images/LOGO.png" height="50" width="50"></a>
-        </div>
-    </nav>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+    </symbol>
+  </svg>
+  <nav class="navbar navbar-dark navbar-expand-sm fixed-top" id="navbarcr">
+    <div class="container-fluid">
+      <a class="navbar-brand col-sm-6" href="index.php"><img src="images/LOGO.png" height="50" width="50"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-5" id="Navbar">
+        <ul class="navbar-nav ml-auto">
+          <?php
+          if (isset($_SESSION['email'])) {
+          ?>
+            <li class="nav-item "><a class="nav-link " style="color: white;" href="#"><span style="color: white" class="fa fa-user fa-lg"> <?php echo "Hello " . $_SESSION['first_name']; ?></span></a>
+              <!--<div class="dropdown-menu" style="background-color: #CCCD6A;">-->
+            <li class="nav-item"><a class="nav-link" href="index.php#courses" style="color: white;"><span class="fas fa-book-reader fa-lg"> Your Courses</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="logout.php" style="color: white;"><span class="fas fa-sign-out-alt fa-lg">Sign Out</span></a></li>
+
+      </div>
+      </li>
+    </div>
+  <?php
+    } else { ?>
+    <li class="nav-item" id="loginButton"><a class="nav-link" href="#" style="color: white;"><span class="fas fa-sign-in-alt fa-lg "> Login</span></a></li>
+    <li class="nav-item" id="RegisterButton"><a class="nav-link" href="#" style="color: white;"><span class="fas fa-user fa-lg "> Register </span></a></li>
+  <?php
+    } ?>
+  </ul>
+  </div>
+  </div>
+  </nav>
 
         <div class="container req_cont">
             <div class="content" style="justify-content:center;">
@@ -167,6 +191,33 @@ if (isset($_POST['submit'])) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+        <script>
+  var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbarcr").style.top = "0";
+      } else {
+        document.getElementById("navbarcr").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    $('#loginButton').click(function() {
+      $('#loginModal').modal('show')
+    });
+
+    $('#RegisterButton').click(function() {
+      $('#register_Modal').modal('show')
+    });
+
+    $('#register-link').click(function() {
+      $('#loginModal').modal('hide')
+      $('#register_Modal').modal('show')
+    });
+    $('#Loginlink').click(function() {
+      $('#loginModal').modal('show')
+    });
+    </script>
 
 </body>
 

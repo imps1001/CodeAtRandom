@@ -36,7 +36,7 @@ require 'includes/common.php';
     <div class="row justify-content-center">             
         <div class="col-auto">
         <h3 class="col-12"><strong><u> TERMS AND CONDITIONS OF ACCESS OR USE</u></strong></h3>
-        <h5 class="offset-md-4 offset-2"><strong><u> Effective 1st Aug 2020 </u></strong></h5>
+        <h5 class="offset-md-4 offset-2"><strong><u> Last Updated On 17th May 2021 </u></strong></h5>
        </div>
     </div>
     <div class="row row_content align-text-center">

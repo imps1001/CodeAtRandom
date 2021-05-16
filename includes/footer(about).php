@@ -10,7 +10,7 @@
                    <a class="link" href="index.php">Home</a>
                  </div>
                  <div class="footer-list-item">
-                   <a class="link" href="aboutus.php#mission_vision">Our Vision</a>
+                   <a class="link" href="PrivacyPolicy.php">Privacy Policy</a>
                  </div>
                  <div class="footer-list-item">
                    <a class="link" href="index.php#courses">All Courses</a>
@@ -21,22 +21,25 @@
                  <div class="footer-list-item">
                     <a class="link" href="contactus.php">Contact Us</a>
                  </div>
+                 <div class="footer-list-item">
+                    <a class="link" href="requirement_students.php">Fill Your Requirements</a>
+                 </div>
             </div>
            </div>
          <div class="col-sm-5 offset-1 d-none d-md-block mr-auto">
              <div class="footer-list footer-column" style="float: right; margin-right: 200px;">
                <h5>Links</h5>
                  <div class="footer-list-item">
-                   <a class="link" href="index.php">Home</a>
+                   <a class="link" href="aboutus.php#mission_vision">Our Vision and Mission</a>
                  </div>
                  <div class="footer-list-item">
-                    <a class="link" href="#">Login/Register</a>
+                    <a class="link" href="Loginlink">Login/Register</a>
                  </div>
                  <div class="footer-list-item">
-                    <a class="link" href="contactus.phps">Feedback</a>
+                    <a class="link" href="index.php#courses">Java 9th ICSE</a>
                  </div>
                  <div class="footer-list-item">
-                    <a class="link" href="#"> All Courses</a>
+                    <a class="link" href="index.php#courses"> All Courses</a>
                  </div>
                  <div class="footer-list-item">
                      <a class="link" href="termsandconditions.php">Privacy</a>

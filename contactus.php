@@ -34,6 +34,10 @@ if (isset($_POST['submit'])) {
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">
   <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
   <title> Conatct Us | Code At Random</title>
 
 
@@ -72,7 +76,7 @@ if (isset($_POST['submit'])) {
       background-color: #45a049;
     }
 
-    .container {
+    .form_container {
       border-radius: 5px;
       background-color: #f2f2f2;
       padding: 20px;
@@ -101,9 +105,9 @@ if (isset($_POST['submit'])) {
     </symbol>
   </svg>
   <nav class="navbar navbar-dark navbar-expand-sm fixed-top" id="navbarcr">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand col-sm-6" href="index.php"><img src="images/LOGO.png" height="50" width="50"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" style="float: right;">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse ml-5" id="Navbar">
@@ -113,16 +117,16 @@ if (isset($_POST['submit'])) {
           ?>
             <li class="nav-item "><a class="nav-link " style="color: white;" href="#"><span style="color: white" class="fa fa-user fa-lg"> <?php echo "Hello " . $_SESSION['first_name']; ?></span></a>
               <!--<div class="dropdown-menu" style="background-color: #CCCD6A;">-->
-            <li class="nav-item"><a class="nav-link" href="index.php#courses" style="color: white;"><span class="fa fa-book fa-lg"> Your Courses</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="logout.php" style="color: white;"><span class="fa fa-sign-out fa-lg">Sign Out</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php#courses" style="color: white;"><span class="fas fa-book-reader fa-lg"> Your Courses</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="logout.php" style="color: white;"><span class="fas fa-sign-out-alt fa-lg">Sign Out</span></a></li>
 
       </div>
       </li>
     </div>
   <?php
     } else { ?>
-    <li class="nav-item" id="loginButton"><a class="nav-link" href="#" style="color: white;"><span class="fa fa-sign-in fa-lg "> Login</span></a></li>
-    <li class="nav-item" id="RegisterButton"><a class="nav-link" href="#" style="color: white;"><span class="fa fa-user fa-lg "> Register </span></a></li>
+    <li class="nav-item" id="loginButton"><a class="nav-link" href="#" style="color: white;"><span class="fas fa-sign-in-alt fa-lg "> Login</span></a></li>
+    <li class="nav-item" id="RegisterButton"><a class="nav-link" href="#" style="color: white;"><span class="fas fa-user fa-lg "> Register </span></a></li>
   <?php
     } ?>
   </ul>
@@ -130,7 +134,7 @@ if (isset($_POST['submit'])) {
   </div>
   </nav>
 
-  <div class="container">
+  <div class="container form_container">
     <div class="content" style="justify-content:center;">
       <div class="col-12 col-md-6 offset-md-4">
         <h1 style="font-weight:700;">Contact Us</h1>
@@ -158,12 +162,46 @@ if (isset($_POST['submit'])) {
           <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" id="modal_login_submit" tabindex="3">Submit</button>
 
         </form>
-        <div class="d-flex justify-content-center mt-5">
-          <h5>Or mail us at <span style="color:blue;">support@codeatrandom.com</span> </h5>
-        </div>
       </div>
     </div>
   </div>
+  <!--Footer Section-->
+  <div id="footer" class="generic_footer" style="margin-bottom: 10px;">
+  <div class="container">
+      <div class="max-width-container">             
+          <div class="footer_container">
+            <div class="row">
+              <div class="col-12 col-md-8 offset-md-4" style="justify-content: center; margin-bottom:5px;">
+              <h6>Or mail us at support@codeatrandom.com  </h6><br>
+              <p class="mt-1">Registered Address- 5 Khanderao Gate, Jhansi (UP) 284002</p><br>
+              <p class="mt-1"> Our Contact Numbers:- 7985457381 , 6392838448</p>
+              </div>
+            </div>
+      <hr color="grey">
+         <div class="footer-bottom">
+           <div class="row">
+           <h5 class="col-sm-3">Connect With Us:-</h5>
+           <div class="col-12 col-sm-9 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
+                  <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
+          </div>
+          </div>
+
+          <div id="social-media-container order-sm-first" style="margin-left: 0px;">
+                  <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                  <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+          </div>
+                <div class="clear">
+                </div>
+          </div>
+     </div>
+  </div>
+</div>
+  
+
+  
 <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -172,7 +210,33 @@ if (isset($_POST['submit'])) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  <script>
+  var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbarcr").style.top = "0";
+      } else {
+        document.getElementById("navbarcr").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    $('#loginButton').click(function() {
+      $('#loginModal').modal('show')
+    });
 
+    $('#RegisterButton').click(function() {
+      $('#register_Modal').modal('show')
+    });
+
+    $('#register-link').click(function() {
+      $('#loginModal').modal('hide')
+      $('#register_Modal').modal('show')
+    });
+    $('#Loginlink').click(function() {
+      $('#loginModal').modal('show')
+    });
+    </script>
 </body>
 
 </html>

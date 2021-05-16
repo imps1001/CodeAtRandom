@@ -9,7 +9,7 @@ require 'includes/common.php';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="java" content="index,courses"><title>Code At Random For 9th and 10th standard </title>
+  <meta name="java" content="index,courses">
   <meta name="description" content="Code At Random e-learning platform offering courses at a nominal rate for 9th and 10th standard.">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -26,7 +26,7 @@ require 'includes/common.php';
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon_ioo/favicon-16x16.png">
   <link rel="manifest" href="./favicon_io/site.webmanifest">
-  <title> Code@Random </title>
+  <title> Code@Random | Online Learning Platform </title>
 
   <style>
     .carousel .carousel-indicators {
@@ -141,7 +141,7 @@ require 'includes/common.php';
               </div>
               <div class="carousel-item">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oiKj0Z_Xnjc" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/549626528?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="[Program to check whether a number is prime]"></iframe>
                 </div>
               </div>
             </div>
@@ -447,10 +447,13 @@ require 'includes/common.php';
                   <a class="link" href="contactus.php">Contact Us</a>
                 </div>
                 <div class="footer-list-item">
-                  <a class="link" href="termsandconditions.php">Terms and Policies</a>
+                  <a class="link" href="termsandconditions.php">Terms and Conditions</a>
                 </div>
                 <div class="footer-list-item">
-                  <a class="link" href="#">Feedback</a>
+                  <a class="link" href="PrivacyPolicy.php">Privacy Policy</a>
+                </div>
+                <div class="footer-list-item">
+                  <a class="link" href="refundpolicy.php">Refund Policy</a>
                 </div>
               </div>
             </div>

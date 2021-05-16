@@ -247,6 +247,9 @@ require 'includes/common.php';
       $('#loginModal').modal('hide')
       $('#register_Modal').modal('show')
     });
+    $('#Loginlink').click(function() {
+      $('#loginModal').modal('show')
+    });
   </script>
 
 </body>
