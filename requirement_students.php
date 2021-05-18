@@ -179,6 +179,7 @@ if (isset($_POST['submit'])) {
                     </form>
                     <div class="d-flex justify-content-center mt-5">
                         <h5>Or mail us at <span style="color:blue;">support@codeatrandom.com</span> </h5>
+                        <h6>Copyright &copy; 2020-21 All Rights Reserved</h6>
                     </div>
                 </div>
             </div>

@@ -16,6 +16,10 @@ require 'includes/common.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -65,7 +69,7 @@ require 'includes/common.php';
     
     
     ----
-    
+    <?php include 'includes/footer(about).php'; ?>
     </body>
     
     </html>

@@ -58,6 +58,7 @@
            <h5 class="col-sm-3">Connect With Us:-</h5>
            <div class="col-12 col-sm-9 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
                   <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
+                  <h6>Copyright &copy; 2020-21 All Rights Reserved</h6>
           </div>
           </div>
 

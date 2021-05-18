@@ -26,7 +26,7 @@ require 'includes/common.php';
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon_ioo/favicon-16x16.png">
   <link rel="manifest" href="./favicon_io/site.webmanifest">
-  <title> Code@Random | Online Learning Platform </title>
+  <title> Code At Random | Online Learning Platform </title>
 
   <style>
     .carousel .carousel-indicators {
@@ -131,7 +131,7 @@ require 'includes/common.php';
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/549620264?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://youtube.com/embed/ycFo0-tApJ8" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="carousel-item">
@@ -213,7 +213,7 @@ require 'includes/common.php';
                           <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 8% 0px 8%;">
                             <div style="text-align: center;">
                               <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Actual Fees</strong></div>
-                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;4,999/-</strong></div>
+                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;1,999/-</strong></div>
                             </div>
                             <div style="text-align: center;">
                               <div class="course-card__price-discounted"><strong>&#x20b9;&nbsp;1,199/-&nbsp;* </strong></span></div>
@@ -271,10 +271,10 @@ require 'includes/common.php';
                           <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 8% 0px 8%;">
                             <div style="text-align: center;">
                               <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Actual Fees</strong></div>
-                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;6,999/-</strong></div>
+                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;2,999/-</strong></div>
                             </div>
                             <div style="text-align: center;">
-                              <div class="course-card__price-discounted"><strong>&#x20b9;&nbsp;1,499/-&nbsp;* </strong></span></div>
+                              <div class="course-card__price-discounted"><strong>&#x20b9;&nbsp;1,799/-&nbsp;* </strong></span></div>
                               <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Offer Price</strong></div>
                             </div>
                             <div style="align-self: flex-end;">
@@ -470,6 +470,7 @@ require 'includes/common.php';
             <div class='' id='copyright' style="margin-right: 0px; color: white;">
             <span id="siteseal" class="d-none d-lg-block "><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=AjsKTmPlyBiS3GZpOk5Evgcdp4YQmbSunjnNpJauTZE0tJrEHK03jBy5qC3I"></script></span>
               <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
+              <h6>Copyright &copy; 2020-21 All Rights Reserved</h6>
             </div>
           </div>
           <div class="clear">

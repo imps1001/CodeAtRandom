@@ -62,15 +62,14 @@ $num_rows = mysqli_num_rows($result);
     </div>
     </nav>
         <?php
-    if($showError){
-        echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    if($showError){?>
+         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>Error!</strong> '. $showError.'
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">×</span>
             </button>
         </div> ';
-        }
-    ?>
+        <?php } ?>
     <section class="text-gray-700 body-font" style="background-color: white;">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">

@@ -77,7 +77,7 @@ require 'includes/common.php';
                 <div class="mg-top text-description">
                   Fees
                 </div>
-                <div class="text-orange text-size-l"><del>&#x20b9; 1,999 </del> &nbsp;&#x20b9;1,199*</div>
+                <div class="text-orange text-size-l"><del>&#x20b9; 2,999 </del> &nbsp;&#x20b9;1,799*</div>
                 <div class="mg-top text-description" style="font-size: 15px;">
                   * Introductory offer valid till <br> 26th May 2021<br>
                   * After Enrolling/payment you will receive a Tax Invoice along with a link for joining the Telegram group on your registered email ID so as to get constant updates.
@@ -465,10 +465,10 @@ function pay_now() {
 
         var options = {
           "key": "rzp_live_jU7XeSF5KCVYVE",
-          "amount": "149900",
+          "amount": "179900",
           "currency": "INR",
           "name": "Code At Random (OPC) Pvt Ltd",
-          "description": "Java Course For Class 9th ICSE  ",
+          "description": "Java Course For Class 10th ICSE  ",
           "image": "http://codeatrandom.com/images/LOGO_1.png",
           "handler": function(response) {
             jQuery.ajax({
