@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $subjects = $_POST['subjects'];
     $message = $_POST['message'];
 
-    $require_query = "Insert into requirments(name, email, class, subjects, message) 
+    $require_query = "Insert into requirements(name, email, class, subjects, message) 
     values ('$name', '$email', '$class', '$subjects', '$message')";
     $require_submit = mysqli_query($con, $require_query)
         or die(mysqli_error($con));
@@ -31,6 +31,10 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link href="css/style.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_ioo/favicon-16x16.png">

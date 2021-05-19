@@ -1,6 +1,7 @@
 <?php
 $showError = false;
-$showAlert = false;
+$loginStatus=0;
+$showMessage= false;
 require 'includes/common.php';
 $First_Name = $_POST['first_name'];
 $Last_Name = $_POST['last_name'];
@@ -14,26 +15,37 @@ $Confirm_Password = $_POST['password_confirm'];
 $token = bin2hex(random_bytes(15));
 
 //Check whether username exists or not
-$Sql = "SELECT * FROM demo WHERE Email= '$Email' OR Phone= '$Phone'";
+$Sql = "SELECT * FROM users WHERE Email= '$Email' OR Phone= '$Phone'";
 $result = mysqli_query($con, $Sql);
 $num_rows = mysqli_num_rows($result);
-
+if($num_rows==0){
   if(strcmp($Confirm_Password,$Password)==0) 
   { 
-    $user_registration_query = "Insert into demo(First_Name, Last_Name, Class, Board, Phone, State, Email, Password,Confirm_Password,token) 
+    $user_registration_query = "Insert into users(First_Name, Last_Name, Class, Board, Phone, State, Email, Password,Confirm_Password,token) 
     values ('$First_Name', '$Last_Name', '$Class', '$Board', '$Phone','$State', '$Email', '$Password', '$Confirm_Password', '$token')";
     $user_registration_submit = mysqli_query($con, $user_registration_query)
     or die(mysqli_error($con));
-    session_start();
+    $query = "SELECT * FROM users WHERE Email='$Email' AND Password = '$Password'";
+    $result= mysqli_query($con,$query) or die(mysqli_error($con));
+    $result_row= mysqli_fetch_assoc($result);
     $_SESSION['email']= $Email;
     $_SESSION['first_name']= $First_Name;
     $_SESSION['last_name']=$Last_Name;
-    $_SESSION['id']= mysqli_insert_id($con);
-    header('location: index.php');
+    $_SESSION['class']=$Class;
+    $_SESSION['board']=$Board;
+    $_SESSION['token']=$token;
+    $_SESSION['id']= $result_row['ID'];
+    $loginStatus=1;
+    $showMessage= "You are successfully registered";
+    header('location:index.php');
   }
   else{
     $showError= "Both Passwords must be same";
    }
+}
+else{
+  $showError= "Email Or Phone Number Already exits.";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,12 +76,12 @@ $num_rows = mysqli_num_rows($result);
         <?php
     if($showError){?>
          <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Error!</strong> '. $showError.'
+            <strong>Error!</strong> <?php echo $showError; ?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">×</span>
             </button>
         </div> ';
-        <?php } ?>
+        <?php }?>
     <section class="text-gray-700 body-font" style="background-color: white;">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">

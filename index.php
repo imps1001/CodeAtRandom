@@ -131,17 +131,17 @@ require 'includes/common.php';
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://youtube.com/embed/ycFo0-tApJ8" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://youtube.com/embed/ycFo0-tApJ8?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/546657963?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VEE5kOoRkIw?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://player.vimeo.com/video/549626528?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="[Program to check whether a number is prime]"></iframe>
+                <iframe src="https://youtube.com/embed/ycjtZdP1ZjY?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen ></iframe>
                 </div>
               </div>
             </div>
@@ -461,23 +461,31 @@ require 'includes/common.php';
         </div>
         <hr color="grey">
         <div class="footer-bottom">
-          <div id="social-media-container" style="margin-left: 0px;" class="ml-auto">
-            <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
-            <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
-            <div class='' id='copyright' style="margin-right: 0px; color: white;">
-            <span id="siteseal" class="d-none d-lg-block "><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=AjsKTmPlyBiS3GZpOk5Evgcdp4YQmbSunjnNpJauTZE0tJrEHK03jBy5qC3I"></script></span>
-              <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
-              <h6>Copyright &copy; 2020-21 All Rights Reserved</h6>
-            </div>
+           <div class="row">
+           <h5 class="col-sm-4 d-none d-lg-block">Connect With Us:-</h5>
+           <h6 class="col-sm-3 col-md-4 d-none d-lg-block">Designed, Created And Managed By </h6>
+           <div class="col-12 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
+                  <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
           </div>
-          <div class="clear">
-
-
           </div>
-        </div>
+          <div class="row">
+          <div id="social-media-container" style="margin-left: 0px;" class="col-12 col-sm-4 col-md-4 order-sm-first">
+                  <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                  <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+          </div>
+          <div class="col-sm-4 col-md-3 d-none d-lg-block" >
+          <h5 class="ml-3">Pragati Sahu</h5>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 offset-md-1" style="float: right;">
+          <h6 class="mt-2">Copyright &copy; 2020-21 All Rights Reserved</h6>
+          </div>
+          </div>
+                <div class="clear">
+                </div>
+          </div>
       </div>
     </div>
   </div>
@@ -485,9 +493,9 @@ require 'includes/common.php';
   </footer>
   <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/path/to/js.cookie.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>

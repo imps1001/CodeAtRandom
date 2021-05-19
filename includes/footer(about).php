@@ -53,21 +53,28 @@
       </div>
       </div>
       <hr color="grey">
-         <div class="footer-bottom">
+      <div class="footer-bottom">
            <div class="row">
-           <h5 class="col-sm-3">Connect With Us:-</h5>
-           <div class="col-12 col-sm-9 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
+           <h5 class="col-sm-4 d-none d-lg-block">Connect With Us:-</h5>
+           <h6 class="col-sm-3 col-md-4 d-none d-lg-block">Designed, Created And Managed By </h6>
+           <div class="col-12 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
                   <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
-                  <h6>Copyright &copy; 2020-21 All Rights Reserved</h6>
           </div>
           </div>
-
-          <div id="social-media-container order-sm-first" style="margin-left: 0px;">
+          <div class="row">
+          <div id="social-media-container" style="margin-left: 0px;" class="col-12 col-sm-4 col-md-4 order-sm-first">
                   <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
                   <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
                   <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
                   <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
                   <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+          </div>
+          <div class="col-sm-4 col-md-3 d-none d-lg-block" >
+          <h5 class="ml-3">Pragati Sahu</h5>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 offset-md-1" style="float: right;">
+          <h6 class="mt-2">Copyright &copy; 2020-21 All Rights Reserved</h6>
+          </div>
           </div>
                 <div class="clear">
                 </div>

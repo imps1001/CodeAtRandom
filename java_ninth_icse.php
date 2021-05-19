@@ -368,10 +368,10 @@ require 'includes/common.php';
         <p>Here are two sample sessions of this course.</p>
         <div class="row">
           <div class="col-12 col-md-6 mt-4">
-          <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/549620264?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" src="https://youtube.com/embed/XrVJQ2J65gQ?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col-12 col-md-6 mt-4">
-          <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/546657963?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" src="https://youtube.com/embed/ycjtZdP1ZjY?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -450,7 +450,7 @@ function pay_now() {
           "currency": "INR",
           "name": "Code At Random (OPC) Pvt Ltd",
           "description": "Java Course For Class 9th ICSE  ",
-          "image": "https://codeatrandom.com/images/LOGO_1.png",
+          "image": "https://codeatrandom.com/images/LOGO_Payment%20Gateway.png",
           "handler": function(response) {
             jQuery.ajax({
               type: 'post',

@@ -124,11 +124,11 @@ if (isset($_POST['submit'])) {
       </li>
     </div>
   <?php
-    } else { ?>
+          } else { ?>
     <li class="nav-item" id="loginButton"><a class="nav-link" href="#" style="color: white;"><span class="fas fa-sign-in-alt fa-lg "> Login</span></a></li>
     <li class="nav-item" id="RegisterButton"><a class="nav-link" href="#" style="color: white;"><span class="fas fa-user fa-lg "> Register </span></a></li>
   <?php
-    } ?>
+          } ?>
   </ul>
   </div>
   </div>
@@ -146,7 +146,11 @@ if (isset($_POST['submit'])) {
             <use xlink:href="#check-circle-fill" />
           </svg>
           <div>
-            Send your message by filling this form. We will reach to you shortly.
+            <?php if ($Message) {
+              echo $Message;
+            } else { ?>
+              We are working on more courses. Till then tell us your requirements
+            <?php } ?>
           </div>
         </div>
         <form action="" method="POST" role="form" id="contact-form">
@@ -159,7 +163,7 @@ if (isset($_POST['submit'])) {
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Write about your feedback, query or any doubt." style="height:200px"></textarea>
 
-          <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" id="modal_login_submit" tabindex="3">Submit</button>
+          <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" id="modal_login_submit" tabindex="3" name="submit">Submit</button>
 
         </form>
       </div>
@@ -167,77 +171,77 @@ if (isset($_POST['submit'])) {
   </div>
   <!--Footer Section-->
   <div id="footer" class="generic_footer" style="margin-bottom: 10px;">
-  <div class="container">
-      <div class="max-width-container">             
-          <div class="footer_container">
-            <div class="row">
-              <div class="col-12 col-md-8 offset-md-4" style="justify-content: center; margin-bottom:5px;">
-              <h6>Or mail us at support@codeatrandom.com  </h6><br>
+    <div class="container">
+      <div class="max-width-container">
+        <div class="footer_container">
+          <div class="row">
+            <div class="col-12 col-md-8 offset-md-4" style="justify-content: center; margin-bottom:5px;">
+              <h6>Or mail us at support@codeatrandom.com </h6><br>
               <p class="mt-1">Registered Address- 5 Khanderao Gate, Jhansi (UP) 284002</p><br>
               <p class="mt-1"> Our Contact Numbers:- 7985457381 , 6392838448</p>
+            </div>
+          </div>
+          <hr color="grey">
+          <div class="footer-bottom">
+            <div class="row">
+              <h5 class="col-sm-3">Connect With Us:-</h5>
+              <div class="col-12 col-sm-9 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
+                <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
+                <h6>Copyright &copy; 2020-21 All Rights Reserved</h6>
+
               </div>
             </div>
-      <hr color="grey">
-         <div class="footer-bottom">
-           <div class="row">
-           <h5 class="col-sm-3">Connect With Us:-</h5>
-           <div class="col-12 col-sm-9 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
-                  <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
-                  <h6>Copyright &copy; 2020-21 All Rights Reserved</h6>
-                  
-          </div>
-          </div>
 
-          <div id="social-media-container order-sm-first" style="margin-left: 0px;">
-                  <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
-                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
-                  <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+            <div id="social-media-container order-sm-first" style="margin-left: 0px;">
+              <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+              <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
+              <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+              <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
+              <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+            </div>
+            <div class="clear">
+            </div>
           </div>
-                <div class="clear">
-                </div>
-          </div>
-     </div>
-  </div>
-</div>
-  
+        </div>
+      </div>
+    </div>
 
-  
-<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/path/to/js.cookie.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-  <script>
-  var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbarcr").style.top = "0";
-      } else {
-        document.getElementById("navbarcr").style.top = "-50px";
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/path/to/js.cookie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbarcr").style.top = "0";
+        } else {
+          document.getElementById("navbarcr").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
       }
-      prevScrollpos = currentScrollPos;
-    }
-    $('#loginButton').click(function() {
-      $('#loginModal').modal('show')
-    });
+      $('#loginButton').click(function() {
+        $('#loginModal').modal('show')
+      });
 
-    $('#RegisterButton').click(function() {
-      $('#register_Modal').modal('show')
-    });
+      $('#RegisterButton').click(function() {
+        $('#register_Modal').modal('show')
+      });
 
-    $('#register-link').click(function() {
-      $('#loginModal').modal('hide')
-      $('#register_Modal').modal('show')
-    });
-    $('#Loginlink').click(function() {
-      $('#loginModal').modal('show')
-    });
+      $('#register-link').click(function() {
+        $('#loginModal').modal('hide')
+        $('#register_Modal').modal('show')
+      });
+      $('#Loginlink').click(function() {
+        $('#loginModal').modal('show')
+      });
     </script>
 </body>
 

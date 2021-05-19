@@ -4,9 +4,10 @@ $showError = false;
 require 'includes/common.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
-$query= "SELECT DISTINCT Email, Password FROM demo WHERE Email= '$email' AND Password= '$password' ";
-$query_result= mysqli_query($con, $query);
+$query= "SELECT * FROM users WHERE Email= '$email' AND Password= '$password' ";
+$query_result= mysqli_query($con,$query) or die(mysqli_error($con));
 $result= mysqli_num_rows($query_result);
+$result_row= mysqli_fetch_assoc($query_result);
 if ($result==0)
 {
    $login = false;
@@ -17,8 +18,8 @@ else
     $login = true;
     session_start();
     $_SESSION['email']= $email;
-    $_SESSION['id']= mysqli_insert_id($con);
-    $sql= "SELECT First_Name, Last_Name, Class, Board, Phone, State From demo Where Email= '$email' ";
+    $_SESSION['id']= $result_row['ID'];
+    $sql= "SELECT First_Name, Last_Name, Class, Board, Phone, State From users Where Email= '$email' ";
     $stmt=$con->prepare( $sql );
 
     if( $stmt && isset( $_SESSION['email'] ) ){
@@ -41,6 +42,8 @@ else
     $_SESSION['board'] = $board;
     $_SESSION['phone'] = $phone;
     $_SESSION['state'] = $state;
+    
+    
     if(isset($_POST['rememberme']))
     {
         setcookie('emailcookie',$email,time()+86400);
