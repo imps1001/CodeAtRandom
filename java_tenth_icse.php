@@ -14,10 +14,10 @@ require 'includes/common.php';
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet"> 
-    <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
-    <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
-    <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/all.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
+  <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <link href="css/style.css" rel="stylesheet">
   <link href="js/course2.js" rel="stylesheet">
@@ -28,18 +28,18 @@ require 'includes/common.php';
   <title>Code@Random | 10th ICSE</title>
 
   <style>
+    @media only screen and (max-width:600px) {
+      .course_9 {
+        margin-left: 0rem;
+        padding-left: 0rem;
+        width: 100%;
+        justify-content: flex-start;
+      }
 
-  @media only screen and (max-width:600px){
-  .course_9{
-    margin-left: 0rem;
-    padding-left: 0rem;
-    width: 100%;
-    justify-content: flex-start;
-  }
-  .heading{
-    font-size: 1.8rem;
-  }
-  }
+      .heading {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 
@@ -69,36 +69,49 @@ require 'includes/common.php';
       <main>
         <h1 class="heading" style="color: white; ">JAVA COURSE FOR 10th ICSE</h1>
         <div class="row">
-        <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-4 course_9">
+          <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-4 course_9">
             <div class="offer-card row">
               <div class="col-12 col-md-6">
                 <div class="text-description">Lectures Available From</div>
-                <div class="text-orange text-size-m"><strong> May 26th 2021</strong></div>
+                <div class="text-orange text-size-m"><strong> May 31st 2021</strong></div>
                 <div class="mg-top text-description">
                   Fees
                 </div>
-                <div class="text-orange text-size-l"><del>&#x20b9; 2,999 </del> &nbsp;&#x20b9;1,799*</div>
+                <div class="text-orange text-size-l"><del>&#x20b9; 7,999 </del> &nbsp;&#x20b9;1,799*</div>
                 <div class="mg-top text-description" style="font-size: 15px;">
-                  * Introductory offer valid till <br> 26th May 2021<br>
+                  * Introductory offer valid till <br> 31st May 2021<br>
                   * After Enrolling/payment you will receive a Tax Invoice along with a link for joining the Telegram group on your registered email ID so as to get constant updates.
                 </div>
               </div>
               <div class="col-12 col-md-6">
-                <?php if (isset($_SESSION['email'])) { ?>
-                  <a href="#">
-                    <div id="payment_btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
-                      Enroll Now <br>And Pay
-                    </div>
-                  </a>
-                <?php } else {
-                ?>
+                <?php
+                if (isset($_SESSION['email'])) {
+                  $user_id = $_SESSION['id'];
+                  $query = "SELECT * FROM user_courses WHERE user_id='$user_id' ";
+                  $result = mysqli_query($con, $query) or die(mysqli_error($con));
+                  $row = $result->fetch_assoc();
+                  if (isset($row['course_id']) && $row['course_id'] == 2) { ?>
+                    <a href="#">
+                      <div class="btn btn--main btn-l btn--padding-l">
+                        GO TO <br>Course
+                      </div>
+                    </a>
+                  <?php } else { ?>
+                    <a href="#">
+                      <div id="payment_btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
+                        Enroll Now <br>And Pay
+                      </div>
+                    </a>
+                  <?php
+                  }
+                } else {
+                  ?>
                   <a href="#">
                     <div id="not_login" class="btn btn--main btn-l btn--padding-l">
                       Enroll Now <br>And Pay
                     </div>
                   </a>
                 <?php } ?>
-
                 <a href="#course_content"><button class="btn btn--outline btn-l btn--padding-l mt-2">
                     Want to know more?
                   </button>
@@ -108,7 +121,7 @@ require 'includes/common.php';
             </div>
           </div>
           <div class="col-12 col-md-6 mt-4">
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/546990311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/Xu9UR3RNczc?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
             <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
@@ -142,16 +155,16 @@ require 'includes/common.php';
         <div style="z-index: 2;" class="card card--shadow card--behind col-12 col-md-4">
           <h2 class="heading" style="justify-content: center; padding-bottom:10px;"> 200+ Programs</h2>
           <ul>
-          <li class="ml-3 mb-1">Programs based on – Input through Scanner class and programs done in class 9th.</li>
+            <li class="ml-3 mb-1">Programs based on – Input through Scanner class and programs done in class 9th.</li>
             <li class="ml-3 mb-1">Programs based on if, if else, if else if ladder, nested if, switch case, menu-driven, bill-slab.</li>
-            <li class="ml-3 mb-1">Programs based on  for loop such as, printing simple series, summation of simple series,etc</li>
+            <li class="ml-3 mb-1">Programs based on for loop such as, printing simple series, summation of simple series,etc</li>
             <li class="ml-3 mb-1">Prime number, perfect number, composite number, Fibonacci series. Lowest Common Multiple (LCM), Highest Common Factor(HCF) etc.</li>
             <li class="ml-3 mb-1">Program based on while loop like Armstrong number, Spy number,Niven number,Palindrome number, etc.</li>
             <li class="ml-3 mb-1">Programs based on Nested Loops</li>
             <li class="ml-3 mb-1">Programs based on overloaded methods</li>
             <li class="ml-3 mb-1">Programs involving data members, member methods invoking the methods with respect to the object created.</li>
-             <li class="ml-3 mb-1">Programs based on arrays such as accessing elements, searching and sorting techniques, etc</li>
-             <li class="ml-3 mb-1">Programs based on extracting the characters from a given string, Palindrome string, piglatin, alphabetical order of characters, etc </li>
+            <li class="ml-3 mb-1">Programs based on arrays such as accessing elements, searching and sorting techniques, etc</li>
+            <li class="ml-3 mb-1">Programs based on extracting the characters from a given string, Palindrome string, piglatin, alphabetical order of characters, etc </li>
           </ul>
         </div>
 
@@ -231,19 +244,19 @@ require 'includes/common.php';
                   </div>
                   <div class="accordions-content">
                     <ul>
-                    <li>Objects and Classes</li>
+                      <li>Objects and Classes</li>
                       <li>Examples on how objects encapsulate state and behaviour</li>
                       <li>Variables define state; member methods;</li>
                       <li>Operations/methods/messages/ methods define behaviour. </li>
                       <li>Classes as abstractions for sets of objects; class as an object factory; </li>
                       <li>Primitive data types, Composite data types. </li>
-                      <li>Variable declarations for both types; difference between the two types.  </li>
+                      <li>Variable declarations for both types; difference between the two types. </li>
                       <li> Real life examples for explaining the concept of class and object.</li>
                       <li> Programs involving data members, member methods invoking the methods with respect to the object created.</li>
                       <li>Practice Assignments and other programs </li>
-                      
 
-                      
+
+
 
                     </ul>
                   </div>
@@ -288,7 +301,7 @@ require 'includes/common.php';
                       <li>Programs based on different types of constructors mentioned in the syllabus.</li>
                       <li>Programs / outputs based on constructor overloading</li>
                       <li>Practice Assignments and other programs </li>
-                      
+
 
 
                     </ul>
@@ -309,7 +322,7 @@ require 'includes/common.php';
                       <li>Class may be considered as a new data type created by the user, that has its own functionality.</li>
                       <li>Methods such as int parseInt(String s), long parseLong(String s), and so on , and also character methods </li>
                       <li>Practice Assignments and other programs </li>
-                      
+
 
                     </ul>
                   </div>
@@ -329,7 +342,7 @@ require 'includes/common.php';
                       <li>Visibility rules for private, protected and public access specifiers.</li>
                       <li>Scope of variables, class variables, instance variables, argument variables, local variables</li>
                       <li>Practice Assignments and other programs </li>
-                      
+
                     </ul>
                   </div>
                 </div>
@@ -349,7 +362,7 @@ require 'includes/common.php';
                       <li>Array as a composite type, length statement to find the size of the array </li>
                       <li>Declaration, initialization, accepting data in a double dimensional array</li>
                       <li>Practice Assignments and other programs </li>
-                      
+
                     </ul>
                   </div>
                 </div>
@@ -368,7 +381,7 @@ require 'includes/common.php';
                       <li>Programs based on the string methods such as extracting and modifying characters of a string</li>
                       <li>Alphabetical order of the strings in an array through sorting techniques.</li>
                       <li>Practice Assignments and other programs </li>
-                      
+
                     </ul>
                   </div>
                 </div>
@@ -382,20 +395,20 @@ require 'includes/common.php';
   </div>
 
   <div class="bg-white">
-  <div class="container">
-        <div class="video-container" style="padding: 30px 0px 20px 0px; text-align: center; color: #000;">
-          <h2>Want to see the demo class?</h2>
-          <p>Here are sample sessions of this course.</p>
-          <div class="row">
-            <div class="col-12 col-md-6 mt-4">
-            <iframe class="embed-responsive-item" src="https://youtube.com/embed/XrVJQ2J65gQ?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="col-12 col-md-6 mt-4">
-            <iframe class="embed-responsive-item" src="https://youtube.com/embed/ycjtZdP1ZjY?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
+    <div class="container">
+      <div class="video-container" style="padding: 30px 0px 20px 0px; text-align: center; color: #000;">
+        <h2>Want to see the demo class?</h2>
+        <p>Here are sample sessions of this course.</p>
+        <div class="row">
+          <div class="col-12 col-md-6 mt-4">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/XrVJQ2J65gQ?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Assignment 36 Solution"></iframe></div>
+          </div>
+          <div class="col-12 col-md-6 mt-4">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/ycjtZdP1ZjY?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Assignment 36 Solution"></iframe></div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 
   <?php include 'includes/footer(about).php';
@@ -403,7 +416,7 @@ require 'includes/common.php';
 
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/path/to/js.cookie.js"></script>
@@ -411,90 +424,89 @@ require 'includes/common.php';
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script>
-  $('#loginButton').click(function() {
-    $('#loginModal').modal('show')
-  });
-
-  $('#RegisterButton').click(function() {
-    $('#register_Modal').modal('show')
-  });
-
-  $('#register-link').click(function() {
-    $('#loginModal').modal('hide')
-    $('#register_Modal').modal('show')
-  });
-  $('#not_login').click(function() {
-    $('#loginModal').modal('show')
-  });
-
-let acc = document.querySelectorAll(".accordion");
-let i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-      } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-  });
-}
-
-$('.accordion-heading').on('click', (e) => {
-  if ($(e.target).parent().parent().hasClass('active-accordion')) {
-      $('.accordion-heading').parent().parent().removeClass('active-accordion')
-  }
-  else {
-      $('.accordion-heading').parent().parent().removeClass('active-accordion')
-      $(e.target).parent().parent().addClass('active-accordion')
-  }
-})
-
-function pay_now() {
-    var course_id = 2;
-
-    jQuery.ajax({
-      type: 'post',
-      url: 'payment_process.php',
-      data: "course_id=" + course_id,
-      success: function(result) {
-
-        var options = {
-          "key": "rzp_live_jU7XeSF5KCVYVE",
-          "amount": "179900",
-          "currency": "INR",
-          "name": "Code At Random (OPC) Pvt Ltd",
-          "description": "Java Course For Class 10th ICSE  ",
-          "image": "https://codeatrandom.com/images/LOGO_Payment%20Gateway.png",
-          "handler": function(response) {
-            jQuery.ajax({
-              type: 'post',
-              url: 'payment_process.php',
-              data: "payment_id=" + response.razorpay_payment_id + "&course_id=" + course_id,
-              success: function(result) {
-
-                window.location.href = "java_tenth_icse.php";
-              }
-            });
-          },
-          "notes": {
-            "address": "5, Khanderao Gate Jhansi (UP)"
-          },
-          "theme": {
-            "color": "#3399ff"
-          }
-        };
-        var rzp1 = new Razorpay(options);
-          rzp1.open();
-      }
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    $('#loginButton').click(function() {
+      $('#loginModal').modal('show')
     });
 
+    $('#RegisterButton').click(function() {
+      $('#register_Modal').modal('show')
+    });
 
-  }
+    $('#register-link').click(function() {
+      $('#loginModal').modal('hide')
+      $('#register_Modal').modal('show')
+    });
+    $('#not_login').click(function() {
+      $('#loginModal').modal('show')
+    });
+
+    let acc = document.querySelectorAll(".accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+    $('.accordion-heading').on('click', (e) => {
+      if ($(e.target).parent().parent().hasClass('active-accordion')) {
+        $('.accordion-heading').parent().parent().removeClass('active-accordion')
+      } else {
+        $('.accordion-heading').parent().parent().removeClass('active-accordion')
+        $(e.target).parent().parent().addClass('active-accordion')
+      }
+    })
+
+    function pay_now() {
+      var course_id = 2;
+
+      jQuery.ajax({
+        type: 'post',
+        url: 'payment_process.php',
+        data: "course_id=" + course_id,
+        success: function(result) {
+
+          var options = {
+            "key": "rzp_live_jU7XeSF5KCVYVE",
+            "amount": "179900",
+            "currency": "INR",
+            "name": "Code At Random (OPC) Pvt Ltd",
+            "description": "Java Course For Class 10th ICSE  ",
+            "image": "https://codeatrandom.com/images/LOGO_Payment%20Gateway.png",
+            "handler": function(response) {
+              jQuery.ajax({
+                type: 'post',
+                url: 'payment_process.php',
+                data: "payment_id=" + response.razorpay_payment_id + "&course_id=" + course_id,
+                success: function(result) {
+
+                  window.location.href = "java_tenth_icse.php";
+                }
+              });
+            },
+            "notes": {
+              "address": "5, Khanderao Gate Jhansi (UP)"
+            },
+            "theme": {
+              "color": "#3399ff"
+            }
+          };
+          var rzp1 = new Razorpay(options);
+          rzp1.open();
+        }
+      });
+
+
+    }
   </script>
 
 

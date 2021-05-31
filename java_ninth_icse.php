@@ -28,18 +28,18 @@ require 'includes/common.php';
 
 
   <style>
+    @media only screen and (max-width:600px) {
+      .course_9 {
+        margin-left: 0rem;
+        padding-left: 0rem;
+        width: 100%;
+        justify-content: flex-start;
+      }
 
-  @media only screen and (max-width:600px){
-  .course_9{
-    margin-left: 0rem;
-    padding-left: 0rem;
-    width: 100%;
-    justify-content: flex-start;
-  }
-  .heading{
-    font-size: 1.8rem;
-  }
-  }
+      .heading {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 
@@ -73,25 +73,39 @@ require 'includes/common.php';
             <div class="offer-card row">
               <div class="col-12 col-md-6">
                 <div class="text-description">Lectures Available From</div>
-                <div class="text-orange text-size-m"><strong> May 26th 2021</strong></div>
+                <div class="text-orange text-size-m"><strong> May 31st 2021</strong></div>
                 <div class="mg-top text-description">
                   Fees
                 </div>
-                <div class="text-orange text-size-l"><del>&#x20b9; 1,999 </del> &nbsp;&#x20b9;1,199*</div>
+                <div class="text-orange text-size-l"><del>&#x20b9; 4,999 </del> &nbsp;&#x20b9;1,199*</div>
                 <div class="mg-top text-description" style="font-size: 15px;">
-                  * Introductory offer valid till <br> 26th May 2021<br>
+                  * Introductory offer valid till <br> 31st May 2021<br>
                   * After Enrolling/payment you will receive a Tax Invoice along with a link for joining the Telegram group on your registered email ID so as to get constant updates.
                 </div>
               </div>
               <div class="col-12 col-md-6">
-                <?php if (isset($_SESSION['email'])) { ?>
-                  <a href="#">
-                    <div id="payment_btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
-                      Enroll Now <br>And Pay
-                    </div>
-                  </a>
-                <?php } else {
-                ?>
+                <?php
+                if (isset($_SESSION['email'])) {
+                  $user_id = $_SESSION['id'];
+                  $query = "SELECT * FROM user_courses WHERE user_id='$user_id' ";
+                  $result = mysqli_query($con, $query) or die(mysqli_error($con));
+                  $row = $result->fetch_assoc();
+                  if (isset($row['course_id']) && $row['course_id'] == 1) { ?>
+                    <a href="#">
+                      <div class="btn btn--main btn-l btn--padding-l">
+                        GO TO <br>Course
+                      </div>
+                    </a>
+                  <?php } else { ?>
+                    <a href="#">
+                      <div id="payment_btn" class="btn btn--main btn-l btn--padding-l" onclick="pay_now()">
+                        Enroll Now <br>And Pay
+                      </div>
+                    </a>
+                  <?php
+                  }
+                } else {
+                  ?>
                   <a href="#">
                     <div id="not_login" class="btn btn--main btn-l btn--padding-l">
                       Enroll Now <br>And Pay
@@ -108,8 +122,7 @@ require 'includes/common.php';
             </div>
           </div>
           <div class="col-12 col-md-6 mt-4">
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/546990311?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/9SHPtUEEkJ0?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
           </div>
         </div>
       </main>
@@ -218,7 +231,7 @@ require 'includes/common.php';
                   </div>
                   <div class="accordions-content">
                     <ul>
-                      <li>Introduction to JAVA - Types of java programs, Java Source code, Bytecode, Java Virtual Machine(JVM),Features of JAVA.</li>
+                      <li>Introduction to JAVA </li>
                       <li>Java Source code, Bytecode, Java Virtual Machine(JVM)</li>
                       <li>Features Of JAVA</li>
                       <li>JAVA Compilation Process</li>
@@ -368,10 +381,10 @@ require 'includes/common.php';
         <p>Here are two sample sessions of this course.</p>
         <div class="row">
           <div class="col-12 col-md-6 mt-4">
-          <iframe class="embed-responsive-item" src="https://youtube.com/embed/XrVJQ2J65gQ?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/XrVJQ2J65gQ?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
           </div>
           <div class="col-12 col-md-6 mt-4">
-          <iframe class="embed-responsive-item" src="https://youtube.com/embed/ycjtZdP1ZjY?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/ycjtZdP1ZjY?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
           </div>
         </div>
       </div>
@@ -391,101 +404,98 @@ require 'includes/common.php';
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <script>
-
-  
-
-$('#loginButton').click(function() {
-    $('#loginModal').modal('show')
-  });
-
-  $('#RegisterButton').click(function() {
-    $('#register_Modal').modal('show')
-  });
-
-  $('#register-link').click(function() {
-    $('#loginModal').modal('hide')
-    $('#register_Modal').modal('show')
-  });
-  $('#not_login').click(function() {
-    $('#loginModal').modal('show')
-  });
-
-  let acc = document.querySelectorAll(".accordion");
-  let i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
+    $('#loginButton').click(function() {
+      $('#loginModal').modal('show')
     });
-  }
 
-  $('.accordion-heading').on('click', (e) => {
-    if ($(e.target).parent().parent().hasClass('active-accordion')) {
-      $('.accordion-heading').parent().parent().removeClass('active-accordion')
-    } else {
-      $('.accordion-heading').parent().parent().removeClass('active-accordion')
-      $(e.target).parent().parent().addClass('active-accordion')
+    $('#RegisterButton').click(function() {
+      $('#register_Modal').modal('show')
+    });
+
+    $('#register-link').click(function() {
+      $('#loginModal').modal('hide')
+      $('#register_Modal').modal('show')
+    });
+    $('#not_login').click(function() {
+      $('#loginModal').modal('show')
+    });
+
+    let acc = document.querySelectorAll(".accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
     }
-  })
 
-
-function pay_now() {
-    var course_id = 1;
-
-    jQuery.ajax({
-      type: 'post',
-      url: 'payment_process.php',
-      data: "course_id=" + course_id,
-      success: function(result) {
-
-        var options = {
-          "key": "rzp_live_jU7XeSF5KCVYVE",
-          "amount": "119900",
-          "currency": "INR",
-          "name": "Code At Random (OPC) Pvt Ltd",
-          "description": "Java Course For Class 9th ICSE  ",
-          "image": "https://codeatrandom.com/images/LOGO_Payment%20Gateway.png",
-          "handler": function(response) {
-            jQuery.ajax({
-              type: 'post',
-              url: 'payment_process.php',
-              data: "payment_id=" + response.razorpay_payment_id + "&course_id=" + course_id,
-              success: function(result) {
-
-                window.location.href = "java_ninth_icse.php";
-              }
-            });
-          },
-          "notes": {
-            "address": "5, Khanderao Gate Jhansi (UP)"
-          },
-          "theme": {
-            "color": "#3399ff"
-          }
-        };
-        var rzp1 = new Razorpay(options);
-    rzp1.on('payment.failed', function (response){
-      alert(response.error.code);
-      alert(response.error.description);
-      alert(response.error.source);
-      alert(response.error.step);
-      alert(response.error.reason);
-      alert(response.error.metadata.order_id);
-      alert(response.error.metadata.payment_id);
-});
-        var rzp1 = new Razorpay(options);
-          rzp1.open();
+    $('.accordion-heading').on('click', (e) => {
+      if ($(e.target).parent().parent().hasClass('active-accordion')) {
+        $('.accordion-heading').parent().parent().removeClass('active-accordion')
+      } else {
+        $('.accordion-heading').parent().parent().removeClass('active-accordion')
+        $(e.target).parent().parent().addClass('active-accordion')
       }
-    });
+    })
 
 
-  }
+    function pay_now() {
+      var course_id = 1;
+
+      jQuery.ajax({
+        type: 'post',
+        url: 'payment_process.php',
+        data: "course_id=" + course_id,
+        success: function(result) {
+
+          var options = {
+            "key": "rzp_live_jU7XeSF5KCVYVE",
+            "amount": "119900",
+            "currency": "INR",
+            "name": "Code At Random (OPC) Pvt Ltd",
+            "description": "Java Course For Class 9th ICSE  ",
+            "image": "https://codeatrandom.com/images/LOGO_Payment%20Gateway.png",
+            "handler": function(response) {
+              jQuery.ajax({
+                type: 'post',
+                url: 'payment_process.php',
+                data: "payment_id=" + response.razorpay_payment_id + "&course_id=" + course_id,
+                success: function(result) {
+
+                  window.location.href = "java_ninth_icse.php";
+                }
+              });
+            },
+            "notes": {
+              "address": "5, Khanderao Gate Jhansi (UP)"
+            },
+            "theme": {
+              "color": "#3399ff"
+            }
+          };
+          var rzp1 = new Razorpay(options);
+          rzp1.on('payment.failed', function(response) {
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+          });
+          var rzp1 = new Razorpay(options);
+          rzp1.open();
+        }
+      });
+
+
+    }
   </script>
 
 

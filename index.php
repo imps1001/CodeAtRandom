@@ -110,7 +110,7 @@ require 'includes/common.php';
         </div>
         <div class="row" style="margin-top:0px;">
           <div class="startlearningbutton col-md-12 mt-5" style="margin-bottom: 10px;">
-            <a href="#courses" role="button" style="color: black;" ><span class="startbutton btn btn-lg nav-link col-12 col-md-5 offset-lg-5 offset-md-4 offset-sm-2">Explore Now</span></a>
+            <a href="#courses" role="button" style="color: black;"><span class="startbutton btn btn-lg nav-link col-12 col-md-5 offset-lg-5 offset-md-4 offset-sm-2">Explore Now</span></a>
           </div>
         </div>
       </div>
@@ -131,17 +131,17 @@ require 'includes/common.php';
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://youtube.com/embed/ycFo0-tApJ8?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/912ad66tMhk?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VEE5kOoRkIw?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rNKMshHtmz8?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://youtube.com/embed/ycjtZdP1ZjY?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff"frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen ></iframe>
+                  <iframe lass="embed-responsive-item" src="https://www.youtube.com/embed/Xu9UR3RNczc?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -196,13 +196,13 @@ require 'includes/common.php';
                         Our Courses have 100+ hours learning sessions, 30+(minimum) hours live sessions, 300+ practice questions, carefully
                         designed to give a boast to your learning.</span>
                       <div class="t-2" style=" display: none; color: white;" class="course-detail__typography">
-                      <p>We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </p>
-                      <button class="btn btn-warning btn-lg offset-md-4 offset-lg-5"><a href="requirement_students.php" style="color: black; text-decoration:none;" >Learn More</a></button>
-                    </div>
-                    <div class="t-3" style=" display: none; color: white;" class="course-detail__typography">
-                      <p>We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </p>
-                      <button class="btn btn-warning btn-lg offest-md-4 offset-lg-5"><a href="requirement_students.php" style="color: black; text-decoration:none;" >Learn More</a></button>
-                    </div>
+                        <p>We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </p>
+                        <button class="btn btn-warning btn-lg offset-md-4 offset-lg-5"><a href="requirement_students.php" style="color: black; text-decoration:none;">Learn More</a></button>
+                      </div>
+                      <div class="t-3" style=" display: none; color: white;" class="course-detail__typography">
+                        <p>We appreciate for showing your interest in our courses. Please drop your requirements by clicking on the button below. </p>
+                        <button class="btn btn-warning btn-lg offest-md-4 offset-lg-5"><a href="requirement_students.php" style="color: black; text-decoration:none;">Learn More</a></button>
+                      </div>
                     </div>
                   </div>
                   <div class="pb-3 row">
@@ -213,7 +213,7 @@ require 'includes/common.php';
                           <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 8% 0px 8%;">
                             <div style="text-align: center;">
                               <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Actual Fees</strong></div>
-                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;1,999/-</strong></div>
+                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;4,999/-</strong></div>
                             </div>
                             <div style="text-align: center;">
                               <div class="course-card__price-discounted"><strong>&#x20b9;&nbsp;1,199/-&nbsp;* </strong></span></div>
@@ -271,7 +271,7 @@ require 'includes/common.php';
                           <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 8% 0px 8%;">
                             <div style="text-align: center;">
                               <div style="font: 20px / 24px Mulish; letter-spacing: 0px; color: rgb(255, 255, 255); opacity: 0.8;"><strong> Actual Fees</strong></div>
-                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;2,999/-</strong></div>
+                              <div class="course-card__price-actual" style="font-size: large;"><strong>&#x20b9;7,999/-</strong></div>
                             </div>
                             <div style="text-align: center;">
                               <div class="course-card__price-discounted"><strong>&#x20b9;&nbsp;1,799/-&nbsp;* </strong></span></div>
@@ -322,7 +322,7 @@ require 'includes/common.php';
                       </div>
                     </div>
                   </div>
-                  
+
 
                 </div>
 
@@ -461,31 +461,31 @@ require 'includes/common.php';
         </div>
         <hr color="grey">
         <div class="footer-bottom">
-           <div class="row">
-           <h5 class="col-sm-4 d-none d-lg-block">Connect With Us:-</h5>
-           <h6 class="col-sm-3 col-md-4 d-none d-lg-block">Designed, Created And Managed By </h6>
-           <div class="col-12 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
-                  <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
-          </div>
+          <div class="row">
+            <h5 class="col-sm-4 d-none d-lg-block">Connect With Us:-</h5>
+            <h6 class="col-sm-3 col-md-4 d-none d-lg-block">Designed, Created And Managed By </h6>
+            <div class="col-12 col-md-4 ml-auto order-sm-last" id='copyright' style="margin-right:0px; color: white; float:right;">
+              <h6><strong>CODE AT RANDOM (OPC) Private Limited</strong></h6>
+            </div>
           </div>
           <div class="row">
-          <div id="social-media-container" style="margin-left: 0px;" class="col-12 col-sm-4 col-md-4 order-sm-first">
-                  <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
-                  <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
-                  <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+            <div id="social-media-container" style="margin-left: 0px;" class="col-12 col-sm-4 col-md-4 order-sm-first">
+              <a class="btn btn-social-icon btn-twitter" href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+              <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/codeatrandom" target="_blank"><i class="fab fa-facebook-square"></i></a>
+              <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/codeatrandom/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+              <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/channel/UCFykORvcikeYASRLNARaj4g" target="_blank"><i class="fab fa-youtube-square"></i></a>
+              <a style="color: white;" class="btn btn-social-icon btn-adn" href="mailto:support@codeatrandom.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+            </div>
+            <div class="col-sm-4 col-md-3 d-none d-lg-block">
+              <h5 class="ml-5">Pragati Sahu</h5>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 offset-md-1" style="float: right;">
+              <h6 class="mt-2">Copyright &copy; 2020-21 All Rights Reserved</h6>
+            </div>
           </div>
-          <div class="col-sm-4 col-md-3 d-none d-lg-block" >
-          <h5 class="ml-3">Pragati Sahu</h5>
+          <div class="clear">
           </div>
-          <div class="col-12 col-sm-4 col-md-4 offset-md-1" style="float: right;">
-          <h6 class="mt-2">Copyright &copy; 2020-21 All Rights Reserved</h6>
-          </div>
-          </div>
-                <div class="clear">
-                </div>
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -506,7 +506,7 @@ require 'includes/common.php';
   <script src="https://player.vimeo.com/api/player.js"></script>
 
   <script>
-  var prevScrollpos = window.pageYOffset;
+    var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
@@ -539,8 +539,8 @@ require 'includes/common.php';
       $('#First_Modal').modal('hide')
       $('#register_Modal').modal('show')
     });*/
-  
-  
+
+
     if (!Cookies.get('popup')) {
       setTimeout(function() {
         $('#First_Modal').modal();
@@ -596,7 +596,7 @@ require 'includes/common.php';
         $(".t-3").show();
       }
     }
-  
+
 
     jQuery(document).ready(function() {
       $('#myModal').on('hidden.bs.modal', function(e) {
@@ -607,7 +607,7 @@ require 'includes/common.php';
       });
 
     });
-    </script>
+  </script>
 
 
 </body>

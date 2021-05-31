@@ -18,6 +18,8 @@ if(isset($_POST['payment_id']) && isset($_SESSION['OID'])){
     $payment_id = $_POST['payment_id'];
     $added_on = date('Y-m-d h:i:s');
     $id= $_SESSION['OID'];
+    $user_id = $_SESSION['id'];
     mysqli_query($con,"update payment set payment_status='complete',payment_id='$payment_id',added_on='$added_on' where id='$id ' ");
+    mysqli_query($con, "Insert into user_courses(user_id, course_id)values ('$user_id', '$course_id')");
 }
 ?>

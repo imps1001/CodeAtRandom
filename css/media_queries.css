@@ -1,5 +1,9 @@
 @media only screen and (max-width: 600px) {
-    [class*="col-"] {
+  body{
+    overflow-x: hidden;
+    overflow-x: scroll;
+  }  
+  [class*="col-"] {
       width: 100%;
     }
 
@@ -144,7 +148,68 @@
   }
   @media only screen and (min-width :1025px){
     .brand-banner {
+      width: 550px;
+      float: left;
+    }
+    .paragraph {
+      position: relative;
+      float: left;
+      flex-direction: column;
+      flex-basis: auto;
+      flex-flow: column-reverse wrap;
+    }
+  }
+
+  @media only screen and (min-width :1211px){
+    .brand-banner {
+      width: 600px;
+      float: left;
+    }
+    .paragraph {
+      position: relative;
+      float: left;
+      flex-direction: column;
+      flex-basis: auto;
+      flex-flow: column-reverse wrap;
+    }
+  }
+
+  @media only screen and (min-width :1265px){
+    .brand-banner {
       width: 650px;
       float: left;
+    }
+    .paragraph {
+      position: relative;
+      float: left;
+      flex-direction: column;
+      flex-basis: auto;
+      flex-flow: column-reverse wrap;
+    }
+  }
+  @media only screen and (min-width :1319px){
+    .brand-banner {
+      width: 660px;
+      float: left;
+    }
+    .paragraph {
+      position: relative;
+      float: left;
+      flex-direction: column;
+      flex-basis: auto;
+      flex-flow: column-reverse wrap;
+    }
+  }
+  @media only screen and (min-width :1331px)  {
+    .brand-banner {
+      width: 665px;
+      float: left;
+    }
+    .paragraph {
+      position: relative;
+      float: left;
+      flex-direction: column;
+      flex-basis: auto;
+      flex-flow: column-reverse wrap;
     }
   }

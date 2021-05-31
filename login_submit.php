@@ -46,8 +46,8 @@ else
     
     if(isset($_POST['rememberme']))
     {
-        setcookie('emailcookie',$email,time()+86400);
-        setcookie('passwordcookie',$password,time()+86400);
+        setcookie('emailcookie',$email,time()+6400);
+        setcookie('passwordcookie',$password,time()+6400);
 
         header('location:index.php');    
     }

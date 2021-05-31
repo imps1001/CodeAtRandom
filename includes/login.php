@@ -12,11 +12,11 @@
                 <form action="login_submit.php" method="POST" role="form" id="modal-login-form">
                   <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
                   <div class="form-group">
-                  <label for="Email" class="control-label">Email</label>
+                  <label for="Email" class="control-label">Email <span style="color: red;"> *</span></label>
                       <input type="email" class="form-control" id="modal_email" tabindex="1" name ="email" placeholder="Email" value="<?php if(isset($_COOKIE['emailcookie'])){ echo $_COOKIE['emailcookie'];} ?>">
                   </div>
                   <div class="form-group">
-                      <label for="password" class="control-label">Password</label>
+                      <label for="password" class="control-label">Password <span style="color: red;"> *</span></label>
                       <input type="password" class="form-control" id="modal_password" tabindex="2" name="password" placeholder="Password" value="<?php if(isset($_COOKIE['passwordcookie'])){ echo $_COOKIE['passwordcookie'];} ?>">
                   </div>
                   <div class="form-group">
