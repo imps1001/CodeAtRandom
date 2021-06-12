@@ -1,33 +1,34 @@
 <?php
-require '../includes/common.php';
+require '../../includes/common.php';
 
 if (isset($_SESSION['email'])) { ?>
-  <!DOCTYPE html>
-  <html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-  <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/course.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_ioo/favicon-16x16.png">
-    <link rel="manifest" href="../favicon_io/site.webmanifest">
-    <link href="../node_modules/font-awesome/css/all.css" rel="stylesheet">
-    <link href="../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
-    <link href="../node_modules/font-awesome/css/brands.css" rel="stylesheet">
-    <link href="../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-    <title> Java Course Class 9th ICSE - Code AtRandom</title>
-  </head>
-  <style>
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../node_modules/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="../../css/course.css">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/customize/components/">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_ioo/favicon-16x16.png">
+        <link rel="manifest" href="../../favicon_io/site.webmanifest">
+        <link href="../../node_modules/font-awesome/css/all.css" rel="stylesheet">
+        <link href="../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
+        <link href="../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
+        <link href="../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
+        <title> Java Course Class 10th ICSE - Code At Random</title>
+    </head>
+    <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
@@ -40,8 +41,8 @@ if (isset($_SESSION['email'])) { ?>
                 <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="../dashboard.php">
-                    <img src="../images/LOGO.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
+                <a class="navbar-brand" href="../../dashboard.php">
+                    <img src="../../images/LOGO.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
                     Code At Random
                 </a>
                 <div class="collapse navbar-collapse" id="navbarToggler" data-toggle="collapse" data-target=".navbar-collapse">
@@ -50,13 +51,13 @@ if (isset($_SESSION['email'])) { ?>
                             <a class="nav-link" href="#" style="color: white;"><?php echo "Hello " . $_SESSION['first_name']; ?> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../dashboard.php">Dashboard</a>
+                            <a class="nav-link active" aria-current="page" href="../../dashboard.php">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: white;">Your profile</a>
                         </li>
                         <li class="nav-item d-xs-block d-sm-block d-md-block d-lg-none">
-                            <a class="nav-link" href="#" style="color: white;">Log Out</a>
+                            <a class="nav-link" href="../../logout.php" style="color: white;">Log Out</a>
                         </li>
                     </ul>
                     <div class="d-flex">
@@ -65,17 +66,17 @@ if (isset($_SESSION['email'])) { ?>
                                 <?php echo "Hello " . $_SESSION['first_name']; ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../logout.php">Log Out</a></li>
+                                <li><a class="dropdown-item" href="../../logout.php">Log Out</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <nav class="bd-subnavbar pt-2" aria-label="Secondary navigation">
+        <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
             <div class="container-xxl d-flex align-items-md-center">
 
-                <h2 class="align-items-center offset-lg-3 heading justify-content-between" style="font-family: Times New Roman;"><strong>Java Course For Class 9th ICSE</strong></h2>
+                <h2 class="align-items-center offset-lg-3 heading justify-content-between" style="font-family: Times New Roman;"><strong>Java Course For Class 10th ICSE</strong></h2>
 
                 <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle docs navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
@@ -106,9 +107,9 @@ if (isset($_SESSION['email'])) { ?>
 
                             <div class="collapse show" id="getting-started-collapse">
                                 <ul class="list-unstyled fw-normal pb-2 small">
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded active">Overview</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Introduction To The Course</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">How to use the resources of the course</a></li>
+                                    <li><a href="../java_10_icse/overview.php" class="d-inline-flex align-items-center rounded active">Overview</a></li>
+                                    <li><a href="../java_10_icse/introduction_course.php" class="d-inline-flex align-items-center rounded">Introduction To The Course</a></li>
+                                    <li><a href="../java_10_icse/using_resources.php" class="d-inline-flex align-items-center rounded">How to use the resources of the course</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -119,11 +120,11 @@ if (isset($_SESSION['email'])) { ?>
 
                             <div class="collapse" id="customize-collapse">
                                 <ul class="list-unstyled fw-normal pb-2 small">
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded pb-1">Video: Introduction To Computers</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded pb-1">Video: Types Of Language</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded pb-1">Reading: Java: Introduction</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded pb-1">Notes</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded pb-1">Quiz Time</a>
+                                    <li><a href="../java_10_icse/introduction_computers.php" class="d-inline-flex align-items-center rounded pb-1">Video: Introduction To Computers</a></li>
+                                    <li><a href="../java_10_icse/types_language.php" class="d-inline-flex align-items-center rounded pb-1">Video: Types Of Language</a></li>
+                                    <li><a href="../java_10_icse/reading_introduction_to_java.php" class="d-inline-flex align-items-center rounded pb-1">Reading: Java: Introduction</a></li>
+                                    <li><a href="../java_10_icse/notes_prerequisites.php" class="d-inline-flex align-items-center rounded pb-1">Notes</a></li>
+                                    <li><a href="../java_10_icse/quiz1.php" class="d-inline-flex align-items-center rounded pb-1">Quiz Time</a>
                                 </ul>
                             </div>
                         </li>
@@ -134,15 +135,15 @@ if (isset($_SESSION['email'])) { ?>
 
                             <div class="collapse" id="layout-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: Features Of Java</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded"> Notes: Features Of Java</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: OOPs Vs POP</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Notes: OOPs Vs POP</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: OOPs Concepts</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Notes: OOPs Concepts</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: Elementary Concepts OF Java</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Notes: Elementary Concepts OF Java</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Assignment 1</a></li>
+                                    <li><a href="../java_10_icse/features_java.php" class="d-inline-flex align-items-center rounded">Video: Features Of Java</a></li>
+                                    <li><a href="../java_10_icse/notes_features.php" class="d-inline-flex align-items-center rounded"> Notes: Features Of Java</a></li>
+                                    <li><a href="../java_10_icse/oops_pop.php" class="d-inline-flex align-items-center rounded">Video: OOPs Vs POP</a></li>
+                                    <li><a href="../java_10_icse/notes_oops_pop.php" class="d-inline-flex align-items-center rounded">Notes: OOPs Vs POP</a></li>
+                                    <li><a href="../java_10_icse/oops_concepts.php" class="d-inline-flex align-items-center rounded">Video: OOPs Concepts</a></li>
+                                    <li><a href="../java_10_icse/notes_oops_concepts.php" class="d-inline-flex align-items-center rounded">Notes: OOPs Concepts</a></li>
+                                    <li><a href="../java_10_icse/elementary_concepts_java.php" class="d-inline-flex align-items-center rounded">Video: Elementary Concepts OF Java</a></li>
+                                    <li><a href="../java_10_icse/notes_elementary_java.php" class="d-inline-flex align-items-center rounded">Notes: Elementary Concepts OF Java</a></li>
+                                    <li><a href="../java_10_icse/assignment1.php" class="d-inline-flex align-items-center rounded">Assignment 1</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -153,12 +154,16 @@ if (isset($_SESSION['email'])) { ?>
 
                             <div class="collapse" id="content-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: Java Tokens</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: Unary Operators</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Notes of above videos</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Quiz 2</a></li>
-                                    <li><a href="#" class="d-inline-flex align-items-center rounded">Video: Binary Operators</a></li>
+                                    <li><a href="../java_10_icse/java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Java Tokens</a></li>
+                                    <li><a href="../java_10_icse/notes_java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
+                                    <li><a href="../java_10_icse/unary_operators.php" class="d-inline-flex align-items-center rounded">Video: Unary Operators</a></li>
+                                    <li><a href="../java_10_icse/quiz2.php" class="d-inline-flex align-items-center rounded">Quiz 2</a></li>
+                                    <li><a href="../java_10_icse/binary_operators.php" class="d-inline-flex align-items-center rounded">Video: Binary Operators</a></li>
+                                    <li><a href="../java_10_icse/ternary_operators.php" class="d-inline-flex align-items-center rounded">Video: Ternary Operators</a></li>
+                                    <li><a href="../java_10_icse/data_types.php" class="d-inline-flex align-items-center rounded">Video: Data Types in JAVA</a></li>
+                                    <li><a href="../java_10_icse/type_casting.php" class="d-inline-flex align-items-center rounded">Video: Type Casting </a></li>
+                                    <li><a href="../java_10_icse/notes_module2.php" class="d-inline-flex align-items-center rounded">Theory Notes of module 2</a></li>
+                                    <li><a href="../java_10_icse/assignment2.php" class="d-inline-flex align-items-center rounded">Assignment 2</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -317,7 +322,7 @@ if (isset($_SESSION['email'])) { ?>
                     <!--Alert-->
                     <div class="alert alert-success alert-dismissible fade show w-100 p-3" role="alert" id="alert">
                         <h4 class="alert-heading">Welcome to your course!</h4>
-                        <p>Hello Everyone !! This course is designed carefully for class 9th students pursuing ICSE Board. Here you will get all the course modules and the content like notes, assignments and video lectures.</p>
+                        <p>Hello Everyone !! This course is designed carefully for class 10th students pursuing ICSE Board. Here you will get all the course modules and the content like notes, assignments and video lectures.</p>
                         <hr>
                         <p class="mb-0">Happy Learning !</p>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -332,8 +337,8 @@ if (isset($_SESSION['email'])) { ?>
                         <div id="gettingstarted">
                         <div class=" card-body collapse show" id="getting_started_card_collapse">
                             <ul class="list-unstyled fw-normal pb-1 small">
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  Introduction to the course</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  How to use the resources of the course</a></li>
+                                <li><a href="introduction_course.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  Introduction to the course</a></li>
+                                <li><a href="using_resources.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  How to use the resources of the course</a></li>
                             </ul>                        
                         </div>
                     </div>
@@ -348,11 +353,11 @@ if (isset($_SESSION['email'])) { ?>
                         <div id="prerequisites">
                         <div class=" card-body collapse show" id="prerequisites_collapse">
                             <ul class="list-unstyled fw-normal pb-1 small">
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  Introduction To Computers</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  Types Of Language</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-book-open fa-lg  "></span>&nbsp; Reading:  Java Introduction</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; PDF: Notes</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-question-circle fa-lg  "></span>&nbsp; Practice Quiz 1 </a></li>
+                                <li><a href="introduction_computers.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  Introduction To Computers</a></li>
+                                <li><a href="types_language.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video:  Types Of Language</a></li>
+                                <li><a href="reading_introduction_to_java.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-book-open fa-lg  "></span>&nbsp; Reading:  Java Introduction</a></li>
+                                <li><a href="notes_prerequisites.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; PDF: Notes</a></li>
+                                <li><a href="quiz1.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-question-circle fa-lg  "></span>&nbsp; Practice Quiz 1 </a></li>
                             </ul>                        
                         </div>
                     </div>
@@ -367,15 +372,15 @@ if (isset($_SESSION['email'])) { ?>
                         <div id="module1">
                         <div class=" card-body collapse show" id="module1_collapse">
                             <ul class="list-unstyled fw-normal pb-1 small">
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: Features of JAVA</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: Features of JAVA</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: OOPs vs POP</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: OOPs vs POP</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: OOP Concepts</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: OOP Concepts</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: Elementary Concepts Of JAVA</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: Elementary Concepts Of JAVA</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-swatchbook fa-lg  "></span>&nbsp; Assignment 1</a></li>
+                                <li><a href="features_java.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: Features of JAVA</a></li>
+                                <li><a href="notes_features.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: Features of JAVA</a></li>
+                                <li><a href="oops_pop.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: OOPs vs POP</a></li>
+                                <li><a href="notes_oops_pop.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: OOPs vs POP</a></li>
+                                <li><a href="oops_concepts.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: OOP Concepts</a></li>
+                                <li><a href="notes_oops_concepts.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: OOP Concepts</a></li>
+                                <li><a href="elementary_concepts_java.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Video: Elementary Concepts Of JAVA</a></li>
+                                <li><a href="notes_elementary_java.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Notes: Elementary Concepts Of JAVA</a></li>
+                                <li><a href="assignment1.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-swatchbook fa-lg  "></span>&nbsp; Assignment 1</a></li>
                             </ul>                        
                         </div>
                     </div>
@@ -390,7 +395,7 @@ if (isset($_SESSION['email'])) { ?>
                         <div id="module2">
                         <div class="card-body collapse show" id="module2_collapse">
                             <ul class="list-unstyled fw-normal pb-1 small">
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: JAVA Tokens</a></li>
+                                <li><a href="java_tokens.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: JAVA Tokens</a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Theory Notes: JAVA Tokens  </a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: Literals in JAVA</a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Theory Notes: Literals in JAVA</a></li>
@@ -400,11 +405,11 @@ if (isset($_SESSION['email'])) { ?>
                                 <hr>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: Binary Operators</a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Theory Notes: Binary Operators</a></li>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: Ternary Operators</a></li>
+                                <li><a href="ternary_operators.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: Ternary Operators</a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Theory Notes: Ternary Operators</a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-swatchbook fa-lg  "></span>&nbsp; Assignment 2: Based On Binary and Ternary Operators </a></li>
                                 <hr>
-                                <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: Data Types in JAVA</a></li>
+                                <li><a href="data_types.php"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg  "></span>&nbsp; Explanation Video: Data Types in JAVA</a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-sticky-note fa-lg  "></span>&nbsp; Theory Notes: Data Types in JAVA</a></li>
                                 <li><a href="#"class="d-inline-flex align-items-center rounded" style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-question-circle fa-lg  "></span>&nbsp; Practice Quiz 3</a></li>
                             </ul>                        
@@ -458,19 +463,20 @@ if (isset($_SESSION['email'])) { ?>
                     </nav>
                 </div>
 
-                <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+                <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script>
                 <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-                <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-                <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+                <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+                <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-                <script defer src="../node_modules/font-awesome/js/all.js"></script>
-                <script defer src="../node_modules/font-awesome/js/fontawesome.js"></script>
-                <script defer src="../node_modules/font-awesome/js/brands.js"></script>
-                <script defer src="../node_modules/font-awesome/js/solid.js"></script>
+                <script defer src="../../node_modules/font-awesome/js/all.js"></script>
+                <script defer src="../../node_modules/font-awesome/js/fontawesome.js"></script>
+                <script defer src="../../node_modules/font-awesome/js/brands.js"></script>
+                <script defer src="../../node_modules/font-awesome/js/solid.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     </body>
-  </html>
+
+    </html>
 <?php } else {
-  header("Location: ../java_ninth_icse.php");
+    header("Location: ../../java_10_icse.php");
 }
 ?>

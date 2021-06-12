@@ -6,7 +6,7 @@ if(isset($_POST['submit']))
 {
     $email = $_POST['email'];
 
-    $emailquery = "Select * from demo where email= '$email' ";
+    $emailquery = "Select * from users where email= '$email' ";
     $query = mysqli_query($con,$emailquery);
 
     $emailcount = mysqli_num_rows($query);

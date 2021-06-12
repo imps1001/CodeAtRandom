@@ -37,7 +37,7 @@ if($num_rows==0){
     $_SESSION['id']= $result_row['ID'];
     $loginStatus=1;
     $showMessage= "You are successfully registered";
-    header('location:index.php');
+    header('location:dashboard.php');
   }
   else{
     $showError= "Both Passwords must be same";

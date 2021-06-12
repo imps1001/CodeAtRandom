@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
             <?php if ($Message) {
               echo $Message;
             } else { ?>
-              We are working on more courses. Till then tell us your requirements
+              Drop in your queries. We will get back to you soon.
             <?php } ?>
           </div>
         </div>

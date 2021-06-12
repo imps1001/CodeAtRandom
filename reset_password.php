@@ -9,7 +9,7 @@ if(isset($_GET['submit'])){
 
     if($newpassword == $cpassword)
     {
-        $updatequery =  "update demo set Password='$newpassword' where token='$token' ";
+        $updatequery =  "update users set Password='$newpassword' where token='$token' ";
         $iquery = mysqli_query($con, $updatequery);
         if($iquery)
         {

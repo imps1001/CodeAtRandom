@@ -49,9 +49,9 @@ else
         setcookie('emailcookie',$email,time()+6400);
         setcookie('passwordcookie',$password,time()+6400);
 
-        header('location:index.php');    
+        header('location:dashboard.php');    
     }
-    header('location:index.php');
+    header('location:dashboard.php');
 }
 ?>
 <!DOCTYPE html>
