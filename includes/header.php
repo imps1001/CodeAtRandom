@@ -38,7 +38,7 @@
       ?>
       <li class="nav-item "><a class="nav-link " style="color: white;" href ="#" ><i class="fas fa-user fa-lg"></i> <?php echo "Hello ". $_SESSION['first_name'];?></a>
      <!--<div class="dropdown-menu" style="background-color: #CCCD6A;">-->
-        <li class="nav-item"><a class="nav-link" href="#" style="color: white;"><i class="fas fa-user fa-lg"></i> My Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.php" style="color: white;"><i class="fas fa-user fa-lg"></i> My Profile</a></li>
         <li class="nav-item"><a class="nav-link" href="dashboard.php#mycourses" style="color: white;"><i class="fas fa-book-reader fa-lg" ></i> My Courses</a></li>
         <li class="nav-item"><a class="nav-link" href="contactus.php" style="color: white;"><i class="fa fa-id-card fa-lg" ></i> Contact Us</a></li>
         <li class="nav-item"><a class="nav-link" href="logout.php" style="color: white;"><i class="fas fa-sign-out-alt fa-lg"></i>Sign Out</a></li>

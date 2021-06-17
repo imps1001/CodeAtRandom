@@ -1,5 +1,6 @@
 <?php
 require '../../includes/common.php';
+
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -25,7 +26,7 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Java Course Class 10th ICSE - Code At Random</title>
+        <title> Literals in JAVA - Code At Random</title>
     </head>
     <style>
         body {
@@ -113,17 +114,17 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
                                 Prerequisites
                             </button>
 
-                            <div class="collapse show" id="customize-collapse">
+                            <div class="collapse" id="customize-collapse">
                                 <ul class="list-unstyled fw-normal pb-2 small">
                                     <li><a href="../java_10_icse/introduction_computers.php" class="d-inline-flex align-items-center rounded pb-1">Video: Introduction To Computers</a></li>
                                     <li><a href="../java_10_icse/types_language.php" class="d-inline-flex align-items-center rounded pb-1">Video: Types Of Language</a></li>
                                     <li><a href="../java_10_icse/reading_introduction_to_java.php" class="d-inline-flex align-items-center rounded pb-1">Reading: Java: Introduction</a></li>
                                     <li><a href="../java_10_icse/notes_prerequisites.php" class="d-inline-flex align-items-center rounded pb-1">Notes</a></li>
-                                    <li><a href="../java_10_icse/quiz1.php" class="d-inline-flex align-items-center rounded pb-1 active">Quiz Time</a>
+                                    <li><a href="../java_10_icse/quiz1.php" class="d-inline-flex align-items-center rounded pb-1">Quiz Time</a>
                                 </ul>
                             </div>
                         </li>
@@ -147,14 +148,14 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module2-collapse" aria-expanded="true" aria-current="true">
                                 Module 2
                             </button>
 
-                            <div class="collapse" id="content-collapse">
+                            <div class="collapse show" id="module2-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../java_10_icse/java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Java Tokens</a></li>
-                                    <li><a href="../java_10_icse/literals_java.php" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
+                                    <li><a href="../java_10_icse/literals_java.php" class="d-inline-flex align-items-center rounded active">Video: Literals In JAVA</a></li>
                                     <li><a href="../java_10_icse/unary_operators.php" class="d-inline-flex align-items-center rounded">Video: Unary Operators</a></li>
                                     <li><a href="../java_10_icse/quiz2.php" class="d-inline-flex align-items-center rounded">Quiz 2</a></li>
                                     <li><a href="../java_10_icse/binary_operators.php" class="d-inline-flex align-items-center rounded">Video: Binary Operators</a></li>
@@ -316,75 +317,17 @@ if (isset($_SESSION['email'])) { ?>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h1 class=" bd-title mb-4">Quiz 1 - Pre Requisites</h1>
+                        <h3 class="bd-title" id="content">Literals In JAVA</h3>
                     </div>
-                    <?php 
-                        $user_id = $_SESSION['id'];
-                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' ";
-                        $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
-                        $result= mysqli_num_rows($query_result);
-                        if($result!=0){
-                            $result_row= mysqli_fetch_assoc($query_result);
-                            $grade= $result_row['grade'];
-                            echo '<div class="container w-100 p-3">
-                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 30</h2><br>
-                            </div>';
-                            echo '<div class="container w-100 p-3">
-                                    <div class="row">
-                                    <h5>The correct answers of the Quiz 1 were:-</h5>
-                                    <p> 
-                                    <ol> 
-                                    <li> Compiler is used to convert machine level language to high level language-  <strong>False</strong></li>
-                                    <li> Computer is a/an  <strong>electronic device that accepts raw data as input and processes it with a set of instructions (a program) to produce the result as output.  </strong></li>
-                                    <li> Java is an example of <strong> High-Level Language</strong></li>
-                                    </ol>
-                                    </p>
-                                    </div> </div>';
-                        }
-
-                        else 
-                        {
-                    ?>
-                    <div class="form">
-                        <form action="" method="POST" role="form" id="quiz-1">
-                            <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
-                            <input type="hidden" value="" name="utm_source">
-                            <input type="hidden" value="" name="utm_medium">
-                            <input type="hidden" value="" name="utm_campaign">
-                            <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
-                            <ol class="list-numbered">
-                                <li>Compiler is used to convert machine level language to high level language ?<br></li>
-                                <input type="radio" id="true" name="question1" value="true">
-                                <label for="true">TRUE</label><br>
-                                <input type="radio" id="false" name="question1" value="false">
-                                <label for="false">FALSE</label><br>
-
-                                <li>Computer is a/an :</li>
-                                <input type="radio" id="electronic" name="question2" value="electronic">
-                                <label for="electronic">electronic device that accepts raw data as input and processes it with a set of instructions (a program) to produce the result as output. </label>
-                                <input type="radio" id="mechanical " name="question2" value="mechanical">
-                                <label for="mechanical">mechanical device that accepts raw data as input and processes it with a set of instructions (a program) to produce the result as output. </label>
-
-                                <li>Java is an example of ? </li>
-                                <input type="radio" id="low-level" name="question3" value="low-level">
-                                <label for="low-level">Low-level Language </label><br>
-                                <input type="radio" id="high-level " name="question3" value="high-level">
-                                <label for="high-level">High-Level Language </label><br>
-                            </ol>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz1_submit" tabindex="3">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <?php }?>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/0doHdZxSPLw?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
                 </div>
 
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-1">Quiz 1</a></li>
-
+                            <li><a href="#alert">Video</a></li>
+                           
                     </nav>
                 </div>
 
@@ -401,31 +344,6 @@ if (isset($_SESSION['email'])) { ?>
     </body>
 
     </html>
-    <?php
-    if (isset($_POST['submit'])) {
-        $ques1 = $_POST['question1'];
-        $ques2 = $_POST['question2'];
-        $ques3 = $_POST['question3'];
-        $c = 0;
-        if (strcmp($ques1, "false") == 0) {
-            $c++;
-        }
-        if (strcmp($ques2, "electronic") == 0) {
-            $c++;
-        }
-        if (strcmp($ques3, "high-level") == 0) {
-            $c++;
-        }
-        $grade = $c*10;
-    $user_id = $_SESSION['id'];
-    $course_id = 2;
-    $quiz_no = 1;
-    $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
-    values ('$user_id', '$course_id', '$quiz_no', '$grade')";;
-    $query_run = mysqli_query($con, $query)
-    or die(mysqli_error($con));
-}
-    ?>
 <?php } else {
     header("Location: ../../java_tenth_icse.php");
 }

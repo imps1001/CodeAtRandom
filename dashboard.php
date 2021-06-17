@@ -1,14 +1,6 @@
 <?php
 require_once('includes/common.php');
-$showMessage= false;
-if($showMessage){?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-       <strong>Success!</strong> <?php echo $showMessage; ?>
-       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-           <span aria-hidden="true">×</span>
-       </button>
-   </div> ';
-   <?php }?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,11 +50,6 @@ if($showMessage){?>
 </head>
 
 <body style="overflow-x: hidden; overflow-y: auto;">
-
-    <!--Login Modal-->
-    <?php include 'includes/login.php'; ?>
-    <!--SignUp Modal-->
-    <?php include 'includes/signup.php'; ?>
     <!--Navbar-->
     <?php include 'includes/header.php'; ?>
 

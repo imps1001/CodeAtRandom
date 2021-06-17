@@ -32,6 +32,11 @@ if (isset($_SESSION['email'])) { ?>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
+        .button-bar{
+            margin-top: 50px;
+            border-collapse: collapse;
+            border: 1px solid #dddddd;
+        }
     </style>
 
     <body>
@@ -191,7 +196,7 @@ if (isset($_SESSION['email'])) { ?>
                             <div class="collapse" id="content-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../java_10_icse/java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Java Tokens</a></li>
-                                    <li><a href="../java_10_icse/notes_java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
+                                    <li><a href="../java_10_icse/literals_java.php" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
                                     <li><a href="../java_10_icse/unary_operators.php" class="d-inline-flex align-items-center rounded">Video: Unary Operators</a></li>
                                     <li><a href="../java_10_icse/quiz2.php" class="d-inline-flex align-items-center rounded">Quiz 2</a></li>
                                     <li><a href="../java_10_icse/binary_operators.php" class="d-inline-flex align-items-center rounded">Video: Binary Operators</a></li>
@@ -439,6 +444,6 @@ if (isset($_SESSION['email'])) { ?>
 <?php
     
 } else {
-    header("Location: ../../java_10_icse.php");
+    header("Location: ../../java_tenth_icse.php");
 }
 ?>

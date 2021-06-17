@@ -1,5 +1,6 @@
 <?php
 require '../../includes/common.php';
+
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -31,11 +32,18 @@ if (isset($_SESSION['email'])) { ?>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
     </style>
 
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navbarcr" style="background-color: #55ACEE;">
             <div class="container-fluid">
                 <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -47,21 +55,21 @@ if (isset($_SESSION['email'])) { ?>
                 <div class="collapse navbar-collapse" id="navbarToggler" data-toggle="collapse" data-target=".navbar-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item d-xs-block d-sm-block d-md-block d-lg-none">
-                            <a class="nav-link" href="#" style="color: white;"><?php echo "Hello " . $_SESSION['first_name']; ?> </a>
+                            <a class="nav-link" href="#" style="color: black;"><?php echo "Hello " . $_SESSION['first_name']; ?> </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="../../dashboard.php">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: white;">Your profile</a>
+                            <a class="nav-link" href="#" style="color: black;">Your profile</a>
                         </li>
                         <li class="nav-item d-xs-block d-sm-block d-md-block d-lg-none">
-                            <a class="nav-link" href="../../logout.php" style="color: white;">Log Out</a>
+                            <a class="nav-link" href="../../logout.php" style="color: black;">Log Out</a>
                         </li>
                     </ul>
                     <div class="d-flex">
                         <div class="nav-item dropdown d-none d-sm-none d-md-none d-lg-block">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;"><i class="fas fa-user fa-lg"></i>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;"><i class="fas fa-user fa-lg"></i>
                                 <?php echo "Hello " . $_SESSION['first_name']; ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -113,17 +121,17 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
                                 Prerequisites
                             </button>
 
-                            <div class="collapse show" id="customize-collapse">
+                            <div class="collapse" id="customize-collapse">
                                 <ul class="list-unstyled fw-normal pb-2 small">
                                     <li><a href="../java_10_icse/introduction_computers.php" class="d-inline-flex align-items-center rounded pb-1">Video: Introduction To Computers</a></li>
                                     <li><a href="../java_10_icse/types_language.php" class="d-inline-flex align-items-center rounded pb-1">Video: Types Of Language</a></li>
                                     <li><a href="../java_10_icse/reading_introduction_to_java.php" class="d-inline-flex align-items-center rounded pb-1">Reading: Java: Introduction</a></li>
-                                    <li><a href="../java_10_icse/notes_prerequisites.php" class="d-inline-flex align-items-center rounded pb-1">Notes</a></li>
-                                    <li><a href="../java_10_icse/quiz1.php" class="d-inline-flex align-items-center rounded pb-1 active">Quiz Time</a>
+                                    <li><a href="../java_10_icse/notes_prerequisites.php" class="d-inline-flex align-items-center rounded pb-1 active">Notes</a></li>
+                                    <li><a href="../java_10_icse/quiz1.php" class="d-inline-flex align-items-center rounded pb-1">Quiz Time</a>
                                 </ul>
                             </div>
                         </li>
@@ -147,11 +155,11 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="true" aria-current="true">
                                 Module 2
                             </button>
 
-                            <div class="collapse" id="content-collapse">
+                            <div class="collapse show" id="content-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../java_10_icse/java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Java Tokens</a></li>
                                     <li><a href="../java_10_icse/literals_java.php" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
@@ -161,7 +169,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../java_10_icse/ternary_operators.php" class="d-inline-flex align-items-center rounded">Video: Ternary Operators</a></li>
                                     <li><a href="../java_10_icse/data_types.php" class="d-inline-flex align-items-center rounded">Video: Data Types in JAVA</a></li>
                                     <li><a href="../java_10_icse/type_casting.php" class="d-inline-flex align-items-center rounded">Video: Type Casting </a></li>
-                                    <li><a href="../java_10_icse/notes_module2.php" class="d-inline-flex align-items-center rounded">Theory Notes of module 2</a></li>
+                                    <li><a href="../java_10_icse/notes_module2.php" class="d-inline-flex align-items-center rounded active">Theory Notes of module 2</a></li>
                                     <li><a href="../java_10_icse/assignment2.php" class="d-inline-flex align-items-center rounded">Assignment 2</a></li>
                                 </ul>
                             </div>
@@ -316,74 +324,54 @@ if (isset($_SESSION['email'])) { ?>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h1 class=" bd-title mb-4">Quiz 1 - Pre Requisites</h1>
+                        <h3 id="content pb-5">Notes in pdf form </h3>
                     </div>
-                    <?php 
-                        $user_id = $_SESSION['id'];
-                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' ";
-                        $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
-                        $result= mysqli_num_rows($query_result);
-                        if($result!=0){
-                            $result_row= mysqli_fetch_assoc($query_result);
-                            $grade= $result_row['grade'];
-                            echo '<div class="container w-100 p-3">
-                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 30</h2><br>
-                            </div>';
-                            echo '<div class="container w-100 p-3">
-                                    <div class="row">
-                                    <h5>The correct answers of the Quiz 1 were:-</h5>
-                                    <p> 
-                                    <ol> 
-                                    <li> Compiler is used to convert machine level language to high level language-  <strong>False</strong></li>
-                                    <li> Computer is a/an  <strong>electronic device that accepts raw data as input and processes it with a set of instructions (a program) to produce the result as output.  </strong></li>
-                                    <li> Java is an example of <strong> High-Level Language</strong></li>
-                                    </ol>
-                                    </p>
-                                    </div> </div>';
-                        }
-
-                        else 
-                        {
-                    ?>
-                    <div class="form">
-                        <form action="" method="POST" role="form" id="quiz-1">
-                            <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
-                            <input type="hidden" value="" name="utm_source">
-                            <input type="hidden" value="" name="utm_medium">
-                            <input type="hidden" value="" name="utm_campaign">
-                            <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
-                            <ol class="list-numbered">
-                                <li>Compiler is used to convert machine level language to high level language ?<br></li>
-                                <input type="radio" id="true" name="question1" value="true">
-                                <label for="true">TRUE</label><br>
-                                <input type="radio" id="false" name="question1" value="false">
-                                <label for="false">FALSE</label><br>
-
-                                <li>Computer is a/an :</li>
-                                <input type="radio" id="electronic" name="question2" value="electronic">
-                                <label for="electronic">electronic device that accepts raw data as input and processes it with a set of instructions (a program) to produce the result as output. </label>
-                                <input type="radio" id="mechanical " name="question2" value="mechanical">
-                                <label for="mechanical">mechanical device that accepts raw data as input and processes it with a set of instructions (a program) to produce the result as output. </label>
-
-                                <li>Java is an example of ? </li>
-                                <input type="radio" id="low-level" name="question3" value="low-level">
-                                <label for="low-level">Low-level Language </label><br>
-                                <input type="radio" id="high-level " name="question3" value="high-level">
-                                <label for="high-level">High-Level Language </label><br>
-                            </ol>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz1_submit" tabindex="3">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <?php }?>
+                        <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
+                            <tr>
+                                <td>
+                                    <strong>JAVA Tokens</strong>
+                                </td>
+                                <td><a href="../../notes/module 2/Java Tokens.pdf" target="_blank" download="Java Tokens" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Types Of Literals in JAVA</strong>
+                                </td>
+                                <td><a href="../../notes/module 2/Literals In JAVA.pdf" target="_blank" download="Literals in JAVA" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Unary Operators in JAVA</strong>
+                                </td>
+                                <td><a href="../../notes/module 2/unary operators.pdf" target="_blank" download="Unary Operators" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Binary Operators in JAVA</strong>
+                                </td>
+                                <td><a href="../../notes/module 2/Binary Operators.pdf" target="_blank" download="Binary Operators" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Data Types and Ternary Operators</strong>
+                                </td>
+                                <td><a href="../../notes/module 2/Data types and ternary operators.pdf" target="_blank" download="Data Types and Ternary Operators" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Type Casting in JAVA</strong>
+                                </td>
+                                <td><a href="../../notes/module 2/Type Casting in Java.pdf" target="_blank" download="Type Casting in JAVA" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                        </table>
+                    <p class="mt-5 " style="color: blueviolet;"> Download these pdfs and store them in your device for future reference.</p>
                 </div>
 
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-1">Quiz 1</a></li>
+                            <li><a href="#content"></a> Notes to download</li>
 
                     </nav>
                 </div>
@@ -401,31 +389,6 @@ if (isset($_SESSION['email'])) { ?>
     </body>
 
     </html>
-    <?php
-    if (isset($_POST['submit'])) {
-        $ques1 = $_POST['question1'];
-        $ques2 = $_POST['question2'];
-        $ques3 = $_POST['question3'];
-        $c = 0;
-        if (strcmp($ques1, "false") == 0) {
-            $c++;
-        }
-        if (strcmp($ques2, "electronic") == 0) {
-            $c++;
-        }
-        if (strcmp($ques3, "high-level") == 0) {
-            $c++;
-        }
-        $grade = $c*10;
-    $user_id = $_SESSION['id'];
-    $course_id = 2;
-    $quiz_no = 1;
-    $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
-    values ('$user_id', '$course_id', '$quiz_no', '$grade')";;
-    $query_run = mysqli_query($con, $query)
-    or die(mysqli_error($con));
-}
-    ?>
 <?php } else {
     header("Location: ../../java_tenth_icse.php");
 }

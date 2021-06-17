@@ -89,6 +89,7 @@ require 'includes/common.php';
 
       <h2 class="About_Header col-12 offset-md-4" style="color:brown; margin-top: 10px; display:flex; flex-direction:row;"><strong>Code At Random </strong></h2>
     </div>
+  </div>
     <!--Login Modal-->
     <?php include 'includes/login.php' ?>
 
@@ -184,7 +185,6 @@ require 'includes/common.php';
         </div>
       </div>
     </div>
-  </div>
 
   <div class="container" style="box-sizing: border-box;">
     <div class="row">

@@ -32,6 +32,12 @@ if (isset($_SESSION['email'])) { ?>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
     </style>
 
     <body>
@@ -123,7 +129,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../java_10_icse/introduction_computers.php" class="d-inline-flex align-items-center rounded pb-1">Video: Introduction To Computers</a></li>
                                     <li><a href="../java_10_icse/types_language.php" class="d-inline-flex align-items-center rounded pb-1">Video: Types Of Language</a></li>
                                     <li><a href="../java_10_icse/reading_introduction_to_java.php" class="d-inline-flex align-items-center rounded pb-1">Reading: Java: Introduction</a></li>
-                                    <li><a href="../java_10_icse/notes_prerequisites.php" class="d-inline-flex align-items-center rounded pb-1 active">Notes</a></li>
+                                    <li><a href="../java_10_icse/notes_prerequisites.php" class="d-inline-flex align-items-center rounded pb-1">Notes</a></li>
                                     <li><a href="../java_10_icse/quiz1.php" class="d-inline-flex align-items-center rounded pb-1">Quiz Time</a>
                                 </ul>
                             </div>
@@ -155,7 +161,7 @@ if (isset($_SESSION['email'])) { ?>
                             <div class="collapse" id="content-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../java_10_icse/java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Java Tokens</a></li>
-                                    <li><a href="../java_10_icse/notes_java_tokens.php" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
+                                    <li><a href="../java_10_icse/literals_java.php" class="d-inline-flex align-items-center rounded">Video: Literals In JAVA</a></li>
                                     <li><a href="../java_10_icse/unary_operators.php" class="d-inline-flex align-items-center rounded">Video: Unary Operators</a></li>
                                     <li><a href="../java_10_icse/quiz2.php" class="d-inline-flex align-items-center rounded">Quiz 2</a></li>
                                     <li><a href="../java_10_icse/binary_operators.php" class="d-inline-flex align-items-center rounded">Video: Binary Operators</a></li>
@@ -319,9 +325,14 @@ if (isset($_SESSION['email'])) { ?>
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
                         <h3 id="content pb-5">Notes in pdf form </h3>
                     </div>
-                    <ul mt-5>
-                    <li style="font-size: medium;"><strong>OOPS Vs POP</strong> <a href="../../notes/oops and pop.pdf" target="_blank" download="oops and pop" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></li>
-                    </ul>
+                    <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
+                            <tr>
+                                <td>
+                                    <strong>OOPS Vs POP</strong>
+                                </td>
+                                <td><a href="../../notes/oops and pop.pdf" target="_blank" download="oops and pop" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                    </table>
                     <p class="mt-5 " style="color: blueviolet;"> Download the pdfs and store them in your device for future reference.</p>
                 </div>
 
@@ -348,6 +359,6 @@ if (isset($_SESSION['email'])) { ?>
 
     </html>
 <?php } else {
-    header("Location: ../../java_10_icse.php");
+    header("Location: ../../java_tenth_icse.php");
 }
 ?>

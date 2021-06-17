@@ -345,6 +345,6 @@ if (isset($_SESSION['email'])) { ?>
 
     </html>
 <?php } else {
-    header("Location: ../../java_10_icse.php");
+    header("Location: ../../java_tenth_icse.php");
 }
 ?>
