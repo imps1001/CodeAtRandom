@@ -276,7 +276,7 @@ require_once('includes/common.php');
       <?php echo '<h3>' . $result_row['course_name'] . '</h3>'; ?>
       <?php  
       if($course_id==2){?>
-        <a href="./courses/java_10_icse/overview.php"><button class="btn btn-primary btn-lg">Go To Course</button></a>
+        <a href="./courses/java_10_icse/getting started/overview.php"><button class="btn btn-primary btn-lg">Go To Course</button></a>
       <?php } else{?>
           <a href="./courses/java_9_icse/overview.php"><button class="btn btn-primary btn-lg">Go To Course</button></a>
       <?php }

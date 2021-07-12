@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
   <link href="./node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
   <link href="./node_modules/font-awesome/css/brands.css" rel="stylesheet">
   <link href="./node_modules/font-awesome/css/solid.css" rel="stylesheet">
-  <title> Conatct Us | Code At Random</title>
+  <title> Contact Us | Code At Random</title>
 
 
   <style>

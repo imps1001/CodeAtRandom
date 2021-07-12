@@ -73,13 +73,13 @@ require 'includes/common.php';
             <div class="offer-card row">
               <div class="col-12 col-md-6">
                 <div class="text-description">Lectures Available From</div>
-                <div class="text-orange text-size-m"><strong> June 30th 2021</strong></div>
+                <div class="text-orange text-size-m"><strong> July 31st 2021</strong></div>
                 <div class="mg-top text-description">
                   Fees
                 </div>
                 <div class="text-orange text-size-l"><del>&#x20b9; 4,999 </del> &nbsp;&#x20b9;1,199*</div>
                 <div class="mg-top text-description" style="font-size: 15px;">
-                  * Introductory offer valid till <br> June 30th 2021<br>
+                  * Introductory offer valid till <br> July 31st 2021<br>
                   * After Enrolling/payment you will receive a Tax Invoice along with a link for joining the Telegram group on your registered email ID so as to get constant updates.
                 </div>
               </div>
