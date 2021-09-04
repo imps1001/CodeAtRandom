@@ -42,8 +42,10 @@ else
     $_SESSION['board'] = $board;
     $_SESSION['phone'] = $phone;
     $_SESSION['state'] = $state;
-    
-    
+    date_default_timezone_set("Asia/Kolkata");
+    $date =  date('Y-m-d g:i:s');
+    $query1= " update users set last_activity='$date' where email ='$email' ";
+     mysqli_query($con,$query1) or die(mysqli_error($con));
     if(isset($_POST['rememberme']))
     {
         setcookie('emailcookie',$email,time()+6400);

@@ -1,18 +1,16 @@
 <?php
 require '../../../includes/common.php';
-
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
-   <html lang="en">
+    <html lang="en">
 
     <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <!-- Bootstrap CSS -->
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -27,25 +25,17 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Notes-Module 4 - Code At Random</title>
+        <title> Quiz 5 - Code At Random</title>
     </head>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
-
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
     </style>
 
     <body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
             <div class="container-fluid">
                 <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -101,8 +91,42 @@ if (isset($_SESSION['email'])) { ?>
                 </button>
             </div>
         </nav>
+        <?php
+    if (isset($_POST['submit'])) {
+        $ques1 = $_POST['question1'];
+        $ques2 = $_POST['question2'];
+        $ques3 = $_POST['question3'];
+        $ques4 = $_POST['question4'];
+        $ques5 = $_POST['question5'];
+        $c = 0;
+        if (strcmp($ques1, "four") == 0) {
+            $c++;
+        }
+        if (strcmp($ques2, "ten") == 0) {
+            $c++;
+        }
+        if (strcmp($ques3, "three") == 0) {
+            $c++;
+        }
+        if (strcmp($ques4, "fourtyfive") == 0) {
+            $c++;
+        }
+        if (strcmp($ques5, "zero") == 0) {
+            $c++;
+        }
+        $grade = $c*10;
+    $user_id = $_SESSION['id'];
+    $course_id = 2;
+    $quiz_no = 9;
+    $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
+    values ('$user_id', '$course_id', '$quiz_no', '$grade')";
+    $query_run = mysqli_query($con, $query)
+    or die(mysqli_error($con));
+}
+    ?>
 
-        <!-- Side Bar-->
+
+<!-- Side Bar-->
 <div class="container-xxl my-md-3 bd-layout">
             <aside class="bd-sidebar">
                 <nav class="collapse bd-links" id="sidebar" aria-label="Docs navigation">
@@ -186,8 +210,8 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module3/inputs.php" class="d-inline-flex align-items-center rounded">Taking Inputs </a></li>
                                     <li><a href="../../java_10_icse/module3/dynamic_programming.php" class="d-inline-flex align-items-center rounded"> Video: Dynamic Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/java_math_functions.php" class="d-inline-flex align-items-center rounded">JAVA Mathematical Functions</a></li>
-                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded">Quiz 3</a></li>
-                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded active">Quiz 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 3</a></li>
                                     <li><a href="../../java_10_icse/module3/expressions.php" class="d-inline-flex align-items-center rounded">Board Questions: Expressions in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module3/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions:Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/assignment3.php" class="d-inline-flex align-items-center rounded">Assignment 3</a></li>
@@ -195,29 +219,29 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false">
                                 Module 4
                             </button>
 
-                            <div class="collapse show" id="module4-collapse">
+                            <div class="collapse" id="module4-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module4/selective_constructs.php" class="d-inline-flex align-items-center rounded"> Selective Constructs Intro</a></li>
                                     <li><a href="../../java_10_icse/module4/multiple_if_else.php" class="d-inline-flex align-items-center rounded">Multiple If- Else</a></li>
-                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded">Quiz 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded active">Quiz 4</a></li>
                                     <li><a href="../../java_10_icse/module4/nested_if_else.php" class="d-inline-flex align-items-center rounded">Nested_If_Else</a></li>
                                     <li><a href="../../java_10_icse/module4/switchcase.php" class="d-inline-flex align-items-center rounded">Switch Case</a></li>
-                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 4</a></li>
                                     <li><a href="../../java_10_icse/module4/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module4/assignment4.php" class="d-inline-flex align-items-center rounded">Assignment 4</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="true" aria-current="true">
                                 Module 5
                             </button>
 
-                            <div class="collapse" id="module5-collapse">
+                            <div class="collapse show" id="module5-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module5/intro_loops.php" class="d-inline-flex align-items-center rounded">Iterative Constructs- intro</a></li>
                                     <li><a href="../../java_10_icse/module5/forprogramming.php" class="d-inline-flex align-items-center rounded">For Loop Based Programming</a></li>
@@ -225,7 +249,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module5/whileprogramming.php" class="d-inline-flex align-items-center rounded">While Loop Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/do_while.php" class="d-inline-flex align-items-center rounded">Do While Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/notes.php" class="d-inline-flex align-items-center rounded">Notes: Module 5</a></li>
-                                    <li><a href="../../java_10_icse/module5/quiz5.php" class="d-inline-flex align-items-center rounded">Quiz 5</a></li>
+                                    <li><a href="../../java_10_icse/module5/quiz5.php" class="d-inline-flex align-items-center rounded active">Quiz 5</a></li>
                                     <li><a href="../../java_10_icse/module5/boardquestions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module5/assignmnet5.php" class="d-inline-flex align-items-center rounded">Assignment 5</a></li>
 
@@ -334,104 +358,208 @@ if (isset($_SESSION['email'])) { ?>
                 </nav>
 
 
-
-
-
-
             </aside>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h3 id="content pb-5">Notes in pdf form </h3>
+                        <h1 class=" bd-title mb-4">Quiz 5 - Module 5</h1>
                     </div>
-                        <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
-                            <tr>
-                                <td>
-                                    <strong>Introduction to Selective Constructs</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Selective Constructs intro.pdf" target="_blank" download="Slective Constructs Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>If-Else Programming </strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/if-else programming.pdf" target="_blank" download="If-Else Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>If-Else Outputs</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/if-else outputs.pdf" target="_blank" download="If-Else Outputs" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Introduction to multiple if-else</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/multiple if else.pdf" target="_blank" download="Multiple If-Else" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Ascending Order</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Ascending Order.pdf" target="_blank" download="Ascending Order" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Bill Slab Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Bill Slab Programming.pdf" target="_blank" download="Bill Slab Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Menu driven programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Menu Driven Programs.pdf" target="_blank" download="Menu driven programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Character based Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Character Based Programs.pdf" target="_blank" download="Character based Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Nested If-Else Introduction</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Nested If-Else.pdf" target="_blank" download="Nested If-Else Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Nested If-else Progamming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Nested if programming.pdf" target="_blank" download="Nested If-else Progamming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Switch Case Introduction</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/switch case.pdf" target="_blank" download="Switch Case Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Switch Case Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/switch based programming.pdf" target="_blank" download="Switch Case Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Board Questions Practice</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/board questions.pdf" target="_blank" download="Board Questions Practice" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                        </table>
-                    <p class="mt-5 " style="color: blueviolet;"> Download these pdfs and store them in your device for future reference.</p>
+                    <?php 
+                        $user_id = $_SESSION['id'];
+                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='9' ";
+                        $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
+                        $result= mysqli_num_rows($query_result);
+                        if($result!=0){
+                            $result_row= mysqli_fetch_assoc($query_result);
+                            $grade= $result_row['grade'];
+                            echo '<div class="container w-100 p-3">
+                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 50</h2><br>
+                            </div>';
+                            echo '<div class="container w-100 p-3">
+                                    <div class="row">
+                                    <h5>The correct answers of the Quiz 5 were:-</h5>
+                                    <p> 
+                                    <ol> 
+                                    <li>What will happen when you compile and run the following code? <br>
+                                    public class Test { <br>
+                                        &nbsp;  public static void main(String[] args){	<br>
+                                            &nbsp; int x = 0;<br>
+                                            &nbsp; while(x < 4)<br>
+                                            &nbsp;  &nbsp; x = x + 1;<br>
+                                            &nbsp;System.out.println("x is " + x);<br>
+                                        }<br>
+                                    }<br>
+                                    <strong> The answer to the question is 4 </strong> </li>
+                                    
+                                    <li>How many times will the following code print "Welcome to Java" ?<br>
+                                public class Test { <br>
+                                    &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp; int count = 0;<br>
+                                        &nbsp; while (count < 10) {<br>
+                                        &nbsp;  &nbsp;  System.out.println("Welcome to Java");<br>
+                                        &nbsp; count++;<br>
+                                &nbsp;&nbsp; }<br>
+                                    }<br>
+                                }<br>
+                                <strong>The output is 10</strong></li>
+
+                                <li>What is the output for y?
+                                &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp; int y = 0,count=0;<br>
+                                        &nbsp; while (count < 100) {<br> 
+                                        &nbsp;  &nbsp;   y += i;<br>
+                                        &nbsp;  &nbsp;   ++count;<br>
+                                        &nbsp; System.out.println(y);<br>
+                                    }<br>
+                                }<br>
+                                The output of the y <strong>count < 100 is always true at Point A  and count < 100 is always false at Point C.</strong></li>
+                                <li>  <li>What is the output for y?
+                                &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp; int y = 0,count=0;<br>
+                                        &nbsp; while (count < 100) {<br> 
+                                        &nbsp;  &nbsp;   y += i;<br>
+                                        &nbsp;  &nbsp;   ++count;<br>
+                                        &nbsp; System.out.println(y);<br>
+                                    }<br>
+                                }<br> 
+                                 <strong>The output is 45</strong></li>
+                                <li>  <li> What will be displayed when the following code is executed?<br>
+                                &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp;  int number = 6;<br>
+                                        &nbsp; while (number > 0) {<br> 
+                                        &nbsp;  &nbsp;    number -= 3;<br>
+                                        &nbsp;  &nbsp;   System.out.print(number + " ");<br>
+                                        &nbsp; &nbsp; }<br>
+                                    }<br>
+                                }<br>
+                                <strong>The output of the following code will be 0.</strong>
+                                </li>
+                                    </ol>
+                                    </p>
+                                    </div> 
+                                    </div>';
+                        }
+
+                        else 
+                        {
+                    ?>
+                    <div class="form">
+                        <form action="" method="POST" role="form" id="quiz-3">
+                            <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
+                            <input type="hidden" value="" name="utm_source">
+                            <input type="hidden" value="" name="utm_medium">
+                            <input type="hidden" value="" name="utm_campaign">
+                            <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
+                            <ol class="list-numbered">
+                                <li>What will happen when you compile and run the following code? <br>
+                                public class Test { <br>
+                                    &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp; int x = 0;<br>
+                                        &nbsp; while(x < 4)<br>
+                                        &nbsp;  &nbsp; x = x + 1;<br>
+                                        &nbsp;System.out.println("x is " + x);<br>
+                                    }<br>
+                                }</li>
+                                <input type="radio" id="zero" name="question1" value="zero">
+                                <label for="zero">0</label><br>
+                                <input type="radio" id="one" name="question1" value="one">
+                                <label for="one">1</label><br>
+                                <input type="radio" id="three" name="question1" value="three">
+                                <label for="three">3</label><br>
+                                <input type="radio" id="four" name="question1" value="four">
+                                <label for="four">4</label><br>
+
+                                <li>How many times will the following code print "Welcome to Java" ?<br>
+                                public class Test { <br>
+                                    &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp; int count = 0;<br>
+                                        &nbsp; while (count < 10) {<br>
+                                        &nbsp;  &nbsp;  System.out.println("Welcome to Java");<br>
+                                        &nbsp; count++;<br>
+                                &nbsp;&nbsp; }<br>
+                                    }<br>
+                                }</li>
+                                <input type="radio" id="eigth" name="question2" value="eigth">
+                                <label for="eigth">8</label><br>
+                                <input type="radio" id="nine" name="question2" value="nine">
+                                <label for="nine">9</label><br>
+                                <input type="radio" id="ten" name="question2" value="ten">
+                                <label for="ten">10</label><br>
+                                <input type="radio" id="zero" name="question2" value="zero">
+                                <label for="zero">0</label><br>
+
+                                <li>Analyze the following code.<br>
+                                public class Test { <br>
+                                    &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp; int count = 0;<br>
+                                        &nbsp; while (count < 100) {<br>
+                                        &nbsp;  &nbsp;   // Point A<br>
+                                        &nbsp;  &nbsp;   System.out.println("Welcome to Java!");<br>
+                                        &nbsp;  &nbsp;   count++;<br>
+                                        &nbsp;  &nbsp;   // Point B<br>
+                                        &nbsp; //Point C<br>
+                                &nbsp;&nbsp; }<br>
+                                    }<br>
+                                }</li>
+                                <input type="radio" id="one" name="question3" value="one">
+                                <label for="one">count < 100 is always true at Point B </label><br>
+                                <input type="radio" id="two" name="question3" value="two">
+                                <label for="two">count < 100 is always false at Point B</label><br>
+                                <input type="radio" id="three " name="question3" value="three">
+                                <label for="three">count < 100 is always true at Point A  and count < 100 is always false at Point C</label><br>
+                                <input type="radio" id="four " name="question3" value="four">
+                                <label for="four">count < 100 is always true at Point Coint C </label><br>
+
+                                <li>What is the output for y?
+                                &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp; int y = 0,count=0;<br>
+                                        &nbsp; while (count < 100) {<br> 
+                                        &nbsp;  &nbsp;   y += i;<br>
+                                        &nbsp;  &nbsp;   ++count;<br>
+                                        &nbsp; System.out.println(y);<br>
+                                    }<br>
+                                }</li>
+
+                                <input type="radio" id="one" name="question4" value="one">
+                                <label for="one">1</label><br>
+                                <input type="radio" id="thirtysix " name="question4" value="thirtysix">
+                                <label for="thirtysix">36</label><br>
+                                <input type="radio" id="fourtyfive " name="question4" value="fourtyfive">
+                                <label for="fourtyfive"> 45</label><br>
+                                <input type="radio" id="nine " name="question4" value="nine">
+                                <label for="nine">9</label><br>
+
+                                <li> What will be displayed when the following code is executed?<br>
+                                &nbsp;  public static void main(String[] args){	<br>
+                                        &nbsp;  int number = 6;<br>
+                                        &nbsp; while (number > 0) {<br> 
+                                        &nbsp;  &nbsp;    number -= 3;<br>
+                                        &nbsp;  &nbsp;   System.out.print(number + " ");<br>
+                                        &nbsp; &nbsp; }<br>
+                                    }<br>
+                                }</li>
+                                <input type="radio" id="three" name="question5" value="three">
+                                <label for="three">6,3,0 </label><br>
+                                <input type="radio" id="two " name="question5" value="two">
+                                <label for="two">6,3 </label><br>
+                                <input type="radio" id="threezero " name="question5" value="threezero">
+                                <label for="threezero">3,0  </label><br>
+                                <input type="radio" id="zero " name="question5" value="zero">
+                                <label for="zero">0</label><br>
+                            </ol>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz2_submit" tabindex="3">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <?php }?>
                 </div>
 
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#content"></a> Notes to download</li>
+                            <li><a href="#quiz-5">Quiz 5</a></li>
 
                     </nav>
                 </div>
@@ -449,6 +577,7 @@ if (isset($_SESSION['email'])) { ?>
     </body>
 
     </html>
+
 <?php } else {
     header("Location: ../../../java_tenth_icse.php");
 }

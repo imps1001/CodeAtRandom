@@ -519,7 +519,7 @@ if (isset($_SESSION['email'])) { ?>
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-3">Quiz 4</a></li>
+                            <li><a href="#quiz-4">Quiz 4</a></li>
 
                     </nav>
                 </div>

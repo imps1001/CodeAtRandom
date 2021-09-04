@@ -3,12 +3,12 @@ require '../../../includes/common.php';
 
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
-   <html lang="en">
+    <html lang="en">
 
     <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial--yscale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!-- Bootstrap CSS -->
         <!-- Bootstrap CSS -->
@@ -27,23 +27,15 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Notes-Module 4 - Code At Random</title>
+        <title> OOPs Vs POP - Code At Random</title>
     </head>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
-
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
     </style>
 
     <body>
-
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
             <div class="container-fluid">
@@ -102,8 +94,9 @@ if (isset($_SESSION['email'])) { ?>
             </div>
         </nav>
 
+
         <!-- Side Bar-->
-<div class="container-xxl my-md-3 bd-layout">
+        <div class="container-xxl my-md-3 bd-layout">
             <aside class="bd-sidebar">
                 <nav class="collapse bd-links" id="sidebar" aria-label="Docs navigation">
                     <ul class="list-unstyled mb-0 py-3 pt-md-1">
@@ -136,16 +129,16 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module1-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module1-collapse" aria-expanded="true" aria-current="true">
                                 Module 1
                             </button>
 
-                            <div class="collapse" id="module1-collapse">
+                            <div class="collapse show" id="module1-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module1/features_java.php" class="d-inline-flex align-items-center rounded">Video: Features Of Java</a></li>
                                     <li><a href="../../java_10_icse/module1/notes_features.php" class="d-inline-flex align-items-center rounded "> Notes: Features Of Java</a></li>
                                     <li><a href="../../java_10_icse/module1/oops_pop.php" class="d-inline-flex align-items-center rounded">Video: OOPs Vs POP</a></li>
-                                    <li><a href="../../java_10_icse/module1/notes_oops_pop.php" class="d-inline-flex align-items-center rounded">Notes: OOPs Vs POP</a></li>
+                                    <li><a href="../../java_10_icse/module1/notes_oops_pop.php" class="d-inline-flex align-items-center rounded active">Notes: OOPs Vs POP</a></li>
                                     <li><a href="../../java_10_icse/module1/oops_concepts.php" class="d-inline-flex align-items-center rounded">Video: OOPs Concepts</a></li>
                                     <li><a href="../../java_10_icse/module1/notes_oops_concepts.php" class="d-inline-flex align-items-center rounded">Notes: OOPs Concepts</a></li>
                                     <li><a href="../../java_10_icse/module1/elementary_concepts_java.php" class="d-inline-flex align-items-center rounded ">Video: Elementary Concepts OF Java</a></li>
@@ -187,7 +180,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module3/dynamic_programming.php" class="d-inline-flex align-items-center rounded"> Video: Dynamic Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/java_math_functions.php" class="d-inline-flex align-items-center rounded">JAVA Mathematical Functions</a></li>
                                     <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded">Quiz 3</a></li>
-                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 3</a></li>
                                     <li><a href="../../java_10_icse/module3/expressions.php" class="d-inline-flex align-items-center rounded">Board Questions: Expressions in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module3/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions:Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/assignment3.php" class="d-inline-flex align-items-center rounded">Assignment 3</a></li>
@@ -195,18 +188,18 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false">
                                 Module 4
                             </button>
 
-                            <div class="collapse show" id="module4-collapse">
+                            <div class="collapse" id="module4-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module4/selective_constructs.php" class="d-inline-flex align-items-center rounded"> Selective Constructs Intro</a></li>
                                     <li><a href="../../java_10_icse/module4/multiple_if_else.php" class="d-inline-flex align-items-center rounded">Multiple If- Else</a></li>
                                     <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded">Quiz 4</a></li>
                                     <li><a href="../../java_10_icse/module4/nested_if_else.php" class="d-inline-flex align-items-center rounded">Nested_If_Else</a></li>
                                     <li><a href="../../java_10_icse/module4/switchcase.php" class="d-inline-flex align-items-center rounded">Switch Case</a></li>
-                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 4</a></li>
                                     <li><a href="../../java_10_icse/module4/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module4/assignment4.php" class="d-inline-flex align-items-center rounded">Assignment 4</a></li>
                                 </ul>
@@ -334,105 +327,21 @@ if (isset($_SESSION['email'])) { ?>
                 </nav>
 
 
-
-
-
-
             </aside>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h3 id="content pb-5">Notes in pdf form </h3>
+                        <h3 class="bd-title" id="content">OOPs Vs POP</h3>
                     </div>
-                        <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
-                            <tr>
-                                <td>
-                                    <strong>Introduction to Selective Constructs</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Selective Constructs intro.pdf" target="_blank" download="Slective Constructs Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>If-Else Programming </strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/if-else programming.pdf" target="_blank" download="If-Else Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>If-Else Outputs</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/if-else outputs.pdf" target="_blank" download="If-Else Outputs" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Introduction to multiple if-else</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/multiple if else.pdf" target="_blank" download="Multiple If-Else" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Ascending Order</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Ascending Order.pdf" target="_blank" download="Ascending Order" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Bill Slab Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Bill Slab Programming.pdf" target="_blank" download="Bill Slab Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Menu driven programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Menu Driven Programs.pdf" target="_blank" download="Menu driven programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Character based Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Character Based Programs.pdf" target="_blank" download="Character based Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Nested If-Else Introduction</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Nested If-Else.pdf" target="_blank" download="Nested If-Else Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Nested If-else Progamming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Nested if programming.pdf" target="_blank" download="Nested If-else Progamming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Switch Case Introduction</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/switch case.pdf" target="_blank" download="Switch Case Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Switch Case Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/switch based programming.pdf" target="_blank" download="Switch Case Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Board Questions Practice</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/board questions.pdf" target="_blank" download="Board Questions Practice" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                        </table>
-                    <p class="mt-5 " style="color: blueviolet;"> Download these pdfs and store them in your device for future reference.</p>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/-ahSafiL7tM?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
                 </div>
 
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#content"></a> Notes to download</li>
-
+                            <li><a href="#content">Video</a></li>
+                           
                     </nav>
                 </div>
 

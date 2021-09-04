@@ -1,16 +1,15 @@
 <?php
 require '../../../includes/common.php';
-
+       
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
-   <html lang="en">
+    <html lang="en">
 
     <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <!-- Bootstrap CSS -->
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -27,25 +26,28 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Notes-Module 4 - Code At Random</title>
+        <title> Assignment-5 | Java Course 10th ICSE</title>
     </head>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
-
-        td,
-        th {
+        .button-bar{
+            margin-top: 30px;
+            border-collapse: collapse;
             border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
+            height: fit-content;
         }
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
     </style>
 
     <body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
             <div class="container-fluid">
                 <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -101,9 +103,48 @@ if (isset($_SESSION['email'])) { ?>
                 </button>
             </div>
         </nav>
+        
+        <?php
+        if(isset($_POST['submit'])){
+            if ( isset( $_FILES['file'] ) ) {
+                if ($_FILES['file']['type'] == "application/pdf") {
+                    $source_file = $_FILES['file']['tmp_name'];
+                    $dest_file = "../uploads/".$_FILES['file']['name'];
+                    move_uploaded_file( $source_file, $dest_file ) or die("Error!! We can't transfer the file");
+                        if($_FILES['file']['error'] == 0) {
+                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Success !</strong> Your file has been uploaded!!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div> ';
+                        $user_id = $_SESSION['id'];
+                        $course_id = 2;
+                        $quiz_no = 10;
+                        $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
+                        values ('$user_id', '$course_id', '$quiz_no', '20')";
+                        $query_run = mysqli_query($con, $query)
+                        or die(mysqli_error($con));
+
+                        }
+                    }
+                    else {
+                        if ( $_FILES['file']['type'] != "application/pdf") {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error! </strong> Cannot upload file. Invalid  file extension, should be pdf !!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div> ';
+                        }
+                    }
+                }
+        } 
+        ?>
+
 
         <!-- Side Bar-->
-<div class="container-xxl my-md-3 bd-layout">
+        <div class="container-xxl my-md-3 bd-layout">
             <aside class="bd-sidebar">
                 <nav class="collapse bd-links" id="sidebar" aria-label="Docs navigation">
                     <ul class="list-unstyled mb-0 py-3 pt-md-1">
@@ -187,7 +228,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module3/dynamic_programming.php" class="d-inline-flex align-items-center rounded"> Video: Dynamic Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/java_math_functions.php" class="d-inline-flex align-items-center rounded">JAVA Mathematical Functions</a></li>
                                     <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded">Quiz 3</a></li>
-                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 3</a></li>
                                     <li><a href="../../java_10_icse/module3/expressions.php" class="d-inline-flex align-items-center rounded">Board Questions: Expressions in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module3/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions:Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/assignment3.php" class="d-inline-flex align-items-center rounded">Assignment 3</a></li>
@@ -195,29 +236,29 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false" >
                                 Module 4
                             </button>
 
-                            <div class="collapse show" id="module4-collapse">
+                            <div class="collapse" id="module4-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module4/selective_constructs.php" class="d-inline-flex align-items-center rounded"> Selective Constructs Intro</a></li>
                                     <li><a href="../../java_10_icse/module4/multiple_if_else.php" class="d-inline-flex align-items-center rounded">Multiple If- Else</a></li>
                                     <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded">Quiz 4</a></li>
                                     <li><a href="../../java_10_icse/module4/nested_if_else.php" class="d-inline-flex align-items-center rounded">Nested_If_Else</a></li>
                                     <li><a href="../../java_10_icse/module4/switchcase.php" class="d-inline-flex align-items-center rounded">Switch Case</a></li>
-                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 4</a></li>
                                     <li><a href="../../java_10_icse/module4/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module4/assignment4.php" class="d-inline-flex align-items-center rounded">Assignment 4</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="true" aria-current="true">
                                 Module 5
                             </button>
 
-                            <div class="collapse" id="module5-collapse">
+                            <div class="collapse show" id="module5-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module5/intro_loops.php" class="d-inline-flex align-items-center rounded">Iterative Constructs- intro</a></li>
                                     <li><a href="../../java_10_icse/module5/forprogramming.php" class="d-inline-flex align-items-center rounded">For Loop Based Programming</a></li>
@@ -227,7 +268,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module5/notes.php" class="d-inline-flex align-items-center rounded">Notes: Module 5</a></li>
                                     <li><a href="../../java_10_icse/module5/quiz5.php" class="d-inline-flex align-items-center rounded">Quiz 5</a></li>
                                     <li><a href="../../java_10_icse/module5/boardquestions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
-                                    <li><a href="../../java_10_icse/module5/assignmnet5.php" class="d-inline-flex align-items-center rounded">Assignment 5</a></li>
+                                    <li><a href="../../java_10_icse/module5/assignmnet5.php" class="d-inline-flex align-items-center rounded active">Assignment 5</a></li>
 
                                 </ul>
                             </div>
@@ -333,108 +374,102 @@ if (isset($_SESSION['email'])) { ?>
                     </ul>
                 </nav>
 
-
-
-
-
-
             </aside>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h3 id="content pb-5">Notes in pdf form </h3>
+                        <h1 class=" bd-title mb-4"> Assignment 5</h1>
                     </div>
-                        <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
-                            <tr>
-                                <td>
-                                    <strong>Introduction to Selective Constructs</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Selective Constructs intro.pdf" target="_blank" download="Slective Constructs Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>If-Else Programming </strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/if-else programming.pdf" target="_blank" download="If-Else Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>If-Else Outputs</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/if-else outputs.pdf" target="_blank" download="If-Else Outputs" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Introduction to multiple if-else</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/multiple if else.pdf" target="_blank" download="Multiple If-Else" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Ascending Order</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Ascending Order.pdf" target="_blank" download="Ascending Order" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Bill Slab Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Bill Slab Programming.pdf" target="_blank" download="Bill Slab Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Menu driven programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Menu Driven Programs.pdf" target="_blank" download="Menu driven programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Character based Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Character Based Programs.pdf" target="_blank" download="Character based Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Nested If-Else Introduction</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Nested If-Else.pdf" target="_blank" download="Nested If-Else Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Nested If-else Progamming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/Nested if programming.pdf" target="_blank" download="Nested If-else Progamming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Switch Case Introduction</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/switch case.pdf" target="_blank" download="Switch Case Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Switch Case Programming</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/switch based programming.pdf" target="_blank" download="Switch Case Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Board Questions Practice</strong>
-                                </td>
-                                <td><a href="../../../notes/module 4/board questions.pdf" target="_blank" download="Board Questions Practice" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
-                            </tr>
-                        </table>
-                    <p class="mt-5 " style="color: blueviolet;"> Download these pdfs and store them in your device for future reference.</p>
-                </div>
+                    <?php 
+                        $user_id = $_SESSION['id'];
+                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='10' ";
+                        $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
+                        $result= mysqli_num_rows($query_result);
+                        if($result!=0){
+                            $result_row= mysqli_fetch_assoc($query_result);
+                            $grade= $result_row['grade'];
+                            echo '<div class="container w-100 p-3">
+                            <h2> Your assignment is submitted. Your score is '. $grade .' out of 20</h2><br>
+                            </div>';
+                            echo '<div class="container w-100 p-3">
+                                    <div class="row">
+                                    <h5>The solution of the Assignment 5:-</h5>
+                                    <a href="../notes/Assignment 5 Solution.pdf" target="_blank"> Download the solutions</a>
+                
+                                    </div> 
+                                    </div>';
+                        }
 
+                        else 
+                        {
+                    ?>
+                    <div class="form">
+                            <ol class="list-numbered">
+                                <li class="pb-2">Write a menu driven program to accept a number and check and display whether it is <b>prime</b> number or not, OR an <b>automorphic</b> number or not. (Use switch-case statement)<br>
+                                <ol class="list-numbered"><li> Prime number. A number is said to be a prime number if it is divisible only by and itself and not by any other number. <br>
+                                <b>Example: 3, 5, 7, 11, 13 etc.</b>
+                                </li>
+                            <li>Automorphic number. An automorphic number is the number which is contained in the last digit(s) of its square.<br>
+                                <b>Example 25 is an automorphic number as its square is 625 and 25 is present as the last two digits.</b>
+                                </li></ol>
+                                </li>
+
+
+                                <li class="pb-2">Write a menu driven program to accept a number from the user and check whether it is a <b>'BUZZ'</b> number or to accept any two numbers and print the <b>GCD</b> of them.<br>
+                                <ol class="list-numbered">
+                                    <li> A <b>BUZZ</b> number is the number which either ends with 7 or divisible by 7.</li>
+                            <li><b>GCD (Greatest Common Divisor)</b> of two integers is calculated by continued division method Divide the larger number by the smaller, the remainder then divides the previous divisor. The process is repeated till the remainder is zero. The divisor then results the GCD.</li>
+                             </ol>
+                                </li><br>
+
+                                <li class="pb-2">Write a menu driven class to accept a number from the user and check whether it is <b>Palindrome</b> or a <b>Perfect number.</b><br>
+                                <ol class="list-numbered">
+                            <li>Palindrome number - (a number is a Palindrome which when read in reverse order is same as read in the right order)<br>
+                            <b>Example 11, 101, 151 etc.</b><br>
+                                </li>
+                                <li>Perfect number (a number is called Perfect if it is equal to the sum of its factors other than the number itself.)<br>
+                                <b>Example: 6= 1+2+3</b>
+                            </li>
+                            </ol>
+                            </li>
+
+                                <li class="pb-2">State one similarity and one difference between <b>while</b> and <b>do-while</b> loop.</li> 
+                                <li class="pb-2">What will be the <b>output</b> of the following code?<br>
+                                int a=10, b=15; <br>
+                                for ( int i=0; i<6; i++, a++) <br>
+                                    &nbsp;&nbsp; a = a +3; <br>
+                                    &nbsp;&nbsp; b--;  <br>
+                                    System.out.println("a= " + a);<br>
+                                    System.out.println("b="+b);
+                                    <br>
+                                </li>
+                            </ol>
+                            <div style="padding: 20px; border: 1px solid #999" id="upload">
+
+
+                                <h2>Upload your answers: </h2>
+                                <h6 style="color: red;">*Only pdf format acceptable*</h6>
+                                <h6 style="color: blue;">Save your pdf with your name before submitting. Example: YourName_Assignment5.pdf</h6>
+                                <form enctype="multipart/form-data" action="" method="post">
+                                <input type="file" name="file" /><br />
+                                <br />
+                                <input type="submit" value="Upload" name="submit" /></p>
+                                </form>
+
+                            </div>
+                    </div>
+                    <?php } ?>
+                </div>
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#content"></a> Notes to download</li>
+                            <li><a href="#question1">Questions</a></li>
+                            <li><a href="#upload">Upload your answers</a></li>
 
                     </nav>
                 </div>
+                
 
                 <script src="../../../node_modules/jquery/dist/jquery.slim.min.js"></script>
                 <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -449,7 +484,9 @@ if (isset($_SESSION['email'])) { ?>
     </body>
 
     </html>
-<?php } else {
+<?php
+    
+} else {
     header("Location: ../../../java_tenth_icse.php");
 }
 ?>

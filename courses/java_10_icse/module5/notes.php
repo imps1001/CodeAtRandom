@@ -11,7 +11,6 @@ if (isset($_SESSION['email'])) { ?>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!-- Bootstrap CSS -->
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,7 +26,7 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Notes-Module 4 - Code At Random</title>
+        <title> Notes-Module 5 - Code At Random</title>
     </head>
     <style>
         body {
@@ -195,36 +194,35 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false">
                                 Module 4
                             </button>
-
-                            <div class="collapse show" id="module4-collapse">
+                            <div class="collapse" id="module4-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module4/selective_constructs.php" class="d-inline-flex align-items-center rounded"> Selective Constructs Intro</a></li>
                                     <li><a href="../../java_10_icse/module4/multiple_if_else.php" class="d-inline-flex align-items-center rounded">Multiple If- Else</a></li>
                                     <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded">Quiz 4</a></li>
                                     <li><a href="../../java_10_icse/module4/nested_if_else.php" class="d-inline-flex align-items-center rounded">Nested_If_Else</a></li>
                                     <li><a href="../../java_10_icse/module4/switchcase.php" class="d-inline-flex align-items-center rounded">Switch Case</a></li>
-                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 4</a></li>
                                     <li><a href="../../java_10_icse/module4/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module4/assignment4.php" class="d-inline-flex align-items-center rounded">Assignment 4</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="true" aria-current="true">
                                 Module 5
                             </button>
 
-                            <div class="collapse" id="module5-collapse">
+                            <div class="collapse show" id="module5-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module5/intro_loops.php" class="d-inline-flex align-items-center rounded">Iterative Constructs- intro</a></li>
                                     <li><a href="../../java_10_icse/module5/forprogramming.php" class="d-inline-flex align-items-center rounded">For Loop Based Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/series_programming.php" class="d-inline-flex align-items-center rounded">Series Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/whileprogramming.php" class="d-inline-flex align-items-center rounded">While Loop Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/do_while.php" class="d-inline-flex align-items-center rounded">Do While Programming</a></li>
-                                    <li><a href="../../java_10_icse/module5/notes.php" class="d-inline-flex align-items-center rounded">Notes: Module 5</a></li>
+                                    <li><a href="../../java_10_icse/module5/notes.php" class="d-inline-flex align-items-center rounded active">Notes: Module 5</a></li>
                                     <li><a href="../../java_10_icse/module5/quiz5.php" class="d-inline-flex align-items-center rounded">Quiz 5</a></li>
                                     <li><a href="../../java_10_icse/module5/boardquestions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module5/assignmnet5.php" class="d-inline-flex align-items-center rounded">Assignment 5</a></li>
@@ -332,12 +330,6 @@ if (isset($_SESSION['email'])) { ?>
                         </li>
                     </ul>
                 </nav>
-
-
-
-
-
-
             </aside>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
@@ -345,83 +337,149 @@ if (isset($_SESSION['email'])) { ?>
                         <h3 id="content pb-5">Notes in pdf form </h3>
                     </div>
                         <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
-                            <tr>
+                        <tr>
                                 <td>
-                                    <strong>Introduction to Selective Constructs</strong>
+                                    <strong>Introduction To Iterative Constructs</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/Selective Constructs intro.pdf" target="_blank" download="Slective Constructs Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Iterative Constructs.pdf" target="_blank" download="Introduction to Selective Constructs " style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>If-Else Programming </strong>
+                                    <strong>First Program Based On For-Loop</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/if-else programming.pdf" target="_blank" download="If-Else Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/first_program_for_loop.pdf" target="_blank" download="If-Else Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>If-Else Outputs</strong>
+                                    <strong>Programming Based On For Loop</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/if-else outputs.pdf" target="_blank" download="If-Else Outputs" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/for loop based programming questions.pdf" target="_blank" download="For Loop Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Introduction to multiple if-else</strong>
+                                    <strong>Program to check whether a number is prime or not</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/multiple if else.pdf" target="_blank" download="Multiple If-Else" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Program to check whether a number is prime.pdf" target="_blank" download="Program to check whether a number is prime or not" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Ascending Order</strong>
+                                    <strong>Program to check whether a number is perfect or not</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/Ascending Order.pdf" target="_blank" download="Ascending Order" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Program to check whether a number is perfect.pdf" target="_blank" download="Program to check whether a number is perfect or not" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Bill Slab Programming</strong>
+                                    <strong>Program to enter two numbers and find it's HCF </strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/Bill Slab Programming.pdf" target="_blank" download="Bill Slab Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Program to find Hcf of two numbers.pdf" target="_blank" download="Program to enter two numbers and find it's HCF" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Menu driven programming</strong>
+                                    <strong>Programming Based On Series</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/Menu Driven Programs.pdf" target="_blank" download="Menu driven programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Series Programming.pdf" target="_blank" download="Series Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Character based Programming</strong>
+                                    <strong>Printing the sum of series</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/Character Based Programs.pdf" target="_blank" download="Character based Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Printing the sum of series.pdf" target="_blank" download="Printing the sum of series" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Nested If-Else Introduction</strong>
+                                    <strong>Printing the sum of series with alternate sign</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/Nested If-Else.pdf" target="_blank" download="Nested If-Else Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/printing the sum of series with alternate sign.pdf" target="_blank" download="Printing the sum of series with alternate sign" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Nested If-else Progamming</strong>
+                                    <strong>More Programs</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/Nested if programming.pdf" target="_blank" download="Nested If-else Progamming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/more programs based on series.pdf" target="_blank" download="more Programs" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Switch Case Introduction</strong>
+                                    <strong>Question based on mixed series</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/switch case.pdf" target="_blank" download="Switch Case Introduction" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Mixed question on series.pdf" target="_blank" download="Question based on mixed series" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Switch Case Programming</strong>
+                                    <strong>While Loop</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/switch based programming.pdf" target="_blank" download="Switch Case Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/while loop.pdf" target="_blank" download="While Loop" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Board Questions Practice</strong>
+                                    <strong>Armstrong Number</strong>
                                 </td>
-                                <td><a href="../../../notes/module 4/board questions.pdf" target="_blank" download="Board Questions Practice" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 5/Armstrong Number.pdf" target="_blank" download="Armstrong Number" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Reverse and Palindrome</strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/Reverse & Palindrome Number.pdf" target="_blank" download="Reverse and Palindrome" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Automorphic Number </strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/Automorphic Number.pdf" target="_blank" download="Automorphic Number" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>HCF by long division method </strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/hcf by long division.pdf" target="_blank" download="HCF by long division method" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>LCM of two numbers without using HCF </strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/lcm of two numbers.pdf" target="_blank" download="LCM of two numbers without using HCF " style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Perfect Square</strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/perfect square.pdf" target="_blank" download="Perfect Square" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Mersenne Number </strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/mersenne number.pdf" target="_blank" download="Mersenne Number " style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Do While Loop</strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/Do While Loop.pdf" target="_blank" download="Do While Loop" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Do-While Loop Programming</strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/do while programming.pdf" target="_blank" download="Do-While Loop programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Program to find key based on certain criteria</strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/extra program for do while.pdf" target="_blank" download="Program to find key based on certain criteria" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Outputs based on loops</strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/outputs of loop.pdf" target="_blank" download="Outputs based on loops" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Board Question Practice</strong>
+                                </td>
+                                <td><a href="../../../notes/module 5/board questions.pdf" target="_blank" download="Board Questions Practice" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                         </table>
                     <p class="mt-5 " style="color: blueviolet;"> Download these pdfs and store them in your device for future reference.</p>

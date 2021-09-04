@@ -15,6 +15,7 @@ if( isset($_POST['course_id'])){
 }
 
 if(isset($_POST['payment_id']) && isset($_SESSION['OID'])){
+    date_default_timezone_set("Asia/Kolkata");
     $payment_id = $_POST['payment_id'];
     $added_on = date('Y-m-d h:i:s');
     $id= $_SESSION['OID'];
