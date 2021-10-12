@@ -52,7 +52,12 @@ require_once('includes/common.php');
 <body style="overflow-x: hidden; overflow-y: auto;">
     <!--Navbar-->
     <?php include 'includes/header.php'; ?>
-
+    <div class="alert-container" style="padding-top: 63px;">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <p class="demo" style="text-align: center; font-size: 30px;"><strong>Offer Price Ends in </strong><span id="demo" style="font-weight:700;"></span><a href="#courses" style="color: green; font-size:24px; float:right;">Enroll Now</a></p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+        </div>
     <!--Jumbotron-->
     <header class="jumbotron" style="height: 450px;">
         <div class="flex-container">
@@ -250,7 +255,7 @@ require_once('includes/common.php');
     <div class="container mt-0">
       <h2 class="text-dark text-center font-weight-bold mb-0">My Courses</h2>
       <br><br><br>
-      <?php 
+      <?php
        if (isset($_SESSION['email'])) {
         $user_id = $_SESSION['id'];
         $query = "SELECT * FROM user_courses WHERE user_id='$user_id' ";
@@ -269,12 +274,12 @@ require_once('includes/common.php');
        <div class="d-flex align-items-start">
         <div class="flex-shrink-0 mb-5">
        <?php
-       echo '<img src = "data:image/png;base64,' . base64_encode($result_row['course_image']) . '" width = "100px" height = "100px"/>'; 
+       echo '<img src = "data:image/png;base64,' . base64_encode($result_row['course_image']) . '" width = "100px" height = "100px"/>';
        ?>
       </div>
       <div class="flex-grow-1 ms-3">
       <?php echo '<h3>' . $result_row['course_name'] . '</h3>'; ?>
-      <?php  
+      <?php
       if($course_id==2){?>
         <a href="./courses/java_10_icse/getting started/overview.php"><button class="btn btn-primary btn-lg">Go To Course</button></a>
       <?php } else{?>
@@ -332,14 +337,6 @@ require_once('includes/common.php');
     $('#Loginlink').click(function() {
       $('#loginModal').modal('show')
     });
-    /*$(document).ready(function(){
-          $("#First_Modal").modal('show');
-      });
-    $('#register_first-link').click(function ()
-    {
-      $('#First_Modal').modal('hide')
-      $('#register_Modal').modal('show')
-    });*/
 
 
     if (!Cookies.get('popup')) {
@@ -409,7 +406,36 @@ require_once('includes/common.php');
 
     });
   </script>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 15, 2021 00:00:00").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d :" + hours + "h :"
+  + minutes + "m :" + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 </body>
 
 </html>

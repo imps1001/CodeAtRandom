@@ -1,5 +1,6 @@
 <?php
 require '../../../includes/common.php';
+       
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -9,8 +10,8 @@ if (isset($_SESSION['email'])) { ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-       <!-- Bootstrap CSS -->
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -25,12 +26,23 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Quiz 5 - Code At Random</title>
+        <title> Assignment-6 | Java Course 10th ICSE</title>
     </head>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
+        .button-bar{
+            margin-top: 30px;
+            border-collapse: collapse;
+            border: 1px solid #dddddd;
+            height: fit-content;
+        }
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
     </style>
 
     <body>
@@ -91,43 +103,48 @@ if (isset($_SESSION['email'])) { ?>
                 </button>
             </div>
         </nav>
+        
         <?php
-    if (isset($_POST['submit'])) {
-        $ques1 = $_POST['question1'];
-        $ques2 = $_POST['question2'];
-        $ques3 = $_POST['question3'];
-        $ques4 = $_POST['question4'];
-        $ques5 = $_POST['question5'];
-        $c = 0;
-        if (strcmp($ques1, "four") == 0) {
-            $c++;
-        }
-        if (strcmp($ques2, "ten") == 0) {
-            $c++;
-        }
-        if (strcmp($ques3, "three") == 0) {
-            $c++;
-        }
-        if (strcmp($ques4, "fourtyfive") == 0) {
-            $c++;
-        }
-        if (strcmp($ques5, "threezero") == 0) {
-            $c++;
-        }
-        $grade = $c*10;
-    $user_id = $_SESSION['id'];
-    $course_id = 2;
-    $quiz_no = 9;
-    $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
-    values ('$user_id', '$course_id', '$quiz_no', '$grade')";
-    $query_run = mysqli_query($con, $query)
-    or die(mysqli_error($con));
-}
-    ?>
+        if(isset($_POST['submit'])){
+            if ( isset( $_FILES['file'] ) ) {
+                if ($_FILES['file']['type'] == "application/pdf") {
+                    $source_file = $_FILES['file']['tmp_name'];
+                    $dest_file = "../uploads/".$_FILES['file']['name'];
+                    move_uploaded_file( $source_file, $dest_file ) or die("Error!! We can't transfer the file");
+                        if($_FILES['file']['error'] == 0) {
+                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Success !</strong> Your file has been uploaded!!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div> ';
+                        $user_id = $_SESSION['id'];
+                        $course_id = 2;
+                        $quiz_no = 12;
+                        $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
+                        values ('$user_id', '$course_id', '$quiz_no', '40')";
+                        $query_run = mysqli_query($con, $query)
+                        or die(mysqli_error($con));
+
+                        }
+                    }
+                    else {
+                        if ( $_FILES['file']['type'] != "application/pdf") {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error! </strong> Cannot upload file. Invalid  file extension, should be pdf !!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div> ';
+                        }
+                    }
+                }
+        } 
+        ?>
 
 
-<!-- Side Bar-->
-<div class="container-xxl my-md-3 bd-layout">
+        <!-- Side Bar-->
+        <div class="container-xxl my-md-3 bd-layout">
             <aside class="bd-sidebar">
                 <nav class="collapse bd-links" id="sidebar" aria-label="Docs navigation">
                     <ul class="list-unstyled mb-0 py-3 pt-md-1">
@@ -210,7 +227,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module3/inputs.php" class="d-inline-flex align-items-center rounded">Taking Inputs </a></li>
                                     <li><a href="../../java_10_icse/module3/dynamic_programming.php" class="d-inline-flex align-items-center rounded"> Video: Dynamic Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/java_math_functions.php" class="d-inline-flex align-items-center rounded">JAVA Mathematical Functions</a></li>
-                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded active">Quiz 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded">Quiz 3</a></li>
                                     <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 3</a></li>
                                     <li><a href="../../java_10_icse/module3/expressions.php" class="d-inline-flex align-items-center rounded">Board Questions: Expressions in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module3/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions:Programming</a></li>
@@ -219,7 +236,7 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false" >
                                 Module 4
                             </button>
 
@@ -227,7 +244,7 @@ if (isset($_SESSION['email'])) { ?>
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module4/selective_constructs.php" class="d-inline-flex align-items-center rounded"> Selective Constructs Intro</a></li>
                                     <li><a href="../../java_10_icse/module4/multiple_if_else.php" class="d-inline-flex align-items-center rounded">Multiple If- Else</a></li>
-                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded active">Quiz 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded">Quiz 4</a></li>
                                     <li><a href="../../java_10_icse/module4/nested_if_else.php" class="d-inline-flex align-items-center rounded">Nested_If_Else</a></li>
                                     <li><a href="../../java_10_icse/module4/switchcase.php" class="d-inline-flex align-items-center rounded">Switch Case</a></li>
                                     <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 4</a></li>
@@ -237,11 +254,11 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module5-collapse" aria-expanded="false">
                                 Module 5
                             </button>
 
-                            <div class="collapse show" id="module5-collapse">
+                            <div class="collapse" id="module5-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module5/intro_loops.php" class="d-inline-flex align-items-center rounded">Iterative Constructs- intro</a></li>
                                     <li><a href="../../java_10_icse/module5/forprogramming.php" class="d-inline-flex align-items-center rounded">For Loop Based Programming</a></li>
@@ -249,7 +266,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module5/whileprogramming.php" class="d-inline-flex align-items-center rounded">While Loop Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/do_while.php" class="d-inline-flex align-items-center rounded">Do While Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/notes.php" class="d-inline-flex align-items-center rounded">Notes: Module 5</a></li>
-                                    <li><a href="../../java_10_icse/module5/quiz5.php" class="d-inline-flex align-items-center rounded active">Quiz 5</a></li>
+                                    <li><a href="../../java_10_icse/module5/quiz5.php" class="d-inline-flex align-items-center rounded">Quiz 5</a></li>
                                     <li><a href="../../java_10_icse/module5/boardquestions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module5/assignmnet5.php" class="d-inline-flex align-items-center rounded">Assignment 5</a></li>
 
@@ -257,11 +274,11 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module6-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module6-collapse" aria-expanded="true" aria-current="true">
                                 Module 6
                             </button>
 
-                            <div class="collapse" id="module6-collapse">
+                            <div class="collapse show" id="module6-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module6/nested_loops.php" class="d-inline-flex align-items-center rounded">Nested Loops</a></li>
                                     <li><a href="../../java_10_icse/module6/range_programs.php" class="d-inline-flex align-items-center rounded">Range Progarmming</a></li>
@@ -271,7 +288,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module6/equi_tri.php" class="d-inline-flex align-items-center rounded">Equlilateral triangular patterns</a></li>
                                     <li><a href="../../java_10_icse/module6/quiz6.php" class="d-inline-flex align-items-center rounded">Quiz 6</a></li>
                                     <li><a href="../../java_10_icse/module6/impques.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
-                                    <li><a href="../../java_10_icse/module6/assignment6.php" class="d-inline-flex align-items-center rounded">Assignmnet 6</a></li>
+                                    <li><a href="../../java_10_icse/module6/assignment6.php" class="d-inline-flex align-items-center rounded active">Assignmnet 6</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -345,7 +362,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module10/assignment10.php" class="d-inline-flex align-items-center rounded">Assignment 10</a></li>
 
                                 </ul>
-                            </div>
+                             </div>
                         </li>
          
                         <li class="my-2 mx-6 me-2 border-top"></li>
@@ -357,85 +374,28 @@ if (isset($_SESSION['email'])) { ?>
                     </ul>
                 </nav>
 
-
             </aside>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h1 class=" bd-title mb-4">Quiz 5 - Module 5</h1>
+                        <h1 class=" bd-title mb-4"> Assignment 6</h1>
                     </div>
                     <?php 
                         $user_id = $_SESSION['id'];
-                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='9' ";
+                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='12' ";
                         $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
                         $result= mysqli_num_rows($query_result);
                         if($result!=0){
                             $result_row= mysqli_fetch_assoc($query_result);
                             $grade= $result_row['grade'];
                             echo '<div class="container w-100 p-3">
-                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 50</h2><br>
+                            <h2> Your assignment is submitted. Your score is '. $grade .' out of 40</h2><br>
                             </div>';
                             echo '<div class="container w-100 p-3">
                                     <div class="row">
-                                    <h5>The correct answers of the Quiz 5 were:-</h5>
-                                    <p> 
-                                    <ol> 
-                                    <li>What will happen when you compile and run the following code? <br>
-                                    public class Test { <br>
-                                        &nbsp;  public static void main(String[] args){	<br>
-                                            &nbsp; int x = 0;<br>
-                                            &nbsp; while(x < 4)<br>
-                                            &nbsp;  &nbsp; x = x + 1;<br>
-                                            &nbsp;System.out.println("x is " + x);<br>
-                                        }<br>
-                                    }<br>
-                                    <strong> The answer to the question is 4 </strong> </li>
-                                    
-                                    <li>How many times will the following code print "Welcome to Java" ?<br>
-                                public class Test { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int count = 0;<br>
-                                        &nbsp; while (count < 10) {<br>
-                                        &nbsp;  &nbsp;  System.out.println("Welcome to Java");<br>
-                                        &nbsp; count++;<br>
-                                &nbsp;&nbsp; }<br>
-                                    }<br>
-                                }<br>
-                                <strong>The output is 10</strong></li>
-
-                                <li>What is the output for y?
-                                &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int y = 0,count=0;<br>
-                                        &nbsp; while (count < 100) {<br> 
-                                        &nbsp;  &nbsp;   y += i;<br>
-                                        &nbsp;  &nbsp;   ++count;<br>
-                                        &nbsp; System.out.println(y);<br>
-                                    }<br>
-                                }<br>
-                                The output of the y <strong>count < 100 is always true at Point A  and count < 100 is always false at Point C.</strong></li>
-                                <li>  <li>What is the output for y?
-                                &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int y = 0,count=0;<br>
-                                        &nbsp; while (count < 10) {<br> 
-                                        &nbsp;  &nbsp;   y += count;<br>
-                                        &nbsp;  &nbsp;   ++count;<br>
-                                        &nbsp; System.out.println(y);<br>
-                                    }<br>
-                                }<br> 
-                                 <strong>The output is 45</strong></li>
-                                <li>  <li> What will be displayed when the following code is executed?<br>
-                                &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp;  int number = 6;<br>
-                                        &nbsp; while (number > 0) {<br> 
-                                        &nbsp;  &nbsp;    number -= 3;<br>
-                                        &nbsp;  &nbsp;   System.out.print(number + " ");<br>
-                                        &nbsp; &nbsp; }<br>
-                                    }<br>
-                                }<br>
-                                <strong>The output of the following code will be 3,0.</strong>
-                                </li>
-                                    </ol>
-                                    </p>
+                                    <h5>The solution of the Assignment 6:-</h5>
+                                    <a href="../notes/Assignment 6 Solution.pdf" target="_blank"> Download the solutions</a>
+                
                                     </div> 
                                     </div>';
                         }
@@ -444,122 +404,60 @@ if (isset($_SESSION['email'])) { ?>
                         {
                     ?>
                     <div class="form">
-                        <form action="" method="POST" role="form" id="quiz-3">
-                            <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
-                            <input type="hidden" value="" name="utm_source">
-                            <input type="hidden" value="" name="utm_medium">
-                            <input type="hidden" value="" name="utm_campaign">
-                            <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
-                            <ol class="list-numbered">
-                                <li>What will happen when you compile and run the following code? <br>
-                                public class Test { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int x = 0;<br>
-                                        &nbsp; while(x < 4)<br>
-                                        &nbsp;  &nbsp; x = x + 1;<br>
-                                        &nbsp;System.out.println("x is " + x);<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="zero" name="question1" value="zero">
-                                <label for="zero">0</label><br>
-                                <input type="radio" id="one" name="question1" value="one">
-                                <label for="one">1</label><br>
-                                <input type="radio" id="three" name="question1" value="three">
-                                <label for="three">3</label><br>
-                                <input type="radio" id="four" name="question1" value="four">
-                                <label for="four">4</label><br>
+                            <ol class="list-numbered" id="question1">
+                                <li class="pb-2">Write a program to print the given pattern using nested loops.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  5 <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 4 5<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;5 4 3 5 4<br>
+                                &nbsp;&nbsp;5 4 3 2 5 4 3<br>
+                                5 4 3 2 1 5 4 3 2
+                                </li>
 
-                                <li>How many times will the following code print "Welcome to Java" ?<br>
-                                public class Test { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int count = 0;<br>
-                                        &nbsp; while (count < 10) {<br>
-                                        &nbsp;  &nbsp;  System.out.println("Welcome to Java");<br>
-                                        &nbsp; count++;<br>
-                                &nbsp;&nbsp; }<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="eigth" name="question2" value="eigth">
-                                <label for="eigth">8</label><br>
-                                <input type="radio" id="nine" name="question2" value="nine">
-                                <label for="nine">9</label><br>
-                                <input type="radio" id="ten" name="question2" value="ten">
-                                <label for="ten">10</label><br>
-                                <input type="radio" id="zero" name="question2" value="zero">
-                                <label for="zero">0</label><br>
+                                <li class="pb-2">WAP to print all mersene numbers from 1 to 100.
+                                </li>
 
-                                <li>How many times <b>"Welcome to Java!"</b> will be printed on the screen after running this code?<br>
-                                public class Test { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int count = 0;<br>
-                                        &nbsp; while (count < 10) {<br>
-                                        &nbsp;  &nbsp;   System.out.println("Welcome to Java!");<br>
-                                        &nbsp;  &nbsp;   count++;<br>
-                                &nbsp;&nbsp; }<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="one" name="question3" value="one">
-                                <label for="one">4 </label><br>
-                                <input type="radio" id="two" name="question3" value="two">
-                                <label for="two">7</label><br>
-                                <input type="radio" id="three " name="question3" value="three">
-                                <label for="three">10</label><br>
-                                <input type="radio" id="four " name="question3" value="four">
-                                <label for="four">11 </label><br>
+                                <li class="pb-2">WAP to print the sum of the given series:<br>
+                                    S= <sup>x</sup>&frasl;<sub>2!</sub> + <sup>2x</sup>&frasl;<sub>4!</sub> + <sup>3x</sup>&frasl;<sub>8!</sub> + ...... + n terms.
+                            </li>
 
-                                <li>What is the output for y?
-                                &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int y = 0,count=0;<br>
-                                        &nbsp; while (count < 10) {<br> 
-                                        &nbsp;  &nbsp;   y += count;<br>
-                                        &nbsp;  &nbsp;   ++count;<br>
-                                        &nbsp; System.out.println(y);<br>
+                                <li class="pb-2">What are Nested Loops. How they work?</li> 
+                                <li class="pb-2">
+                                    Analyse the given code and find the errors, if any. State with reason. (Don't need to find the output only analyse the code and find errors if any otherwise write none.)<br>
+                                    int i;<br>
+                                    for{int i=76 ; i>=-9 ; i--}<br>
+                                    {<br>
+                                        &nbsp;  for{j=i ; j>3 ; j--}<br>
+                                        &nbsp;&nbsp; i+=i;<br>
+                                        &nbsp;  System,out,println(k);<br>
                                     }<br>
-                                }</li>
-
-                                <input type="radio" id="one" name="question4" value="one">
-                                <label for="one">1</label><br>
-                                <input type="radio" id="thirtysix " name="question4" value="thirtysix">
-                                <label for="thirtysix">36</label><br>
-                                <input type="radio" id="fourtyfive " name="question4" value="fourtyfive">
-                                <label for="fourtyfive"> 45</label><br>
-                                <input type="radio" id="nine " name="question4" value="nine">
-                                <label for="nine">9</label><br>
-
-                                <li> What will be displayed when the following code is executed?<br>
-                                &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp;  int number = 6;<br>
-                                        &nbsp; while (number > 0) {<br> 
-                                        &nbsp;  &nbsp;    number -= 3;<br>
-                                        &nbsp;  &nbsp;   System.out.print(number + " ");<br>
-                                        &nbsp; &nbsp; }<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="three" name="question5" value="three">
-                                <label for="three">6,3,0 </label><br>
-                                <input type="radio" id="two " name="question5" value="two">
-                                <label for="two">6,3 </label><br>
-                                <input type="radio" id="threezero " name="question5" value="threezero">
-                                <label for="threezero">3,0  </label><br>
-                                <input type="radio" id="zero " name="question5" value="zero">
-                                <label for="zero">0</label><br>
+                                </li>
                             </ol>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz2_submit" tabindex="3">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <?php }?>
-                </div>
+                            <div style="padding: 20px; border: 1px solid #999" id="upload">
 
+
+                                <h2>Upload your answers: </h2>
+                                <h6 style="color: red;">*Only pdf format acceptable*</h6>
+                                <h6 style="color: blue;">Save your pdf with your name before submitting. Example: YourName_Assignment6.pdf</h6>
+                                <form enctype="multipart/form-data" action="" method="post">
+                                <input type="file" name="file" /><br />
+                                <br />
+                                <input type="submit" value="Upload" name="submit" /></p>
+                                </form>
+
+                            </div>
+                    </div>
+                    <?php } ?>
+                </div>
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-5">Quiz 5</a></li>
+                            <li><a href="#question1">Questions</a></li>
+                            <li><a href="#upload">Upload your answers</a></li>
 
                     </nav>
                 </div>
+                
 
                 <script src="../../../node_modules/jquery/dist/jquery.slim.min.js"></script>
                 <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -574,8 +472,9 @@ if (isset($_SESSION['email'])) { ?>
     </body>
 
     </html>
-
-<?php } else {
+<?php
+    
+} else {
     header("Location: ../../../java_tenth_icse.php");
 }
 ?>

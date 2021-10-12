@@ -72,14 +72,14 @@ require 'includes/common.php';
           <div class="col-10 offset-1 offset-sm-0 col-md-6 mt-4 course_9">
             <div class="offer-card row">
               <div class="col-12 col-md-6">
-                <div class="text-description">Lectures Available From</div>
-                <div class="text-orange text-size-m"><strong> August 31st 2021</strong></div>
+                <div class="text-description">Lectures Available :</div>
+                <div class="text-orange text-size-m"><strong> Immediately</strong></div>
                 <div class="mg-top text-description">
                   Fees
                 </div>
                 <div class="text-orange text-size-l"><del>&#x20b9; 4,999 </del> &nbsp;&#x20b9;1,199*</div>
                 <div class="mg-top text-description" style="font-size: 15px;">
-                  * Offer Price valid till <br> August 31st 2021<br>
+                  * Offer Price valid till <br> September 20th 2021<br>
                   * After Enrolling/payment you will receive a Tax Invoice along with a link for joining the Telegram group on your registered email ID so as to get constant updates.
                 </div>
               </div>
@@ -381,10 +381,10 @@ require 'includes/common.php';
         <p>Here are two sample sessions of this course.</p>
         <div class="row">
           <div class="col-12 col-md-6 mt-4">
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/XrVJQ2J65gQ?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/519IJ5ckNqc?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
           </div>
           <div class="col-12 col-md-6 mt-4">
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/ycjtZdP1ZjY?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/Lb_HIiP-3HA?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Java Tokens"></iframe></div>
           </div>
         </div>
       </div>
