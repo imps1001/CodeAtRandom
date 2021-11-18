@@ -99,25 +99,25 @@ if (isset($_SESSION['email'])) { ?>
         $ques4 = $_POST['question4'];
         $ques5 = $_POST['question5'];
         $c = 0;
-        if (strcmp($ques1, "one") == 0) {
+        if (strcmp($ques1, "two") == 0) {
             $c++;
         }
-        if (strcmp($ques2, "eigth") == 0) {
+        if (strcmp($ques2, "default") == 0) {
             $c++;
         }
-        if (strcmp($ques3, "two") == 0) {
+        if (strcmp($ques3, "four") == 0) {
             $c++;
         }
-        if (strcmp($ques4, "fourtyfive") == 0) {
+        if (strcmp($ques4, "datatype") == 0) {
             $c++;
         }
-        if (strcmp($ques5, "two") == 0) {
+        if (strcmp($ques5, "void") == 0) {
             $c++;
         }
         $grade = $c*10;
     $user_id = $_SESSION['id'];
     $course_id = 2;
-    $quiz_no = 11;
+    $quiz_no = 13;
     $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
     values ('$user_id', '$course_id', '$quiz_no', '$grade')";
     $query_run = mysqli_query($con, $query)
@@ -257,7 +257,7 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module6-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module6-collapse" aria-expanded="false">
                                 Module 6
                             </button>
 
@@ -269,25 +269,25 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module6/patterns.php" class="d-inline-flex align-items-center rounded">Patterns Programming</a></li>
                                     <li><a href="../../java_10_icse/module6/triangular_patterns.php" class="d-inline-flex align-items-center rounded">Triangular Patterns</a></li>
                                     <li><a href="../../java_10_icse/module6/equi_tri.php" class="d-inline-flex align-items-center rounded">Equlilateral triangular patterns</a></li>
-                                    <li><a href="../../java_10_icse/module6/quiz6.php" class="d-inline-flex align-items-center rounded active">Quiz 6</a></li>
+                                    <li><a href="../../java_10_icse/module6/quiz6.php" class="d-inline-flex align-items-center rounded">Quiz 6</a></li>
                                     <li><a href="../../java_10_icse/module6/impques.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module6/assignment6.php" class="d-inline-flex align-items-center rounded">Assignmnet 6</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="true" aria-current="true">
                                 Module 7
                             </button>
 
-                            <div class="collapse" id="module7-collapse">
+                            <div class="collapse show" id="module7-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module7/functions.php" class="d-inline-flex align-items-center rounded">Introduction to Functions</a></li>
                                     <li><a href="../../java_10_icse/module7/programs_functions.php" class="d-inline-flex align-items-center rounded">Programming On Functions</a></li>
                                     <li><a href="../../java_10_icse/module7/parameters.php" class="d-inline-flex align-items-center rounded">Parameters in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module7/overloading.php" class="d-inline-flex align-items-center rounded">Function Overloading in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module7/constructors.php" class="d-inline-flex align-items-center rounded">Constructors in Java</a></li>
-                                    <li><a href="../../java_10_icse/module7/quiz7.php" class="d-inline-flex align-items-center rounded">Quiz 7</a></li>
+                                    <li><a href="../../java_10_icse/module7/quiz7.php" class="d-inline-flex align-items-center rounded active">Quiz 7</a></li>
                                     <li><a href="../../java_10_icse/module7/questions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module7/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 7 </a></li>
                                     <li><a href="../../java_10_icse/module7/assignment7.php" class="d-inline-flex align-items-center rounded">Assignment 7</a></li>
@@ -362,11 +362,11 @@ if (isset($_SESSION['email'])) { ?>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h1 class=" bd-title mb-4">Quiz 6 - Module 6</h1>
+                        <h1 class=" bd-title mb-4">Quiz 7 - Module 7</h1>
                     </div>
                     <?php 
                         $user_id = $_SESSION['id'];
-                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='11' ";
+                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='13' ";
                         $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
                         $result= mysqli_num_rows($query_result);
                         if($result!=0){
@@ -377,61 +377,55 @@ if (isset($_SESSION['email'])) { ?>
                             </div>';
                             echo '<div class="container w-100 p-3">
                                     <div class="row">
-                                    <h5>The correct answers of the Quiz 6 were:-</h5>
+                                    <h5>The correct answers of the Quiz 7 were:-</h5>
                                     <p> 
                                     <ol> 
-                                    <li>What will be the output of the following program?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int sum = 23;<br>
-                                        &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 7; j <= 9; j++ )<br>
-                                        &nbsp;  &nbsp;sum+= (i*j);<br>
-                                        &nbsp;}<br>
-                                        &nbsp;System.out.println("sum is " + sum);<br>
-                                    }<br>
-                                }<br>
-                                    <h6><strong> In this program, sum is initialised to 23 and i is initialized to 2. i is incremented after every completion of the inner loop of j. j starts from 7 and goes up to 9. At the end of the program, sum gets the value 359 </strong></h6> </li>
+                                    <li>Select the correct function definition from the given options.<br>
+                                        <ul>
+                                        <li>void isFunc{int a,int b}</li>
+                                        <li>void isFunc(int a,int b)</li>
+                                        <li>void isFunc[int a,int b]</li>
+                                        <li>All of the above</li>
+                                        </ul>
+                                    <h6><strong> The correct option is void isFun(int a,int b), as there are round brackets used in the function prototype. </strong></h6> </li>
                                     
-                                    <li>class NestedFor { <br>
-                                        &nbsp;  public static void main(String[] args){	<br>
-                                            &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                            &nbsp;  &nbsp;for(int j = 1; j < i; j++ )<br>
-                                            &nbsp;  &nbsp;{<br>
-                                            &nbsp; &nbsp; System.out.println(" i = " + i + " j = " + j);<br>
-                                            &nbsp; &nbsp;}<br>
-                                        }<br>
-                                    }<br>
-                                <h6><strong><p>Inside main is a for loop with the following conditions:<br>
-                                Initialization condition: i = 2 <br>
-                                Terminating condition: i <= 5   <br>
-                                Increment Value: 1 (i++) <br></p>
-                                <p>Inside this loop, there is another for loop with: <br>
-                                    Initialization condition: j = 7 <br>
-                                Terminating condition: j <= 9 <br>
-                                Increment Value: 1 (j++) <br>
-                                Inside this loop is a display statement which prints values of i and j. Total number of iterations = 4 * 3 = 12.<br></p>
+                                <li>Select the access specifier from the given options.<br>
+                                <ul>
+                                <li>default</li>
+                                <li>class</li>
+                                <li>static</li>
+                                <li>None of the above</li>
+                                </ul>
+                                <h6><strong>There are five access specifiers in java- public, private, protected, default and private protected. So default is the right answer.</strong><h6></li>
 
-                                <p>First j loop iterates 3 times from 7 to 9 and then i increments. So for values of i from 2 to 5, the values of j from 7 to 9 will be printed.</p></strong><h6></li>
-
-                                <li>Examine the following code. How many times will the nested loop run?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; for(int i = 1; i <= 3; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 1; j <= i; j++ )<br>
-                                        &nbsp;  &nbsp;{<br>
-                                        &nbsp; &nbsp;}<br>
-                                    }<br>
-                                }<br>
-                                <h6><strong>This loop will run 6 times. When i is 1 then j will run 1 time, when i is 2 then j will run 2 times, when i is 3 then j will 3 times. Total will be 6 times.</strong></h6></li>
+                                <li>Select what is included when we talk about function signature?<br>
+                                <ul>
+                                <li>Return type , Modifiers </li>
+                                <li>Access Specifiers, Return Type, Parameter list</li>
+                                <li>Return type, Function Name, Parameters list</li>
+                                <li>Function Name, Parameters list</li>
+                                </ul>
+                                <h6><strong>The function Signature includes Function name with Parameters list.</strong></h6></li>
 
                                 
-                                <li>How often is the inner loop of a nested loop run? <br>
-                                 <h6><strong>The answer is - each time the main loop run.</strong></h6></li>
+                                <li>A method must return a value unless the method definition contains the keyword ___________ in its prototype.<br>
+                                   <ul>
+                                   <li>public </li>
+                                   <li>void</li>
+                                   <li>static</li>
+                                   <li>data type</li>
+                                   </ul>
+                                 <h6><strong>The answer is data type. When any data type is used as a return type, the function return a value of that type.</strong></h6></li>
 
 
-                                 <li> In nested loops the outer loop must be terminated before the inner loop.<br>
-                                <h6><strong>The answer is false.</strong></h6>
+                                 <li> Methods that contain the _______ keyword in the data type position do not return any data, so they can simply be called without being part of a larger statement.<br>
+                                   <ul>
+                                   <li>public </li>
+                                   <li>void</li>
+                                   <li>static</li>
+                                   <li>boolean</li>
+                                   </ul>
+                                   <h6><strong>The answer is void. When void is used in the data type position, the function do not return a values.</strong></h6>
                                 </li>
                                     </ol>
                                     </p>
@@ -450,105 +444,56 @@ if (isset($_SESSION['email'])) { ?>
                             <input type="hidden" value="" name="utm_campaign">
                             <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
                             <ol class="list-numbered">
-                                <li>What will be the output of the following program?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int sum = 23;<br>
-                                        &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 7; j <= 9; j++ )<br>
-                                        &nbsp;  &nbsp;sum+= (i*j);<br>
-                                        &nbsp;}<br>
-                                        &nbsp;System.out.println("sum is " + sum);<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="zero" name="question1" value="zero">
-                                <label for="zero">sum = 336</label><br>
+                                <li>Select the correct function definition from the given options.</li>
                                 <input type="radio" id="one" name="question1" value="one">
-                                <label for="one">sum = 359</label><br>
+                                <label for="one"> void isFunc{int a,int b} </label><br>
+                                <input type="radio" id="two" name="question1" value="two">
+                                <label for="two">void isFunc(int a,int b)</label><br>
                                 <input type="radio" id="three" name="question1" value="three">
-                                <label for="three">Error</label><br>
-                                <input type="radio" id="four" name="question1" value="four">
-                                <label for="four">sum = 45</label><br>
+                                <label for="three">void isFunc[int a,int b]</label><br>
+                                <input type="radio" id="all" name="question1" value="all">
+                                <label for="all">All of the above</label><br>
+                                
+                                <li>Select the access specifier from the given options.</li>
+                                <input type="radio" id="default" name="question2" value="default">
+                                <label for="default">default</label><br>
+                                <input type="radio" id="class" name="question2" value="class">
+                                <label for="class">class</label><br>
+                                <input type="radio" id="static" name="question2" value="static">
+                                <label for="static">static</label><br>
+                                <input type="radio" id="none" name="question2" value="none">
+                                <label for="none">None</label><br>
 
-                                <li>What will be the output of the following program?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 1; j < i; j++ )<br>
-                                        &nbsp;  &nbsp;{<br>
-                                        &nbsp; &nbsp; System.out.println(" i = " + i + " j = " + j);<br>
-                                        &nbsp; &nbsp;}<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="eigth" name="question2" value="eigth">
-                                <label for="eigth">i = 2 j = 1 <br>
-                                                i = 3 j = 1 <br>
-                                                i = 3 j = 2  <br>                                                                           
-                                                i = 4 j = 1 <br>
-                                                i = 4 j = 2 <br>
-                                                i = 4 j = 3 <br>
-                                                i = 5 j = 1 <br>
-                                                i = 5 j = 2 <br>
-                                                i = 5 j = 3 <br>
-                                                i = 5 j = 4 <br>
-                                            </label><br>
-                                <input type="radio" id="nine" name="question2" value="nine">
-                                <label for="nine">No Output</label><br>
-                                <input type="radio" id="ten" name="question2" value="ten">
-                                <label for="ten">Compilation error</label><br>
-                                <input type="radio" id="zero" name="question2" value="zero">
-                                <label for="zero">
-                                                i = 2 j = 1 <br>
-                                                i = 2 j = 2 <br>
-                                                i = 3 j = 1 <br>
-                                                i = 3 j = 2  <br>
-                                                i = 3 j = 3  <br>
-                                                i = 4 j = 1 <br>
-                                                i = 4 j = 2 <br>
-                                                i = 4 j = 3 <br>
-                                                i = 4 j = 4 <br>
-                                                i = 5 j = 1 <br>
-                                                i = 5 j = 2 <br>
-                                                i = 5 j = 3 <br>
-                                                i = 5 j = 4 <br>
-                                                i = 5 j = 5 <br>
-                                </label><br>
-
-                                <li>Examine the following code. How many times will the nested loop run?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; for(int i = 1; i <= 3; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 1; j <= i; j++ )<br>
-                                        &nbsp;  &nbsp;{<br>
-                                        &nbsp; &nbsp;}<br>
-                                    }<br>
-                                }</li>
+                                <li>Select what is included when we talk about function signature?</li>
                                 <input type="radio" id="one" name="question3" value="one">
-                                <label for="one">3 </label><br>
+                                <label for="one">Return type , Modifiers </label><br>
                                 <input type="radio" id="two" name="question3" value="two">
-                                <label for="two">6</label><br>
+                                <label for="two">Access Specifiers, Return Type, Parameter list</label><br>
                                 <input type="radio" id="three " name="question3" value="three">
-                                <label for="three">9</label><br>
+                                <label for="three">Return type, Function Name, Parameters list</label><br>
                                 <input type="radio" id="four " name="question3" value="four">
-                                <label for="four">1</label><br>
+                                <label for="four">Function Name, Parameters list</label><br>
 
-                                <li>How often is the inner loop of a nested loop run?</li>
+                                <li>A method must return a value unless the method definition contains the keyword ___________ in its prototype.</li>
 
                                 <input type="radio" id="one" name="question4" value="one">
-                                <label for="one">Forever</label><br>
+                                <label for="one">public</label><br>
                                 <input type="radio" id="thirtysix " name="question4" value="thirtysix">
-                                <label for="thirtysix">One fewer time than the main loop</label><br>
+                                <label for="thirtysix">void</label><br>
                                 <input type="radio" id="fourtyfive " name="question4" value="fourtyfive">
-                                <label for="fourtyfive"> Each time the main loop is run</label><br>
-                                <input type="radio" id="nine " name="question4" value="nine">
-                                <label for="nine">One more time than the main loop</label><br>
+                                <label for="fourtyfive"> static</label><br>
+                                <input type="radio" id="datatype " name="question4" value="datatype">
+                                <label for="datatype">Data type</label><br>
 
-                                <li> In nested loops the outer loop must be terminated before the inner loop.
-                                </li>
-                                <input type="radio" id="three" name="question5" value="three">
-                                <label for="three">TRUE </label><br>
-                                <input type="radio" id="two " name="question5" value="two">
-                                <label for="two">FALSE </label><br>
+                                <li> Methods that contain the _______ keyword in the data type position do not return any data, so they can simply be called without being part of a larger statement.</li>
+                                <input type="radio" id="void" name="question5" value="void">
+                                <label for="void">void </label><br>
+                                <input type="radio" id="static" name="question5" value="static">
+                                <label for="static">static</label><br>
+                                <input type="radio" id="public" name="question5" value="public">
+                                <label for="public">public</label><br>
+                                <input type="radio" id="boolean" name="question5" value="boolean">
+                                <label for="boolean">boolean</label><br>
                             </ol>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz2_submit" tabindex="3">Submit</button>
@@ -562,7 +507,7 @@ if (isset($_SESSION['email'])) { ?>
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-6">Quiz 6</a></li>
+                            <li><a href="#quiz-7">Quiz 7</a></li>
 
                     </nav>
                 </div>

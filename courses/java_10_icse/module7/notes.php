@@ -1,16 +1,17 @@
 <?php
 require '../../../includes/common.php';
+
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
-    <html lang="en">
+   <html lang="en">
 
     <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-       <!-- Bootstrap CSS -->
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -25,17 +26,25 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Quiz 6 - Code At Random</title>
+        <title> Notes-Module 5 - Code At Random</title>
     </head>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
     </style>
 
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbarcr">
             <div class="container-fluid">
                 <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -91,42 +100,8 @@ if (isset($_SESSION['email'])) { ?>
                 </button>
             </div>
         </nav>
-        <?php
-    if (isset($_POST['submit'])) {
-        $ques1 = $_POST['question1'];
-        $ques2 = $_POST['question2'];
-        $ques3 = $_POST['question3'];
-        $ques4 = $_POST['question4'];
-        $ques5 = $_POST['question5'];
-        $c = 0;
-        if (strcmp($ques1, "one") == 0) {
-            $c++;
-        }
-        if (strcmp($ques2, "eigth") == 0) {
-            $c++;
-        }
-        if (strcmp($ques3, "two") == 0) {
-            $c++;
-        }
-        if (strcmp($ques4, "fourtyfive") == 0) {
-            $c++;
-        }
-        if (strcmp($ques5, "two") == 0) {
-            $c++;
-        }
-        $grade = $c*10;
-    $user_id = $_SESSION['id'];
-    $course_id = 2;
-    $quiz_no = 11;
-    $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
-    values ('$user_id', '$course_id', '$quiz_no', '$grade')";
-    $query_run = mysqli_query($con, $query)
-    or die(mysqli_error($con));
-}
-    ?>
 
-
-<!-- Side Bar-->
+        <!-- Side Bar-->
 <div class="container-xxl my-md-3 bd-layout">
             <aside class="bd-sidebar">
                 <nav class="collapse bd-links" id="sidebar" aria-label="Docs navigation">
@@ -210,8 +185,8 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module3/inputs.php" class="d-inline-flex align-items-center rounded">Taking Inputs </a></li>
                                     <li><a href="../../java_10_icse/module3/dynamic_programming.php" class="d-inline-flex align-items-center rounded"> Video: Dynamic Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/java_math_functions.php" class="d-inline-flex align-items-center rounded">JAVA Mathematical Functions</a></li>
-                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded active">Quiz 3</a></li>
-                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded">Quiz 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 3</a></li>
                                     <li><a href="../../java_10_icse/module3/expressions.php" class="d-inline-flex align-items-center rounded">Board Questions: Expressions in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module3/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions:Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/assignment3.php" class="d-inline-flex align-items-center rounded">Assignment 3</a></li>
@@ -222,12 +197,11 @@ if (isset($_SESSION['email'])) { ?>
                             <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false">
                                 Module 4
                             </button>
-
                             <div class="collapse" id="module4-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module4/selective_constructs.php" class="d-inline-flex align-items-center rounded"> Selective Constructs Intro</a></li>
                                     <li><a href="../../java_10_icse/module4/multiple_if_else.php" class="d-inline-flex align-items-center rounded">Multiple If- Else</a></li>
-                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded active">Quiz 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded">Quiz 4</a></li>
                                     <li><a href="../../java_10_icse/module4/nested_if_else.php" class="d-inline-flex align-items-center rounded">Nested_If_Else</a></li>
                                     <li><a href="../../java_10_icse/module4/switchcase.php" class="d-inline-flex align-items-center rounded">Switch Case</a></li>
                                     <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 4</a></li>
@@ -248,7 +222,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module5/series_programming.php" class="d-inline-flex align-items-center rounded">Series Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/whileprogramming.php" class="d-inline-flex align-items-center rounded">While Loop Programming</a></li>
                                     <li><a href="../../java_10_icse/module5/do_while.php" class="d-inline-flex align-items-center rounded">Do While Programming</a></li>
-                                    <li><a href="../../java_10_icse/module5/notes.php" class="d-inline-flex align-items-center rounded">Notes: Module 5</a></li>
+                                    <li><a href="../../java_10_icse/module5/notes.php" class="d-inline-flex align-items-center rounded active">Notes: Module 5</a></li>
                                     <li><a href="../../java_10_icse/module5/quiz5.php" class="d-inline-flex align-items-center rounded">Quiz 5</a></li>
                                     <li><a href="../../java_10_icse/module5/boardquestions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module5/assignmnet5.php" class="d-inline-flex align-items-center rounded">Assignment 5</a></li>
@@ -257,11 +231,11 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module6-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module6-collapse" aria-expanded="false">
                                 Module 6
                             </button>
 
-                            <div class="collapse show" id="module6-collapse">
+                            <div class="collapse" id="module6-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module6/nested_loops.php" class="d-inline-flex align-items-center rounded">Nested Loops</a></li>
                                     <li><a href="../../java_10_icse/module6/range_programs.php" class="d-inline-flex align-items-center rounded">Range Progarmming</a></li>
@@ -269,18 +243,18 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module6/patterns.php" class="d-inline-flex align-items-center rounded">Patterns Programming</a></li>
                                     <li><a href="../../java_10_icse/module6/triangular_patterns.php" class="d-inline-flex align-items-center rounded">Triangular Patterns</a></li>
                                     <li><a href="../../java_10_icse/module6/equi_tri.php" class="d-inline-flex align-items-center rounded">Equlilateral triangular patterns</a></li>
-                                    <li><a href="../../java_10_icse/module6/quiz6.php" class="d-inline-flex align-items-center rounded active">Quiz 6</a></li>
+                                    <li><a href="../../java_10_icse/module6/quiz6.php" class="d-inline-flex align-items-center rounded">Quiz 6</a></li>
                                     <li><a href="../../java_10_icse/module6/impques.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module6/assignment6.php" class="d-inline-flex align-items-center rounded">Assignmnet 6</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="true" aria-current="true">
                                 Module 7
                             </button>
 
-                            <div class="collapse" id="module7-collapse">
+                            <div class="collapse show" id="module7-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module7/functions.php" class="d-inline-flex align-items-center rounded">Introduction to Functions</a></li>
                                     <li><a href="../../java_10_icse/module7/programs_functions.php" class="d-inline-flex align-items-center rounded">Programming On Functions</a></li>
@@ -289,7 +263,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module7/constructors.php" class="d-inline-flex align-items-center rounded">Constructors in Java</a></li>
                                     <li><a href="../../java_10_icse/module7/quiz7.php" class="d-inline-flex align-items-center rounded">Quiz 7</a></li>
                                     <li><a href="../../java_10_icse/module7/questions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
-                                    <li><a href="../../java_10_icse/module7/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 7 </a></li>
+                                    <li><a href="../../java_10_icse/module7/notes.php" class="d-inline-flex align-items-center rounded active">Notes- Module 7 </a></li>
                                     <li><a href="../../java_10_icse/module7/assignment7.php" class="d-inline-flex align-items-center rounded">Assignment 7</a></li>
                                 </ul>
                             </div>
@@ -356,213 +330,100 @@ if (isset($_SESSION['email'])) { ?>
                         </li>
                     </ul>
                 </nav>
-
-
             </aside>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h1 class=" bd-title mb-4">Quiz 6 - Module 6</h1>
+                        <h3 id="content pb-5">Notes in pdf form </h3>
                     </div>
-                    <?php 
-                        $user_id = $_SESSION['id'];
-                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='11' ";
-                        $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
-                        $result= mysqli_num_rows($query_result);
-                        if($result!=0){
-                            $result_row= mysqli_fetch_assoc($query_result);
-                            $grade= $result_row['grade'];
-                            echo '<div class="container w-100 p-3">
-                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 50</h2><br>
-                            </div>';
-                            echo '<div class="container w-100 p-3">
-                                    <div class="row">
-                                    <h5>The correct answers of the Quiz 6 were:-</h5>
-                                    <p> 
-                                    <ol> 
-                                    <li>What will be the output of the following program?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int sum = 23;<br>
-                                        &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 7; j <= 9; j++ )<br>
-                                        &nbsp;  &nbsp;sum+= (i*j);<br>
-                                        &nbsp;}<br>
-                                        &nbsp;System.out.println("sum is " + sum);<br>
-                                    }<br>
-                                }<br>
-                                    <h6><strong> In this program, sum is initialised to 23 and i is initialized to 2. i is incremented after every completion of the inner loop of j. j starts from 7 and goes up to 9. At the end of the program, sum gets the value 359 </strong></h6> </li>
-                                    
-                                    <li>class NestedFor { <br>
-                                        &nbsp;  public static void main(String[] args){	<br>
-                                            &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                            &nbsp;  &nbsp;for(int j = 1; j < i; j++ )<br>
-                                            &nbsp;  &nbsp;{<br>
-                                            &nbsp; &nbsp; System.out.println(" i = " + i + " j = " + j);<br>
-                                            &nbsp; &nbsp;}<br>
-                                        }<br>
-                                    }<br>
-                                <h6><strong><p>Inside main is a for loop with the following conditions:<br>
-                                Initialization condition: i = 2 <br>
-                                Terminating condition: i <= 5   <br>
-                                Increment Value: 1 (i++) <br></p>
-                                <p>Inside this loop, there is another for loop with: <br>
-                                    Initialization condition: j = 7 <br>
-                                Terminating condition: j <= 9 <br>
-                                Increment Value: 1 (j++) <br>
-                                Inside this loop is a display statement which prints values of i and j. Total number of iterations = 4 * 3 = 12.<br></p>
-
-                                <p>First j loop iterates 3 times from 7 to 9 and then i increments. So for values of i from 2 to 5, the values of j from 7 to 9 will be printed.</p></strong><h6></li>
-
-                                <li>Examine the following code. How many times will the nested loop run?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; for(int i = 1; i <= 3; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 1; j <= i; j++ )<br>
-                                        &nbsp;  &nbsp;{<br>
-                                        &nbsp; &nbsp;}<br>
-                                    }<br>
-                                }<br>
-                                <h6><strong>This loop will run 6 times. When i is 1 then j will run 1 time, when i is 2 then j will run 2 times, when i is 3 then j will 3 times. Total will be 6 times.</strong></h6></li>
-
-                                
-                                <li>How often is the inner loop of a nested loop run? <br>
-                                 <h6><strong>The answer is - each time the main loop run.</strong></h6></li>
-
-
-                                 <li> In nested loops the outer loop must be terminated before the inner loop.<br>
-                                <h6><strong>The answer is false.</strong></h6>
-                                </li>
-                                    </ol>
-                                    </p>
-                                    </div> 
-                                    </div>';
-                        }
-
-                        else 
-                        {
-                    ?>
-                    <div class="form">
-                        <form action="" method="POST" role="form" id="quiz-6">
-                            <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
-                            <input type="hidden" value="" name="utm_source">
-                            <input type="hidden" value="" name="utm_medium">
-                            <input type="hidden" value="" name="utm_campaign">
-                            <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
-                            <ol class="list-numbered">
-                                <li>What will be the output of the following program?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; int sum = 23;<br>
-                                        &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 7; j <= 9; j++ )<br>
-                                        &nbsp;  &nbsp;sum+= (i*j);<br>
-                                        &nbsp;}<br>
-                                        &nbsp;System.out.println("sum is " + sum);<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="zero" name="question1" value="zero">
-                                <label for="zero">sum = 336</label><br>
-                                <input type="radio" id="one" name="question1" value="one">
-                                <label for="one">sum = 359</label><br>
-                                <input type="radio" id="three" name="question1" value="three">
-                                <label for="three">Error</label><br>
-                                <input type="radio" id="four" name="question1" value="four">
-                                <label for="four">sum = 45</label><br>
-
-                                <li>What will be the output of the following program?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; for(int i = 2; i <= 5; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 1; j < i; j++ )<br>
-                                        &nbsp;  &nbsp;{<br>
-                                        &nbsp; &nbsp; System.out.println(" i = " + i + " j = " + j);<br>
-                                        &nbsp; &nbsp;}<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="eigth" name="question2" value="eigth">
-                                <label for="eigth">i = 2 j = 1 <br>
-                                                i = 3 j = 1 <br>
-                                                i = 3 j = 2  <br>                                                                           
-                                                i = 4 j = 1 <br>
-                                                i = 4 j = 2 <br>
-                                                i = 4 j = 3 <br>
-                                                i = 5 j = 1 <br>
-                                                i = 5 j = 2 <br>
-                                                i = 5 j = 3 <br>
-                                                i = 5 j = 4 <br>
-                                            </label><br>
-                                <input type="radio" id="nine" name="question2" value="nine">
-                                <label for="nine">No Output</label><br>
-                                <input type="radio" id="ten" name="question2" value="ten">
-                                <label for="ten">Compilation error</label><br>
-                                <input type="radio" id="zero" name="question2" value="zero">
-                                <label for="zero">
-                                                i = 2 j = 1 <br>
-                                                i = 2 j = 2 <br>
-                                                i = 3 j = 1 <br>
-                                                i = 3 j = 2  <br>
-                                                i = 3 j = 3  <br>
-                                                i = 4 j = 1 <br>
-                                                i = 4 j = 2 <br>
-                                                i = 4 j = 3 <br>
-                                                i = 4 j = 4 <br>
-                                                i = 5 j = 1 <br>
-                                                i = 5 j = 2 <br>
-                                                i = 5 j = 3 <br>
-                                                i = 5 j = 4 <br>
-                                                i = 5 j = 5 <br>
-                                </label><br>
-
-                                <li>Examine the following code. How many times will the nested loop run?<br>
-                                class NestedFor { <br>
-                                    &nbsp;  public static void main(String[] args){	<br>
-                                        &nbsp; for(int i = 1; i <= 3; i++ ) <br>{<br>
-                                        &nbsp;  &nbsp;for(int j = 1; j <= i; j++ )<br>
-                                        &nbsp;  &nbsp;{<br>
-                                        &nbsp; &nbsp;}<br>
-                                    }<br>
-                                }</li>
-                                <input type="radio" id="one" name="question3" value="one">
-                                <label for="one">3 </label><br>
-                                <input type="radio" id="two" name="question3" value="two">
-                                <label for="two">6</label><br>
-                                <input type="radio" id="three " name="question3" value="three">
-                                <label for="three">9</label><br>
-                                <input type="radio" id="four " name="question3" value="four">
-                                <label for="four">1</label><br>
-
-                                <li>How often is the inner loop of a nested loop run?</li>
-
-                                <input type="radio" id="one" name="question4" value="one">
-                                <label for="one">Forever</label><br>
-                                <input type="radio" id="thirtysix " name="question4" value="thirtysix">
-                                <label for="thirtysix">One fewer time than the main loop</label><br>
-                                <input type="radio" id="fourtyfive " name="question4" value="fourtyfive">
-                                <label for="fourtyfive"> Each time the main loop is run</label><br>
-                                <input type="radio" id="nine " name="question4" value="nine">
-                                <label for="nine">One more time than the main loop</label><br>
-
-                                <li> In nested loops the outer loop must be terminated before the inner loop.
-                                </li>
-                                <input type="radio" id="three" name="question5" value="three">
-                                <label for="three">TRUE </label><br>
-                                <input type="radio" id="two " name="question5" value="two">
-                                <label for="two">FALSE </label><br>
-                            </ol>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz2_submit" tabindex="3">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <?php }?>
+                        <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
+                        <tr>
+                                <td>
+                                    <strong>Introduction to Functions</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Introduction to Functions.pdf" target="_blank" download="Introduction to Functions" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Access Specifiers in JAVA</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Access Specifiers.pdf" target="_blank" download="Access Specifiers in JAVA" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Modifiers in JAVA</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Modifiers.pdf" target="_blank" download="Modifiers in JAVA" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Return Type in JAVA</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/return type.pdf" target="_blank" download="Return Type in JAVA" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Parameters in JAVA</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Parameters in JAVA.pdf" target="_blank" download="Parameters in JAVA" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Programming based on functions</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Programming with Functions.pdf" target="_blank" download="Programming based on functions" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Return Type programming</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/return type programming.pdf" target="_blank" download="Return Type programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Programming Based on Parameters-I</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Programming with parameters.pdf" target="_blank" download="Programming Based on Parameters-I" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Programming Based on Parameters-II</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Programming with parameters 2.pdf" target="_blank" download="Programming Based on Parameters-II" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Programming Based on Parameters-III</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/valid_time program.pdf" target="_blank" download="Programming Based on Parameters-III" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Ways to invoke methods</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/call by value vs call by reference.pdf" target="_blank" download="Ways to invoke methods" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Function Overloading</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Function Overloading.pdf" target="_blank" download="Function Overloading" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Constructors in JAVA</strong>
+                                </td>
+                                <td><a href="../../../notes/module 7/Constructors in JAVA.pdf" target="_blank" download="Constructors in JAVA" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                            </tr>
+                        </table>
+                    <p class="mt-5 " style="color: blueviolet;"> Download these pdfs and store them in your device for future reference.</p>
                 </div>
 
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-6">Quiz 6</a></li>
+                            <li><a href="#content"></a> Notes to download</li>
 
                     </nav>
                 </div>
@@ -580,7 +441,6 @@ if (isset($_SESSION['email'])) { ?>
     </body>
 
     </html>
-
 <?php } else {
     header("Location: ../../../java_tenth_icse.php");
 }
