@@ -1,5 +1,6 @@
 <?php
 require '../../../includes/common.php';
+       
 if (isset($_SESSION['email'])) { ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -9,8 +10,8 @@ if (isset($_SESSION['email'])) { ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-       <!-- Bootstrap CSS -->
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -25,12 +26,23 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Quiz 7 - Code At Random</title>
+        <title> Assignment-8 | Java Course 10th ICSE</title>
     </head>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
+        .button-bar{
+            margin-top: 30px;
+            border-collapse: collapse;
+            border: 1px solid #dddddd;
+            height: fit-content;
+        }
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
     </style>
 
     <body>
@@ -91,43 +103,48 @@ if (isset($_SESSION['email'])) { ?>
                 </button>
             </div>
         </nav>
+        
         <?php
-    if (isset($_POST['submit'])) {
-        $ques1 = $_POST['question1'];
-        $ques2 = $_POST['question2'];
-        $ques3 = $_POST['question3'];
-        $ques4 = $_POST['question4'];
-        $ques5 = $_POST['question5'];
-        $c = 0;
-        if (strcmp($ques1, "two") == 0) {
-            $c++;
-        }
-        if (strcmp($ques2, "default") == 0) {
-            $c++;
-        }
-        if (strcmp($ques3, "four") == 0) {
-            $c++;
-        }
-        if (strcmp($ques4, "datatype") == 0) {
-            $c++;
-        }
-        if (strcmp($ques5, "void") == 0) {
-            $c++;
-        }
-        $grade = $c*10;
-    $user_id = $_SESSION['id'];
-    $course_id = 2;
-    $quiz_no = 13;
-    $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
-    values ('$user_id', '$course_id', '$quiz_no', '$grade')";
-    $query_run = mysqli_query($con, $query)
-    or die(mysqli_error($con));
-}
-    ?>
+        if(isset($_POST['submit'])){
+            if ( isset( $_FILES['file'] ) ) {
+                if ($_FILES['file']['type'] == "application/pdf") {
+                    $source_file = $_FILES['file']['tmp_name'];
+                    $dest_file = "../uploads/".$_FILES['file']['name'];
+                    move_uploaded_file( $source_file, $dest_file ) or die("Error!! We can't transfer the file");
+                        if($_FILES['file']['error'] == 0) {
+                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Success !</strong> Your file has been uploaded!!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div> ';
+                        $user_id = $_SESSION['id'];
+                        $course_id = 2;
+                        $quiz_no = 16;
+                        $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
+                        values ('$user_id', '$course_id', '$quiz_no', '0')";
+                        $query_run = mysqli_query($con, $query)
+                        or die(mysqli_error($con));
+
+                        }
+                    }
+                    else {
+                        if ( $_FILES['file']['type'] != "application/pdf") {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error! </strong> Cannot upload file. Invalid  file extension, should be pdf !!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div> ';
+                        }
+                    }
+                }
+        } 
+        ?>
 
 
-<!-- Side Bar-->
-<div class="container-xxl my-md-3 bd-layout">
+        <!-- Side Bar-->
+        <div class="container-xxl my-md-3 bd-layout">
             <aside class="bd-sidebar">
                 <nav class="collapse bd-links" id="sidebar" aria-label="Docs navigation">
                     <ul class="list-unstyled mb-0 py-3 pt-md-1">
@@ -210,7 +227,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module3/inputs.php" class="d-inline-flex align-items-center rounded">Taking Inputs </a></li>
                                     <li><a href="../../java_10_icse/module3/dynamic_programming.php" class="d-inline-flex align-items-center rounded"> Video: Dynamic Programming</a></li>
                                     <li><a href="../../java_10_icse/module3/java_math_functions.php" class="d-inline-flex align-items-center rounded">JAVA Mathematical Functions</a></li>
-                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded active">Quiz 3</a></li>
+                                    <li><a href="../../java_10_icse/module3/quiz3.php" class="d-inline-flex align-items-center rounded">Quiz 3</a></li>
                                     <li><a href="../../java_10_icse/module3/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 3</a></li>
                                     <li><a href="../../java_10_icse/module3/expressions.php" class="d-inline-flex align-items-center rounded">Board Questions: Expressions in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module3/board_practice.php" class="d-inline-flex align-items-center rounded">Board Questions:Programming</a></li>
@@ -219,7 +236,7 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module4-collapse" aria-expanded="false" >
                                 Module 4
                             </button>
 
@@ -227,7 +244,7 @@ if (isset($_SESSION['email'])) { ?>
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module4/selective_constructs.php" class="d-inline-flex align-items-center rounded"> Selective Constructs Intro</a></li>
                                     <li><a href="../../java_10_icse/module4/multiple_if_else.php" class="d-inline-flex align-items-center rounded">Multiple If- Else</a></li>
-                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded active">Quiz 4</a></li>
+                                    <li><a href="../../java_10_icse/module4/quiz4.php" class="d-inline-flex align-items-center rounded">Quiz 4</a></li>
                                     <li><a href="../../java_10_icse/module4/nested_if_else.php" class="d-inline-flex align-items-center rounded">Nested_If_Else</a></li>
                                     <li><a href="../../java_10_icse/module4/switchcase.php" class="d-inline-flex align-items-center rounded">Switch Case</a></li>
                                     <li><a href="../../java_10_icse/module4/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 4</a></li>
@@ -276,18 +293,18 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="false">
                                 Module 7
                             </button>
 
-                            <div class="collapse show" id="module7-collapse">
+                            <div class="collapse" id="module7-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module7/functions.php" class="d-inline-flex align-items-center rounded">Introduction to Functions</a></li>
                                     <li><a href="../../java_10_icse/module7/programs_functions.php" class="d-inline-flex align-items-center rounded">Programming On Functions</a></li>
                                     <li><a href="../../java_10_icse/module7/parameters.php" class="d-inline-flex align-items-center rounded">Parameters in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module7/overloading.php" class="d-inline-flex align-items-center rounded">Function Overloading in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module7/constructors.php" class="d-inline-flex align-items-center rounded">Constructors in Java</a></li>
-                                    <li><a href="../../java_10_icse/module7/quiz7.php" class="d-inline-flex align-items-center rounded active">Quiz 7</a></li>
+                                    <li><a href="../../java_10_icse/module7/quiz7.php" class="d-inline-flex align-items-center rounded">Quiz 7</a></li>
                                     <li><a href="../../java_10_icse/module7/questions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module7/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 7 </a></li>
                                     <li><a href="../../java_10_icse/module7/assignment7.php" class="d-inline-flex align-items-center rounded">Assignment 7</a></li>
@@ -295,11 +312,11 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module8-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module8-collapse" aria-expanded="true" aria-current="true">
                                 Module 8
                             </button>
 
-                            <div class="collapse" id="module8-collapse">
+                            <div class="collapse show" id="module8-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module8/arrays.php" class="d-inline-flex align-items-center rounded">Arrays- Introduction</a></li>
                                     <li><a href="../../java_10_icse/module8/programming_array.php" class="d-inline-flex align-items-center rounded">Arrays- Programming</a></li>
@@ -309,7 +326,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module8/insert_delete.php" class="d-inline-flex align-items-center rounded">Insertion and Deletion</a></li>
                                     <li><a href="../../java_10_icse/module8/quiz8.php" class="d-inline-flex align-items-center rounded">Quiz 8</a></li>
                                     <li><a href="../../java_10_icse/module8/board_ques.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
-                                    <li><a href="../../java_10_icse/module8/assignment8.php" class="d-inline-flex align-items-center rounded">Assignmnet 8</a></li>
+                                    <li><a href="../../java_10_icse/module8/assignment8.php" class="d-inline-flex align-items-center rounded active">Assignmnet 8</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -345,7 +362,7 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module10/assignment10.php" class="d-inline-flex align-items-center rounded">Assignment 10</a></li>
 
                                 </ul>
-                            </div>
+                             </div>
                         </li>
          
                         <li class="my-2 mx-6 me-2 border-top"></li>
@@ -357,78 +374,30 @@ if (isset($_SESSION['email'])) { ?>
                     </ul>
                 </nav>
 
-
             </aside>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h1 class=" bd-title mb-4">Quiz 7 - Module 7</h1>
+                        <h1 class=" bd-title mb-4"> Assignment 8</h1>
                     </div>
                     <?php 
                         $user_id = $_SESSION['id'];
-                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='13' ";
+                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='16' ";
                         $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
                         $result= mysqli_num_rows($query_result);
                         if($result!=0){
                             $result_row= mysqli_fetch_assoc($query_result);
                             $grade= $result_row['grade'];
                             echo '<div class="container w-100 p-3">
-                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 50</h2><br>
-                            </div>';
+                            <h2> Your assignment is submitted.</h2><br></div>';
+                              if($grade >0)
+                                echo '<h3> Your score is '. $grade .' out of 50</h3><br>';
+                              else 
+                                 echo'<h3>Your submission is under evaluation. The score will be updated soon</h3><br>';
                             echo '<div class="container w-100 p-3">
                                     <div class="row">
-                                    <h5>The correct answers of the Quiz 7 were:-</h5>
-                                    <p> 
-                                    <ol> 
-                                    <li>Select the correct function definition from the given options.<br>
-                                        <ul>
-                                        <li>void isFunc{int a,int b}</li>
-                                        <li>void isFunc(int a,int b)</li>
-                                        <li>void isFunc[int a,int b]</li>
-                                        <li>All of the above</li>
-                                        </ul>
-                                    <h6><strong> The correct option is void isFun(int a,int b), as there are round brackets used in the function prototype. </strong></h6> </li>
-                                    
-                                <li>Select the access specifier from the given options.<br>
-                                <ul>
-                                <li>default</li>
-                                <li>class</li>
-                                <li>static</li>
-                                <li>None of the above</li>
-                                </ul>
-                                <h6><strong>There are five access specifiers in java- public, private, protected, default and private protected. So default is the right answer.</strong><h6></li>
-
-                                <li>Select what is included when we talk about function signature?<br>
-                                <ul>
-                                <li>Return type , Modifiers </li>
-                                <li>Access Specifiers, Return Type, Parameter list</li>
-                                <li>Return type, Function Name, Parameters list</li>
-                                <li>Function Name, Parameters list</li>
-                                </ul>
-                                <h6><strong>The function Signature includes Function name with Parameters list.</strong></h6></li>
-
-                                
-                                <li>A method must return a value unless the method definition contains the keyword ___________ in its prototype.<br>
-                                   <ul>
-                                   <li>public </li>
-                                   <li>void</li>
-                                   <li>static</li>
-                                   <li>data type</li>
-                                   </ul>
-                                 <h6><strong>The answer is data type. When any data type is used as a return type, the function return a value of that type.</strong></h6></li>
-
-
-                                 <li> Methods that contain the _______ keyword in the data type position do not return any data, so they can simply be called without being part of a larger statement.<br>
-                                   <ul>
-                                   <li>public </li>
-                                   <li>void</li>
-                                   <li>static</li>
-                                   <li>boolean</li>
-                                   </ul>
-                                   <h6><strong>The answer is void. When void is used in the data type position, the function do not return a values.</strong></h6>
-                                </li>
-                                    </ol>
-                                    </p>
+                                    <h5>The solution of the Assignment 8:-</h5>
+                                    <a href="../notes/Assignment 8 Solution.pdf" target="_blank"> Download the solutions</a>
                                     </div> 
                                     </div>';
                         }
@@ -437,80 +406,69 @@ if (isset($_SESSION['email'])) { ?>
                         {
                     ?>
                     <div class="form">
-                        <form action="" method="POST" role="form" id="quiz-6">
-                            <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
-                            <input type="hidden" value="" name="utm_source">
-                            <input type="hidden" value="" name="utm_medium">
-                            <input type="hidden" value="" name="utm_campaign">
-                            <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
-                            <ol class="list-numbered">
-                                <li>Select the correct function definition from the given options.</li>
-                                <input type="radio" id="one" name="question1" value="one">
-                                <label for="one"> void isFunc{int a,int b} </label><br>
-                                <input type="radio" id="two" name="question1" value="two">
-                                <label for="two">void isFunc(int a,int b)</label><br>
-                                <input type="radio" id="three" name="question1" value="three">
-                                <label for="three">void isFunc[int a,int b]</label><br>
-                                <input type="radio" id="all" name="question1" value="all">
-                                <label for="all">All of the above</label><br>
-                                
-                                <li>Select the access specifier from the given options.</li>
-                                <input type="radio" id="default" name="question2" value="default">
-                                <label for="default">default</label><br>
-                                <input type="radio" id="class" name="question2" value="class">
-                                <label for="class">class</label><br>
-                                <input type="radio" id="static" name="question2" value="static">
-                                <label for="static">static</label><br>
-                                <input type="radio" id="none" name="question2" value="none">
-                                <label for="none">None</label><br>
+                            <ol class="list-numbered" id="question1">
+                                <li class="pb-2">Differentiate between :- 
+                                    <ul>
+                                        <li>Selection Sort Vs Bubble Sort</li>
+                                        <li>Linear Search Vs Binary Search</li>
+                                        <li>Searching Vs Sorting</li>
+                                    </ul>
+                                </li>
 
-                                <li>Select what is included when we talk about function signature?</li>
-                                <input type="radio" id="one" name="question3" value="one">
-                                <label for="one">Return type , Modifiers </label><br>
-                                <input type="radio" id="two" name="question3" value="two">
-                                <label for="two">Access Specifiers, Return Type, Parameter list</label><br>
-                                <input type="radio" id="three " name="question3" value="three">
-                                <label for="three">Return type, Function Name, Parameters list</label><br>
-                                <input type="radio" id="four " name="question3" value="four">
-                                <label for="four">Function Name, Parameters list</label><br>
+                                <li class="pb-2">WAP to create function <b>boolean isNumberFound(int n, int[] arr)</b> & check whether an element denoted by <b>variable n</b> 
+                                is present in an array. Read the input from the user and call the function.
+                                </li>
 
-                                <li>A method must return a value unless the method definition contains the keyword ___________ in its prototype.</li>
+                                <li class="pb-2">WAP to call these functions from the main() function:<br>
+                                    <ul>
+                                        <li><b>int product(int[] arr)</b>  to return the product of the array elements<br>
+                                        </li>
+                                        <li><b>void sortArray(int[] arr) </b> to sort the passed array in the ascending using selection sort.<br>
+                                       </li>
+                                    </ul>
+                            </li>
 
-                                <input type="radio" id="one" name="question4" value="one">
-                                <label for="one">public</label><br>
-                                <input type="radio" id="thirtysix " name="question4" value="thirtysix">
-                                <label for="thirtysix">void</label><br>
-                                <input type="radio" id="fourtyfive " name="question4" value="fourtyfive">
-                                <label for="fourtyfive"> static</label><br>
-                                <input type="radio" id="datatype " name="question4" value="datatype">
-                                <label for="datatype">Data type</label><br>
+                                <li class="pb-2">Write a program to input an integer array sorted in increasing order, 
+                                    and create a function which returns the array of the squares of each number sorted in increasing order. <br>
+                                Input: nums = [-4,-1,0,3,10]<br>
+                                Output: [0,1,9,16,100]<br>
+                                Explanation: After squaring, the array becomes [16,1,0,9,100].<br>
+                                After sorting, it becomes [0,1,9,16,100].<br>
+                                <b>Hint: You can use sort() function to sort the array.</b>
+                            </li> 
 
-                                <li> Methods that contain the _______ keyword in the data type position do not return any data, so they can simply be called without being part of a larger statement.</li>
-                                <input type="radio" id="void" name="question5" value="void">
-                                <label for="void">void </label><br>
-                                <input type="radio" id="static" name="question5" value="static">
-                                <label for="static">static</label><br>
-                                <input type="radio" id="public" name="question5" value="public">
-                                <label for="public">public</label><br>
-                                <input type="radio" id="boolean" name="question5" value="boolean">
-                                <label for="boolean">boolean</label><br>
+                                <li class="pb-2">What is the output for the following code fragment? <br>
+                                int [ ] numbers = { 1, 2, 3, 4, 5, 6, 7,  8, 9, 10};<br>
+                                for (int j = 0; j < numbers.length; j++)<br>
+                                 &nbsp;System.out.print(numbers[ j ] + " ");
+                            </li>
                             </ol>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz2_submit" tabindex="3">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <?php }?>
-                </div>
+                            <div style="padding: 20px; border: 5px solid #333" id="upload">
 
+
+                                <h2>Upload your answers: </h2>
+                                <h6 style="color: red;">*Only pdf format acceptable*</h6>
+                                <h6 style="color: blue;">Save your pdf with your name before submitting. Example: YourName_Assignment8.pdf</h6>
+                                <form enctype="multipart/form-data" action="" method="post">
+                                <input type="file" name="file" /><br />
+                                <br />
+                                <input type="submit" value="Upload" name="submit" /></p>
+                                </form>
+
+                            </div>
+                    </div>
+                    <?php } ?>
+                </div>
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-7">Quiz 7</a></li>
+                            <li><a href="#question1">Questions</a></li>
+                            <li><a href="#upload">Upload your answers</a></li>
 
                     </nav>
                 </div>
+                
 
                 <script src="../../../node_modules/jquery/dist/jquery.slim.min.js"></script>
                 <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -525,8 +483,9 @@ if (isset($_SESSION['email'])) { ?>
     </body>
 
     </html>
-
-<?php } else {
+<?php
+    
+} else {
     header("Location: ../../../java_tenth_icse.php");
 }
 ?>

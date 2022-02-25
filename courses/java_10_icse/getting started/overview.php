@@ -93,8 +93,6 @@ if (isset($_SESSION['email'])) { ?>
             </div>
         </nav>
 
-
-
         <!-- Side Bar-->
         <div class="container-xxl my-md-3 bd-layout">
             <aside class="bd-sidebar">
@@ -540,6 +538,30 @@ if (isset($_SESSION['email'])) { ?>
                         </div>
                     </div>
 
+                    <!--Module 8-->
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module8_collapse" aria-expanded="true" style="font-size:larger" aria-current="true">
+                                <strong>Module 8: Arrays in JAVA</strong> &nbsp; <i class="fas fa-arrow-circle-down fa-lg d-flex justify-content-between"></i>
+                            </button>
+                        </div>
+                        <div id="module8">
+                            <div class="card-body collapse show" id="module8_collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                                <li><a href="../../java_10_icse/module8/arrays.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Introduction to Arrays</a></li>
+                                    <li><a href="../../java_10_icse/module8/programming_array.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Programming On Arrays</a></li>
+                                    <li><a href="../../java_10_icse/module8/searching.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Searching in Arrays</a></li>
+                                    <li><a href="../../java_10_icse/module8/sorting.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Sorting in Arrays</a></li>
+                                    <li><a href="../../java_10_icse/module8/merging.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Merging of Arrays</a></li>
+                                    <li><a href="../../java_10_icse/module8/quiz8.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-question-circle fa-lg" ></span>Quiz 8</a></li>
+                                    <li><a href="../../java_10_icse/module8/insert_delete.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Board Questions Practice</a></li>
+                                    <li><a href="../../java_10_icse/module8/assignment8.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-swatchbook fa-lg" ></span>Assignment 8</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+
                 </div>
 
                 <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
@@ -556,6 +578,7 @@ if (isset($_SESSION['email'])) { ?>
                             <li><a href="#module5">Module 5</a></li>
                             <li><a href="#module6">Module 6</a></li>
                             <li><a href="#module7">Module 7</a></li>
+                            <li><a href="#module8">Module 8</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -79,7 +79,7 @@ require 'includes/common.php';
                 </div>
                 <div class="text-orange text-size-l"><del>&#x20b9; 7,999 </del> &nbsp;&#x20b9;1,799*</div>
                 <div class="mg-top text-description" style="font-size: 15px;">
-                  * Offer Price valid till <br> December 25 2021<br>
+                  * Offer Price valid till <br> February 15 2022<br>
                   * After Enrolling/payment you will receive a Tax Invoice along with a link for joining the Telegram group on your registered email ID so as to get constant updates.
                 </div>
               </div>

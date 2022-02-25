@@ -25,7 +25,7 @@ if (isset($_SESSION['email'])) { ?>
         <link href="../../../node_modules/font-awesome/css/fontawesome.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/brands.css" rel="stylesheet">
         <link href="../../../node_modules/font-awesome/css/solid.css" rel="stylesheet">
-        <title> Quiz 7 - Code At Random</title>
+        <title> Quiz 8 - Arrays || CodeAtRandom</title>
     </head>
     <style>
         body {
@@ -98,26 +98,30 @@ if (isset($_SESSION['email'])) { ?>
         $ques3 = $_POST['question3'];
         $ques4 = $_POST['question4'];
         $ques5 = $_POST['question5'];
+        $ques6 = $_POST['question6'];
         $c = 0;
-        if (strcmp($ques1, "two") == 0) {
+        if (strcmp($ques1, "one") == 0) {
             $c++;
         }
-        if (strcmp($ques2, "default") == 0) {
+        if (strcmp($ques2, "three") == 0) {
             $c++;
         }
-        if (strcmp($ques3, "four") == 0) {
+        if (strcmp($ques3, "one") == 0) {
             $c++;
         }
-        if (strcmp($ques4, "datatype") == 0) {
+        if (strcmp($ques4, "twelve") == 0) {
             $c++;
         }
-        if (strcmp($ques5, "void") == 0) {
+        if (strcmp($ques5, "six") == 0) {
+            $c++;
+        }
+        if (strcmp($ques6, "boolean") == 0) {
             $c++;
         }
         $grade = $c*10;
     $user_id = $_SESSION['id'];
     $course_id = 2;
-    $quiz_no = 13;
+    $quiz_no = 15;
     $query = "Insert into students_quiz(user_id, course_id, quiz_no, grade) 
     values ('$user_id', '$course_id', '$quiz_no', '$grade')";
     $query_run = mysqli_query($con, $query)
@@ -276,18 +280,18 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="true" aria-current="true">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module7-collapse" aria-expanded="false">
                                 Module 7
                             </button>
 
-                            <div class="collapse show" id="module7-collapse">
+                            <div class="collapse" id="module7-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module7/functions.php" class="d-inline-flex align-items-center rounded">Introduction to Functions</a></li>
                                     <li><a href="../../java_10_icse/module7/programs_functions.php" class="d-inline-flex align-items-center rounded">Programming On Functions</a></li>
                                     <li><a href="../../java_10_icse/module7/parameters.php" class="d-inline-flex align-items-center rounded">Parameters in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module7/overloading.php" class="d-inline-flex align-items-center rounded">Function Overloading in JAVA</a></li>
                                     <li><a href="../../java_10_icse/module7/constructors.php" class="d-inline-flex align-items-center rounded">Constructors in Java</a></li>
-                                    <li><a href="../../java_10_icse/module7/quiz7.php" class="d-inline-flex align-items-center rounded active">Quiz 7</a></li>
+                                    <li><a href="../../java_10_icse/module7/quiz7.php" class="d-inline-flex align-items-center rounded">Quiz 7</a></li>
                                     <li><a href="../../java_10_icse/module7/questions.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module7/notes.php" class="d-inline-flex align-items-center rounded">Notes- Module 7 </a></li>
                                     <li><a href="../../java_10_icse/module7/assignment7.php" class="d-inline-flex align-items-center rounded">Assignment 7</a></li>
@@ -295,19 +299,18 @@ if (isset($_SESSION['email'])) { ?>
                             </div>
                         </li>
                         <li class="mb-1">
-                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module8-collapse" aria-expanded="false">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module8-collapse" aria-expanded="true" aria-current="true">
                                 Module 8
                             </button>
 
-                            <div class="collapse" id="module8-collapse">
+                            <div class="collapse show" id="module8-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                                     <li><a href="../../java_10_icse/module8/arrays.php" class="d-inline-flex align-items-center rounded">Arrays- Introduction</a></li>
                                     <li><a href="../../java_10_icse/module8/programming_array.php" class="d-inline-flex align-items-center rounded">Arrays- Programming</a></li>
                                     <li><a href="../../java_10_icse/module8/searching.php" class="d-inline-flex align-items-center rounded">Searching in an array</a></li>
                                     <li><a href="../../java_10_icse/module8/sorting.php" class="d-inline-flex align-items-center rounded">Sorting in Array</a></li>
                                     <li><a href="../../java_10_icse/module8/merging.php" class="d-inline-flex align-items-center rounded">Merging in an Array</a></li>
-                                    <li><a href="../../java_10_icse/module8/insert_delete.php" class="d-inline-flex align-items-center rounded">Insertion and Deletion</a></li>
-                                    <li><a href="../../java_10_icse/module8/quiz8.php" class="d-inline-flex align-items-center rounded">Quiz 8</a></li>
+                                    <li><a href="../../java_10_icse/module8/quiz8.php" class="d-inline-flex align-items-center rounded active">Quiz 8</a></li>
                                     <li><a href="../../java_10_icse/module8/board_ques.php" class="d-inline-flex align-items-center rounded">Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module8/assignment8.php" class="d-inline-flex align-items-center rounded">Assignmnet 8</a></li>
                                 </ul>
@@ -362,70 +365,91 @@ if (isset($_SESSION['email'])) { ?>
             <main class="bd-main order-1">
                 <div class="bd-intro ps-lg-4">
                     <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
-                        <h1 class=" bd-title mb-4">Quiz 7 - Module 7</h1>
+                        <h1 class=" bd-title mb-4">Quiz 8 - Module 8</h1>
                     </div>
                     <?php 
                         $user_id = $_SESSION['id'];
-                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='13' ";
+                        $query = "SELECT * FROM students_quiz WHERE user_id='$user_id' AND quiz_no='15' ";
                         $query_result = mysqli_query($con, $query) or die(mysqli_error($con));
                         $result= mysqli_num_rows($query_result);
                         if($result!=0){
                             $result_row= mysqli_fetch_assoc($query_result);
                             $grade= $result_row['grade'];
                             echo '<div class="container w-100 p-3">
-                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 50</h2><br>
+                            <h2> Your quiz is submitted. Your score is '. $grade .' out of 60</h2><br>
                             </div>';
                             echo '<div class="container w-100 p-3">
                                     <div class="row">
-                                    <h5>The correct answers of the Quiz 7 were:-</h5>
+                                    <h5>The correct answers of the Quiz 8 were:-</h5>
                                     <p> 
                                     <ol> 
-                                    <li>Select the correct function definition from the given options.<br>
+                                    <li>Select the correct array definition from the given options..<br>
                                         <ul>
-                                        <li>void isFunc{int a,int b}</li>
-                                        <li>void isFunc(int a,int b)</li>
-                                        <li>void isFunc[int a,int b]</li>
-                                        <li>All of the above</li>
+                                        <li>int A [ ] = new int [5];</li>
+                                        <li>Float unio [ ] = new Float [89];</li>
+                                        <li>double new { } = new double {n};</li>
+                                        <li>short hello ( ) = new short (78);</li>
                                         </ul>
-                                    <h6><strong> The correct option is void isFun(int a,int b), as there are round brackets used in the function prototype. </strong></h6> </li>
+                                    <h6><strong> The correct option is int A [ ] = new int [5], as there are square brackets used in the array definition. </strong></h6> </li>
                                     
-                                <li>Select the access specifier from the given options.<br>
+                                <li>What is the output of the following code fragments?<br>
+                                int [ ] fun = {1,2,3,4,5} <br>
+                                int j=3;<br>
+                                System.out.println(fun[j-1]) ;<br>
                                 <ul>
-                                <li>default</li>
-                                <li>class</li>
-                                <li>static</li>
-                                <li>None of the above</li>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
                                 </ul>
-                                <h6><strong>There are five access specifiers in java- public, private, protected, default and private protected. So default is the right answer.</strong><h6></li>
+                                <h6><strong>The correct answer is 3. fun[2] = 3</strong><h6></li>
 
-                                <li>Select what is included when we talk about function signature?<br>
+                                <li>What does the following method do?<br>
+                                public static void numbers (int [ ] num){ <br>
+                                &nbsp;for(int x = 1; x < num.length; x++)<br>
+                                &nbsp;&nbsp; num[x] = num[0];<br>
+                                }<br>
                                 <ul>
-                                <li>Return type , Modifiers </li>
-                                <li>Access Specifiers, Return Type, Parameter list</li>
-                                <li>Return type, Function Name, Parameters list</li>
-                                <li>Function Name, Parameters list</li>
+                                <li>It copies what is in cell 0 into all other cells.</li>
+                                <li>It changes every element to the value of  x.</li>
+                                <li> It copies 0 into every element.</li>
+                                <li>It puts the array into numerical ascending order.</li>
                                 </ul>
-                                <h6><strong>The function Signature includes Function name with Parameters list.</strong></h6></li>
+                                <h6><strong>The correct answer is - It copies what is in cell 0 into all other cells.</strong></h6></li>
 
                                 
-                                <li>A method must return a value unless the method definition contains the keyword ___________ in its prototype.<br>
+                                <li>What is the output for the following code fragment?<br>
+                                int [ ] a = {5,4,3}<br>
+                                System.out.print(a[0] + a[1] + a[2]);<br>
                                    <ul>
-                                   <li>public </li>
-                                   <li>void</li>
-                                   <li>static</li>
-                                   <li>data type</li>
+                                   <li>9 </li>
+                                   <li>5 3 1</li>
+                                   <li>5 3 0</li>
+                                   <li> 12</li>
                                    </ul>
-                                 <h6><strong>The answer is data type. When any data type is used as a return type, the function return a value of that type.</strong></h6></li>
+                                 <h6><strong>The answer is 12- 5+4+3.</strong></h6></li>
 
 
-                                 <li> Methods that contain the _______ keyword in the data type position do not return any data, so they can simply be called without being part of a larger statement.<br>
+                                 <li> What is the length of this array?<br>
+                                 double[ ] stuff = {1.5,  2.5,  3.5,  4.5,  5.5,  6.5};<br>
                                    <ul>
-                                   <li>public </li>
-                                   <li>void</li>
-                                   <li>static</li>
-                                   <li>boolean</li>
+                                   <li>1 </li>
+                                   <li>5</li>
+                                   <li>6</li>
+                                   <li>7</li>
                                    </ul>
-                                   <h6><strong>The answer is void. When void is used in the data type position, the function do not return a values.</strong></h6>
+                                   <h6><strong>The answer is 6 as there are 6 elements in the array.</strong></h6>
+                                </li>
+
+                                <li> What are the legal indexes for the array ar, given the following declaration:<br>
+                                int[] ar = {2, 4, 6, 8 }<br>
+                                   <ul>
+                                   <li>1,2,3,4 </li>
+                                   <li>0,1</li>
+                                   <li>2,4,6,8</li>
+                                   <li>0,1,2,3</li>
+                                   </ul>
+                                   <h6><strong>The answer is 0,1,2,3.</strong></h6>
                                 </li>
                                     </ol>
                                     </p>
@@ -437,63 +461,85 @@ if (isset($_SESSION['email'])) { ?>
                         {
                     ?>
                     <div class="form">
-                        <form action="" method="POST" role="form" id="quiz-6">
+                        <form action="" method="POST" role="form" id="quiz-8">
                             <input type="hidden" name="csrf_test_name" value="8a80a0a1bdbeedc8fd23ca4ac8731544" />
                             <input type="hidden" value="" name="utm_source">
                             <input type="hidden" value="" name="utm_medium">
                             <input type="hidden" value="" name="utm_campaign">
                             <input type="hidden" name="csrf_test_name" value="ca472541f01935331cf951b3a6984a5d" />
                             <ol class="list-numbered">
-                                <li>Select the correct function definition from the given options.</li>
+                                <li>Select the correct array definition from the given options.</li>
                                 <input type="radio" id="one" name="question1" value="one">
-                                <label for="one"> void isFunc{int a,int b} </label><br>
+                                <label for="one"> int A [ ] = new int [5]; </label><br>
                                 <input type="radio" id="two" name="question1" value="two">
-                                <label for="two">void isFunc(int a,int b)</label><br>
+                                <label for="two">Float unio [ ] = new Float [89];</label><br>
                                 <input type="radio" id="three" name="question1" value="three">
-                                <label for="three">void isFunc[int a,int b]</label><br>
+                                <label for="three">double new { } = new double {n};</label><br>
                                 <input type="radio" id="all" name="question1" value="all">
-                                <label for="all">All of the above</label><br>
+                                <label for="all">short hello ( ) = new short (78);</label><br>
                                 
-                                <li>Select the access specifier from the given options.</li>
-                                <input type="radio" id="default" name="question2" value="default">
-                                <label for="default">default</label><br>
-                                <input type="radio" id="class" name="question2" value="class">
-                                <label for="class">class</label><br>
-                                <input type="radio" id="static" name="question2" value="static">
-                                <label for="static">static</label><br>
-                                <input type="radio" id="none" name="question2" value="none">
-                                <label for="none">None</label><br>
+                                <li>What is the output of the following code fragments?<br>
+                                int [ ] fun = {1,2,3,4,5} <br>
+                                int j=3;<br>
+                                System.out.println(fun[j-1]) ;
+                               </li>
+                                <input type="radio" id="one" name="question2" value="one">
+                                <label for="one">1</label><br>
+                                <input type="radio" id="two" name="question2" value="two">
+                                <label for="two">2</label><br>
+                                <input type="radio" id="three" name="question2" value="three">
+                                <label for="three">3</label><br>
+                                <input type="radio" id="four" name="question2" value="four">
+                                <label for="four">4</label><br>
 
-                                <li>Select what is included when we talk about function signature?</li>
+                                <li>What does the following method do?<br>
+                                public static void numbers (int [ ] num){ <br>
+                                &nbsp;for(int x = 1; x < num.length; x++)<br>
+                                &nbsp;&nbsp; num[x] = num[0];<br>
+                                }<br></li>
                                 <input type="radio" id="one" name="question3" value="one">
-                                <label for="one">Return type , Modifiers </label><br>
+                                <label for="one">It copies what is in cell 0 into all other cells. </label><br>
                                 <input type="radio" id="two" name="question3" value="two">
-                                <label for="two">Access Specifiers, Return Type, Parameter list</label><br>
+                                <label for="two">It changes every element to the value of  x.</label><br>
                                 <input type="radio" id="three " name="question3" value="three">
-                                <label for="three">Return type, Function Name, Parameters list</label><br>
+                                <label for="three"> It copies 0 into every element.</label><br>
                                 <input type="radio" id="four " name="question3" value="four">
-                                <label for="four">Function Name, Parameters list</label><br>
+                                <label for="four">It puts the array into numerical ascending order.</label><br>
 
-                                <li>A method must return a value unless the method definition contains the keyword ___________ in its prototype.</li>
+                                <li>What is the output for the following code fragment?<br>
+                                int [ ] a = {5,4,3}<br>
+                                System.out.print(a[0] + a[1] + a[2]);<br></li>
 
-                                <input type="radio" id="one" name="question4" value="one">
-                                <label for="one">public</label><br>
-                                <input type="radio" id="thirtysix " name="question4" value="thirtysix">
-                                <label for="thirtysix">void</label><br>
+                                <input type="radio" id="nine" name="question4" value="nine">
+                                <label for="nine">9</label><br>
+                                <input type="radio" id="five " name="question4" value="five">
+                                <label for="five">5 3 1</label><br>
                                 <input type="radio" id="fourtyfive " name="question4" value="fourtyfive">
-                                <label for="fourtyfive"> static</label><br>
-                                <input type="radio" id="datatype " name="question4" value="datatype">
-                                <label for="datatype">Data type</label><br>
+                                <label for="fourtyfive"> 5 3 0</label><br>
+                                <input type="radio" id="twelve " name="question4" value="twelve">
+                                <label for="twelve">12</label><br>
 
-                                <li> Methods that contain the _______ keyword in the data type position do not return any data, so they can simply be called without being part of a larger statement.</li>
+                                <li> What is the length of this array?<br>
+                                double[ ] stuff = {1.5,  2.5,  3.5,  4.5,  5.5,  6.5};<br>  </li>
                                 <input type="radio" id="void" name="question5" value="void">
-                                <label for="void">void </label><br>
+                                <label for="void">1</label><br>
                                 <input type="radio" id="static" name="question5" value="static">
-                                <label for="static">static</label><br>
-                                <input type="radio" id="public" name="question5" value="public">
-                                <label for="public">public</label><br>
+                                <label for="static">5</label><br>
+                                <input type="radio" id="six" name="question5" value="six">
+                                <label for="six">6</label><br>
                                 <input type="radio" id="boolean" name="question5" value="boolean">
-                                <label for="boolean">boolean</label><br>
+                                <label for="boolean">7</label><br>
+
+                                <li> What are the legal indexes for the array ar, given the following declaration:<br>
+                                int[] ar = {2, 4, 6, 8 }<br>  </li>
+                                <input type="radio" id="one" name="question6" value="one">
+                                <label for="one">1,2,3,4</label><br>
+                                <input type="radio" id="static" name="question6" value="static">
+                                <label for="static">0,1</label><br>
+                                <input type="radio" id="six" name="question6" value="six">
+                                <label for="six">2,4,6,8</label><br>
+                                <input type="radio" id="boolean" name="question6" value="boolean">
+                                <label for="boolean">0,1,2,3</label><br>
                             </ol>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success col-12 offset-md-4 col-sm-4" style="margin-top: 10px;" name="submit" id="quiz2_submit" tabindex="3">Submit</button>
@@ -507,7 +553,7 @@ if (isset($_SESSION['email'])) { ?>
                     <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#quiz-7">Quiz 7</a></li>
+                            <li><a href="#quiz-8">Quiz 8</a></li>
 
                     </nav>
                 </div>

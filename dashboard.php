@@ -346,12 +346,10 @@ require_once('includes/common.php');
     }
 
     $('#First_Modal').on('shown.bs.modal', function() {
-      // bootstrap modal callback function
-      // set cookie
       Cookies.set('popup', 'valid', {
         expires: 3,
         path: "/"
-      }); // need to set the path to fix a FF bug
+      });
     })
 
 
@@ -408,7 +406,7 @@ require_once('includes/common.php');
   </script>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 25, 2021 00:00:00").getTime();
+var countDownDate = new Date("Feb 28, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
