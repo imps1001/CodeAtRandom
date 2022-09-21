@@ -21,7 +21,7 @@ if(isset($_POST['submit']))
         $Subject = "Reset Your Password";
         echo $token;
         $body = "Hi, $first_name. Click here too reset your password
-        http://localhost/CodeAtRandom%20Hosted/reset_password.php?token=$token ";
+        https://www.codeatrandom.com/reset_password.php?token=$token ";
         $sender_email = "From: codeatrandom3110@gmail.com";
 
         if(mail($email, $Subject, $body, $sender_email)) {

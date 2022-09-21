@@ -554,8 +554,30 @@ if (isset($_SESSION['email'])) { ?>
                                     <li><a href="../../java_10_icse/module8/sorting.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Sorting in Arrays</a></li>
                                     <li><a href="../../java_10_icse/module8/merging.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Merging of Arrays</a></li>
                                     <li><a href="../../java_10_icse/module8/quiz8.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-question-circle fa-lg" ></span>Quiz 8</a></li>
-                                    <li><a href="../../java_10_icse/module8/insert_delete.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Board Questions Practice</a></li>
+                                    <li><a href="../../java_10_icse/module8/board_ques.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Board Questions Practice</a></li>
                                     <li><a href="../../java_10_icse/module8/assignment8.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-swatchbook fa-lg" ></span>Assignment 8</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Module 9-->
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#module9_collapse" aria-expanded="true" style="font-size:larger" aria-current="true">
+                                <strong>Module 9: Strings Handling in JAVA</strong> &nbsp; <i class="fas fa-arrow-circle-down fa-lg d-flex justify-content-between"></i>
+                            </button>
+                        </div>
+                        <div id="module9">
+                            <div class="card-body collapse show" id="module8_collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                                <li><a href="../../java_10_icse/module9/strings.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>String Handling and its programming</a></li>
+                                    <li><a href="../../java_10_icse/module9/function_string.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Functions of Strings</a></li>
+                                    <li><a href="../../java_10_icse/module9/quiz9.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Quiz 9</a></li>
+                                    <li><a href="../../java_10_icse/module9/programs_str.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Programming on functions of string</a></li>
+                                    <li><a href="../../java_10_icse/module9/outputs.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-play-circle fa-lg" ></span>Outputs on String</a></li>
+                                    <li><a href="../../java_10_icse/module9/board_ques.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-question-circle fa-lg" ></span>Previous Year Board Questions</a></li>
+                                    <li><a href="../../java_10_icse/module9/assignment9.php" class="d-inline-flex align-items-center rounded"style="color: black; text-decoration:none; font-size:large;"><span class="fas fa-swatchbook fa-lg" ></span>Assignment 9</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -579,6 +601,7 @@ if (isset($_SESSION['email'])) { ?>
                             <li><a href="#module6">Module 6</a></li>
                             <li><a href="#module7">Module 7</a></li>
                             <li><a href="#module8">Module 8</a></li>
+                            <li><a href="#module9">Module 9</a></li>
                         </ul>
                     </nav>
                 </div>

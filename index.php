@@ -541,14 +541,14 @@ if(isset($_SESSION['email'])){
     $('#Loginlink').click(function() {
       $('#loginModal').modal('show')
     });
-    /*$(document).ready(function(){
+    $(document).ready(function(){
           $("#First_Modal").modal('show');
       });
     $('#register_first-link').click(function ()
     {
       $('#First_Modal').modal('hide')
       $('#register_Modal').modal('show')
-    });*/
+    });
 
 
     if (!Cookies.get('popup')) {
@@ -620,7 +620,7 @@ if(isset($_SESSION['email'])){
   </script>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 28, 2022 00:00:00").getTime();
+var countDownDate = new Date("May 15, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

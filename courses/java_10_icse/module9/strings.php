@@ -400,14 +400,14 @@ td,
                     </li>
                     <li class="mb-1">
                         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#module8-collapse" aria-expanded="true" aria-current="true">
+                            data-bs-target="#module8-collapse" aria-expanded="false">
                             Module 8
                         </button>
 
-                        <div class="collapse show" id="module8-collapse">
+                        <div class="collapse" id="module8-collapse">
                             <ul class="list-unstyled fw-normal pb-1 small">
                                 <li><a href="../../java_10_icse/module8/arrays.php"
-                                        class="d-inline-flex align-items-center rounded active">Arrays- Introduction</a></li>
+                                        class="d-inline-flex align-items-center rounded">Arrays- Introduction</a></li>
                                 <li><a href="../../java_10_icse/module8/programming_array.php"
                                         class="d-inline-flex align-items-center rounded">Arrays- Programming</a></li>
                                 <li><a href="../../java_10_icse/module8/searching.php"
@@ -428,15 +428,15 @@ td,
                     </li>
                     <li class="mb-1">
                         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#module9-collapse" aria-expanded="false">
+                            data-bs-target="#module9-collapse" aria-expanded="true" aria-current="true">
                             Module 9
                         </button>
 
-                        <div class="collapse" id="module9-collapse">
+                        <div class="collapse show" id="module9-collapse">
                             <ul class="list-unstyled fw-normal pb-1 small">
                                 <li><a href="../../java_10_icse/module9/strings.php"
-                                        class="d-inline-flex align-items-center rounded">String Handling and its
-                                        programs</a></li>
+                                        class="d-inline-flex align-items-center rounded active">String Handling and its
+                                        programming</a></li>
                                 <li><a href="../../java_10_icse/module9/function_string.php"
                                         class="d-inline-flex align-items-center rounded">Functions of Strings</a></li>
                                 <li><a href="../../java_10_icse/module9/quiz9.php"
@@ -478,7 +478,6 @@ td,
                             </ul>
                         </div>
                     </li>
-
                     <li class="my-2 mx-6 me-2 border-top"></li>
                     <li>
                         <a href="../notes_whole.php" class="d-inline-flex align-items-start rounded">
@@ -494,22 +493,21 @@ td,
         <main class="bd-main order-1">
             <div class="bd-intro ps-lg-4">
                 <div class="d-md-flex flex-md-row align-items-center justify-content-between">
-                    <h3 class="bd-title" id="content">Module 8- Arrays in JAVA</h3>
+                    <h3 class="bd-title" id="content">Module 8- Strings in JAVA</h3>
                 </div>
                 <ol>
-                    <li id="video1" style="font-size: larger;">Introduction to Arrays</li>
+                    <li id="video1" style="font-size: larger;">Introduction to Strings</li>
                     <div style="padding:56.25% 0 0 0;position:relative;"><iframe
-                            src="https://www.youtube.com/embed/NcZ9HJVsouU?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            src="https://www.youtube.com/embed/SuxBVh35P44?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                             style="position:absolute;top:0;left:0;width:100%;height:80%;"
-                            title="Introduction to Arrays"></iframe></div>
-                   
-                   <li id="video2" style="font-size: larger;">Using Arrays Concept in Programming</li>
+                            title="Introduction to Strings"></iframe></div>
+                <li id="video2" style="font-size: larger;">Using Strings in Programming</li>
                     <div style="padding:56.25% 0 0 0;position:relative;"><iframe
-                            src="https://www.youtube.com/embed/oZy1NBxpGis?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            src="https://www.youtube.com/embed/VxYKVN6VB2I?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                             style="position:absolute;top:0;left:0;width:100%;height:80%;"
-                            title="Using Arrays Concept in Programming"></iframe></div>
+                            title="Using Strings in Programming"></iframe></div>
                 </ol>
                 <div class="d-md-flex flex-md-rowalign-items-center justify-content-between">
                         <h3 id="notes" class="pb-5">Notes in pdf form </h3>
@@ -517,15 +515,15 @@ td,
                         <table style="margin-top: 5px; border-collapse: collapse; width: 100%;">
                             <tr>
                                 <td>
-                                    <strong>Introduction to Arrays</strong>
+                                    <strong>Introduction to Strings</strong>
                                 </td>
-                                <td><a href="../../../notes/module 8/Introduction to arrays.pdf" target="_blank" download="Introduction to Arrays" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 9/Introduction to strings.pdf" target="_blank" download="Introduction to Strings" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong>Using Arrays Concept in Programming</strong>
+                                    <strong>Using Strings in Programming</strong>
                                 </td>
-                                <td><a href="../../../notes/module 8/Using Arrays Concept in Programming.pdf" target="_blank" download="Using Arrays Concept in Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
+                                <td><a href="../../../notes/module 9/using strings in programming with java.pdf" target="_blank" download="Using Strings in Programming" style="font-weight: 700; color:green; text-decoration:none;">Download The PDF here.</a></td>
                             </tr>
                         </table>
                         <p class="mt-5 " style="color: blueviolet;"> Download these pdfs and store them in your device for future reference.</p>
@@ -535,8 +533,8 @@ td,
                 <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
                 <nav id="TableOfContents">
                     <ul>
-                        <li><a href="#video1">Introduction to Arrays</a></li>
-                        <li><a href="#video2">Using Arrays in Programming</a></li>
+                        <li><a href="#video1">Introduction to Strings</a></li>
+                        <li><a href="#video2">Using Strings in Programming</a></li>
                         <li><a href="#notes">Notes in pdf form</a></li>
 
                 </nav>

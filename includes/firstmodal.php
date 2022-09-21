@@ -5,7 +5,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title"><strong> New To Code At Random??</strong></h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <i class="is-icon-cross" aria-hidden="true"></i>
+              </button>
             </div>
             <div class="modal-body">
                 <p style="color: indigo;" ><strong><em> Register Yourself To Access Our Free Courses!!</em> </strong><span class="badge badge-pill badge-danger"> Hurry  Now!!</span></p>

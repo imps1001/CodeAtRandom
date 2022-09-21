@@ -52,12 +52,6 @@ require_once('includes/common.php');
 <body style="overflow-x: hidden; overflow-y: auto;">
     <!--Navbar-->
     <?php include 'includes/header.php'; ?>
-    <div class="alert-container" style="padding-top: 63px;">
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <p class="demo" style="text-align: center; font-size: 30px;"><strong>Offer Price Ends in </strong><span id="demo" style="font-weight:700;"></span><a href="#courses" style="color: green; font-size:24px; float:right;">Enroll Now</a></p>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-        </div>
     <!--Jumbotron-->
     <header class="jumbotron" style="height: 450px;">
         <div class="flex-container">
@@ -404,36 +398,6 @@ require_once('includes/common.php');
 
     });
   </script>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Feb 28, 2022 00:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d :" + hours + "h :"
-  + minutes + "m :" + seconds + "s ";
-
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
 </body>
 
 </html>
