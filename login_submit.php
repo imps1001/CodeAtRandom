@@ -19,29 +19,12 @@ else
     session_start();
     $_SESSION['email']= $email;
     $_SESSION['id']= $result_row['ID'];
-    $sql= "SELECT First_Name, Last_Name, Class, Board, Phone, State From users Where Email= '$email' ";
-    $stmt=$con->prepare( $sql );
-
-    if( $stmt && isset( $_SESSION['email'] ) ){
-
-        $stmt->bind_param('s', $_SESSION['email'] );
-        $result=$stmt->execute();
-
-        if( $result)
-        {
-            $stmt->store_result();
-            $stmt->bind_result( $first_name, $last_name, $class, $board, $phone, $state );
-            $stmt->fetch();
-            $stmt->free_result();
-            $stmt->close();
-        }
-    }
-    $_SESSION['first_name'] = $first_name;
-    $_SESSION['last_name'] = $last_name;
-    $_SESSION['class'] = $class;
-    $_SESSION['board'] = $board;
-    $_SESSION['phone'] = $phone;
-    $_SESSION['state'] = $state;
+    $_SESSION['first_name'] = $result_row['first_name'];
+    $_SESSION['last_name'] = $result_row['last_name'];
+    $_SESSION['class'] = $result_row['class'];
+    $_SESSION['board'] = $result_row['board'];
+    $_SESSION['phone'] = $result_row['phone'];
+    $_SESSION['state'] = $result_row['state'];
     date_default_timezone_set("Asia/Kolkata");
     $date =  date('Y-m-d g:i:s');
     $query1= " update users set last_activity='$date' where email ='$email' ";
